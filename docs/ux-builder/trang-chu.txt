@@ -1,0 +1,140 @@
+[section label="Hero" bg="ID_ANH_HERO" bg_size="original" bg_pos="50% 60%" padding="110px" padding__sm="80px" class="tp-hero"]
+
+[row v_align="middle"]
+
+[col span="8" span__sm="12"]
+
+<p class="tp-eyebrow">CỔNG THÔNG TIN BẤT ĐỘNG SẢN UY TÍN</p>
+<h1>Tìm kiếm dự án phù hợp với bạn</h1>
+<p class="tp-hero__lead">Hàng nghìn dự án, cập nhật liên tục, thông tin minh bạch</p>
+
+[tp_hero_search chips="can-ho,biet-thu,lien-ke,nha-pho,dat-nen,khu-do-thi"]
+
+[/col]
+[col span="4" span__sm="12" class="tp-glass"]
+
+[tp_trust_item icon="shield" title="Thông tin chính xác" text="Cập nhật liên tục"]
+
+[tp_trust_item icon="headset" title="Tư vấn chuyên nghiệp" text="Hỗ trợ 24/7"]
+
+[tp_trust_item icon="users" title="Đồng hành cùng bạn" text="Từ tìm kiếm đến giao dịch"]
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Dự án nổi bật" padding="48px" padding__sm="32px"]
+
+[row]
+
+[col span="12"]
+
+[tp_heading title="Dự án nổi bật" sub="Những dự án bất động sản đáng chú ý nhất hiện nay" link="/du-an/" link_text="Xem tất cả dự án"]
+
+[tp_projects filter="featured" count="4" columns="4"]
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Khám phá theo loại hình" padding="16px" padding__sm="8px"]
+
+[row]
+
+[col span="12"]
+
+[tp_heading title="Khám phá theo loại hình" sub="Chọn loại hình phù hợp với nhu cầu của bạn" link="/du-an/" link_text="Xem tất cả loại hình"]
+
+[tp_terms taxonomy="loai_hinh" include="biet-thu,can-ho,nha-vuon,lien-ke,dat-nen" count="5" arrow="yes"]
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Dự án mới cập nhật" padding="32px" padding__sm="24px"]
+
+[row]
+
+[col span="12"]
+
+[tp_heading title="Dự án mới cập nhật" sub="Cập nhật liên tục những dự án mới nhất trên TOPBDS" link="/du-an/" link_text="Xem tất cả"]
+
+[tp_projects filter="latest" count="4" columns="4" badge="no" button="no"]
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Dự án đang mở bán" padding="16px" padding__sm="8px"]
+
+[row]
+
+[col span="12"]
+
+[tp_heading title="Dự án đang mở bán" sub="Những dự án còn hàng, chính sách tốt, pháp lý rõ ràng" link="/trang-thai/dang-mo-ban/" link_text="Xem tất cả"]
+
+[tp_projects filter="selling" count="4" columns="4" button="no"]
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Tìm kiếm theo khu vực" padding="32px" padding__sm="24px"]
+
+[row]
+
+[col span="12"]
+
+[tp_heading title="Tìm kiếm theo khu vực" sub="Khám phá dự án bất động sản tại các khu vực trên toàn quốc" link="/du-an/" link_text="Xem tất cả khu vực"]
+
+[tp_terms taxonomy="khu_vuc" count="5" columns="6" style="short" arrow="no" more="Các tỉnh khác"]
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Tin tức thị trường" padding="16px" padding__sm="8px"]
+
+[row]
+
+[col span="12"]
+
+[tp_heading title="Tin tức thị trường" sub="Cập nhật tin tức, phân tích và xu hướng thị trường bất động sản" link="/tin-tuc/" link_text="Xem tất cả tin tức"]
+
+[tp_news count="4"]
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="CTA tư vấn" padding="40px" padding__sm="24px"]
+
+[row v_align="middle" class="tp-cta"]
+
+[col span="1" span__sm="12"]
+
+[tp_icon name="bulb" size="30" badge="yes"]
+
+[/col]
+[col span="6" span__sm="12"]
+
+<p class="tp-cta__title">Chưa biết nên chọn dự án nào?</p>
+<p>Nhận tư vấn miễn phí về dự án, vị trí, mặt bằng và chính sách bán hàng.</p>
+
+[/col]
+[col span="5" span__sm="12"]
+
+[tp_contact_buttons style="cta"]
+
+[/col]
+
+[/row]
+
+[/section]

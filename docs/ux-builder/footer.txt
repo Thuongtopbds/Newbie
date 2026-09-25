@@ -1,0 +1,61 @@
+[section label="Footer" bg_color="#0f1e33" padding="56px" padding__sm="40px" dark="true" class="tp-footer"]
+
+[row]
+
+[col span="3" span__sm="12"]
+
+[ux_image id="ID_LOGO_TRANG" width="70"]
+
+<p>TOPBDS.VN là cổng thông tin bất động sản uy tín, cập nhật nhanh chóng các dự án mới, quy hoạch, thị trường, pháp lý. Đồng hành cùng bạn trên hành trình tìm kiếm và đầu tư bất động sản bền vững.</p>
+
+[follow style="fill" facebook="https://facebook.com/..." youtube="https://youtube.com/..." tiktok="https://tiktok.com/@..."]
+
+[/col]
+[col span="2" span__sm="6"]
+
+<h4>Khám phá</h4>
+<ul>
+<li><a href="/du-an/">Dự án</a></li>
+<li><a href="/loai-hinh/can-ho/">Căn hộ</a></li>
+<li><a href="/loai-hinh/biet-thu/">Biệt thự</a></li>
+<li><a href="/loai-hinh/lien-ke/">Liền kề</a></li>
+<li><a href="/loai-hinh/dat-nen/">Đất nền</a></li>
+<li><a href="/loai-hinh/khu-do-thi/">Khu đô thị</a></li>
+</ul>
+
+[/col]
+[col span="2" span__sm="6"]
+
+<h4>Thông tin</h4>
+<ul>
+<li><a href="/tin-tuc/">Tin tức</a></li>
+<li><a href="/chuyen-muc/thi-truong/">Thị trường</a></li>
+<li><a href="/chuyen-muc/quy-hoach/">Quy hoạch</a></li>
+<li><a href="/chuyen-muc/phap-ly/">Pháp lý</a></li>
+<li><a href="/chinh-sach/">Chính sách</a></li>
+</ul>
+
+[/col]
+[col span="3" span__sm="12"]
+
+<h4>Liên hệ</h4>
+<ul>
+<li>[tp_icon name="phone" size="15"] Hotline: <a href="tel:0977113009">0977 113 009</a></li>
+<li>[tp_icon name="chat" size="15"] Zalo: <a href="https://zalo.me/0977113009">0977 113 009</a></li>
+<li>[tp_icon name="mail" size="15"] <a href="mailto:info@topbds.vn">info@topbds.vn</a></li>
+<li>85 Vũ Trọng Phụng, P. Thanh Xuân, Hà Nội</li>
+</ul>
+
+[/col]
+[col span="2" span__sm="12"]
+
+<h4>Đăng ký nhận tin</h4>
+<p>Nhận thông tin dự án mới và chính sách bán hàng sớm nhất.</p>
+
+[contact-form-7 id="ID_FORM" title="Đăng ký nhận tin"]
+
+[/col]
+
+[/row]
+
+[/section]

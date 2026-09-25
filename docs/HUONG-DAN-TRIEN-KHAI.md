@@ -1,0 +1,192 @@
+# Triển khai trang chủ TOPBDS trên WordPress + Flatsome
+
+Tài liệu này đi kèm child theme `flatsome-child/` và các đoạn nội dung UX Builder trong `docs/ux-builder/`.
+
+Ảnh chụp bản chạy thử: `docs/preview/`. Ảnh dự án trong đó được cắt từ mockup, chỉ để minh hoạ.
+
+---
+
+## 1. Cách chia việc: UX Blocks hay code riêng
+
+Nguyên tắc chia như sau:
+
+- **Nội dung tĩnh** mà người quản trị tự sửa bằng tay (chữ, ảnh nền, nút) thì làm bằng **Flatsome UX Builder / UX Blocks**.
+- **Khối lấy dữ liệu từ WordPress** (dự án, loại hình, khu vực, tin tức) thì dùng **shortcode của child theme**. Dữ liệu tự cập nhật khi bạn đăng dự án hoặc bài viết, không phải sửa trang chủ.
+
+Các shortcode này đã được đưa vào UX Builder, nằm trong nhóm **TOPBDS**. Bạn vẫn kéo thả và chỉnh tuỳ chọn như phần tử gốc của Flatsome.
+
+| # | Phần trên mockup | Làm bằng | Chi tiết |
+|---|---|---|---|
+| 1 | Header & menu | **Flatsome Header Builder** + shortcode `[tp_contact_buttons]` | Logo, menu, sticky, mobile: dùng Header Builder. Nút "Chat Zalo" và số điện thoại: đặt shortcode vào phần tử **HTML** của header. Mega menu (tuỳ chọn): **UX Block** `mega-menu.txt`. |
+| 2 | Hero + tìm kiếm | **UX Builder** (Section, Row, Col, Text) + `[tp_hero_search]` + `[tp_trust_item]` | Ảnh nền, dòng chữ cam, H1 và mô tả: sửa trực tiếp trong UX Builder. Ô tìm kiếm là code riêng vì phải tìm trong post type Dự án. Hiệu ứng kính mờ: CSS riêng, gắn qua class `tp-glass`. |
+| 3 | Dự án nổi bật | `[tp_projects filter="featured"]` | Lấy các dự án được tick "Hiện ở mục Dự án nổi bật". |
+| 4 | Khám phá theo loại hình | `[tp_terms taxonomy="loai_hinh"]` | Ảnh và số dự án tự lấy từ mục Loại hình. |
+| 5 | Dự án mới cập nhật | `[tp_projects filter="latest"]` | Sắp theo ngày sửa gần nhất. |
+| 6 | Dự án đang mở bán | `[tp_projects filter="selling"]` | Lấy dự án có Trạng thái "Đang mở bán". Nhãn "Hot" bật trong trang sửa dự án. |
+| 7 | Tìm kiếm theo khu vực | `[tp_terms taxonomy="khu_vuc" more="Các tỉnh khác"]` | Ô cuối tự đếm số dự án thuộc các khu vực chưa được hiện. |
+| 8 | Tin tức thị trường | `[tp_news]` | Bố cục 1 bài lớn + danh sách. Phần tử Blog Posts gốc của Flatsome không dựng được bố cục này nếu không sửa CSS khá nhiều, nên dùng code riêng. |
+| 9 | CTA tư vấn | **UX Builder** (Row class `tp-cta`) + `[tp_contact_buttons style="cta"]` | Chữ sửa trong UX Builder. Số điện thoại và link Zalo lấy từ cài đặt chung. |
+| 10 | Footer | **UX Block** `footer.txt` + Contact Form 7 | Theme Options → Footer: chọn UX Block này. Dòng bản quyền đặt ở phần "Absolute Footer". |
+
+Phần bổ sung (không có trong mockup nhưng cần để web chạy đủ):
+
+- **Trang danh sách dự án.** `/du-an/`, `/loai-hinh/...`, `/khu-vuc/...`, `/trang-thai/...` và kết quả tìm kiếm dùng chung một template, có bộ lọc Từ khoá, Loại hình, Khu vực và phân trang.
+- **Thanh "Chat Zalo / Gọi" cố định ở cuối màn hình mobile.** Bật/tắt trong Tuỳ biến.
+
+---
+
+## 2. Trong child theme có gì
+
+```
+flatsome-child/
+├── style.css               khai báo child theme (Template: flatsome)
+├── functions.php           nạp các file trong inc/
+├── inc/
+│   ├── setup.php           nạp CSS/JS, kích thước ảnh, Tuỳ biến "TOPBDS – Liên hệ", thanh liên hệ mobile
+│   ├── post-types.php      post type Dự án + Loại hình, Khu vực, Trạng thái (tạo sẵn các mục mặc định)
+│   ├── meta.php            ô "Thông tin hiển thị trên thẻ dự án" + ảnh đại diện cho Loại hình/Khu vực
+│   ├── template-tags.php   HTML thẻ dự án, ô loại hình/khu vực, bộ icon SVG
+│   ├── shortcodes.php      các shortcode tp_*
+│   ├── ux-builder.php      đưa shortcode vào UX Builder (nhóm TOPBDS)
+│   └── search.php          dùng template danh sách dự án cho archive/taxonomy/tìm kiếm
+├── templates/archive-du-an.php
+└── assets/
+    ├── css/topbds.css      toàn bộ CSS riêng (màu chỉnh ở :root)
+    └── js/topbds.js        nút trái tim lưu dự án (lưu trong trình duyệt của khách)
+```
+
+Không cần cài ACF: các trường thông tin dùng meta box có sẵn của WordPress.
+
+### Thông tin của một dự án
+
+| Trường | Nhập ở đâu | Hiển thị |
+|---|---|---|
+| Tên, ảnh đại diện, nội dung | Trình soạn thảo dự án | Tiêu đề, ảnh thẻ |
+| Giá hiển thị | Ô "Thông tin hiển thị trên thẻ dự án" | VD: "Từ 27 triệu/m²" |
+| Vị trí ngắn | như trên | Để trống thì lấy tên Khu vực |
+| Sản phẩm | như trên | Để trống thì lấy các Loại hình |
+| Nổi bật / Hot | 2 ô tick | Mục "Dự án nổi bật" / nhãn đỏ "Hot" |
+| Loại hình, Khu vực, Trạng thái | Hộp bên phải | Lọc, đếm số dự án, nhãn "Đang mở bán" |
+
+### Tham số shortcode
+
+| Shortcode | Tham số chính |
+|---|---|
+| `[tp_heading]` | `title`, `sub`, `link`, `link_text`, `tag` (h2/h3/h1), `light` |
+| `[tp_hero_search]` | `placeholder`, `button`, `chips` (slug Loại hình, cách nhau dấu phẩy) |
+| `[tp_projects]` | `filter` (featured / latest / selling / all), `count`, `columns`, `badge`, `button`, `loai_hinh`, `khu_vuc`, `trang_thai` |
+| `[tp_terms]` | `taxonomy` (loai_hinh / khu_vuc), `include`, `count`, `columns`, `style` (tall / short), `arrow`, `more` |
+| `[tp_news]` | `count`, `category`, `excerpt` |
+| `[tp_contact_buttons]` | `style` (header / cta), `zalo_text`, `call_text` |
+| `[tp_trust_item]` | `icon`, `title`, `text` |
+| `[tp_icon]` | `name`, `size`, `badge` |
+
+---
+
+## 3. Các bước triển khai
+
+### Bước 1 – Cài theme và plugin
+1. Cài theme gốc **Flatsome** (bản có bản quyền). Đưa thư mục `flatsome-child` vào `wp-content/themes/`, hoặc nén thành `.zip` rồi tải lên ở Giao diện → Giao diện → Thêm mới. Sau đó **kích hoạt TOPBDS Flatsome Child**.
+2. Cài các plugin: **Rank Math SEO**, **LiteSpeed Cache**, **Contact Form 7**.
+3. Vào **Cài đặt → Đường dẫn tĩnh**, chọn "Tên bài viết" rồi bấm **Lưu**, để các đường dẫn `/du-an/`, `/loai-hinh/`… hoạt động.
+
+Khi kích hoạt, theme tự tạo sẵn các mục sau:
+- Loại hình: Căn hộ, Biệt thự, Liền kề, Nhà phố, Đất nền, Khu đô thị, Nhà vườn, Shophouse
+- Khu vực: Hà Nội, TP. Hồ Chí Minh, Hải Phòng, Hưng Yên, Bắc Ninh
+- Trạng thái: Đang mở bán, Sắp mở bán, Đã bàn giao
+
+### Bước 2 – Flatsome Theme Options
+- **Style → Colors:** Primary `#F26B21`, Secondary `#0F1E33`.
+- **Style → Typography:** font **Be Vietnam Pro** cho cả tiêu đề lẫn nội dung (đủ dấu tiếng Việt). Cỡ chữ nội dung 15px.
+- **Layout:** độ rộng container 1200px.
+- **Header:**
+  - Logo bên trái, menu chính ở giữa.
+  - Bên phải thêm phần tử **HTML 1** với nội dung `[tp_contact_buttons]`.
+  - Bật Sticky header.
+  - Mobile: logo + nút menu. Thanh Zalo/Gọi dưới đáy đã có sẵn trong child theme.
+- **Footer:** chọn UX Block "Footer" ở Bước 5. Mục **Absolute Footer** ghi `© 2025 TOPBDS.VN. All rights reserved.` kèm link Chính sách bảo mật và Điều khoản sử dụng.
+
+### Bước 3 – Cài đặt liên hệ
+Vào **Giao diện → Tuỳ biến → TOPBDS – Liên hệ**, nhập Hotline và link Zalo. Nút ở header, khối CTA và thanh mobile đều lấy từ đây.
+
+### Bước 4 – Nhập dữ liệu
+1. Vào **Dự án → Loại hình** và **Dự án → Khu vực**, bấm "Chọn ảnh" cho từng mục. Nên dùng ảnh ngang, tối thiểu 520×400px.
+2. **Dự án → Thêm dự án**:
+   - Điền tên, ảnh đại diện (tối thiểu 640×420px), giá, vị trí, sản phẩm.
+   - Chọn Loại hình, Khu vực, Trạng thái.
+   - Tick "Nổi bật" với 4–8 dự án muốn đưa lên đầu trang chủ.
+3. Viết bài tin tức (Bài viết). Tạo chuyên mục Thị trường, Phân tích, Pháp lý, Quy hoạch, Đầu tư.
+
+### Bước 5 – Dựng trang chủ, footer, mega menu
+1. **Trang chủ:**
+   - Tạo trang "Trang chủ" và chọn template **"Page - Transparent Header"** để header trong suốt nằm đè lên ảnh hero.
+   - Chuyển trình soạn thảo sang chế độ **Code/Văn bản**, dán toàn bộ nội dung `docs/ux-builder/trang-chu.txt`.
+   - Thay `ID_ANH_HERO` bằng ID ảnh hero trong Thư viện (hoặc mở UX Builder, bấm vào Section Hero và chọn ảnh).
+   - Mở **UX Builder** để chỉnh tiếp bằng kéo thả.
+   - Vào **Cài đặt → Đọc**, chọn "Trang tĩnh", trang chủ là "Trang chủ".
+2. **Footer:**
+   - Vào **UX Blocks → Thêm mới**, đặt tên "Footer", dán `docs/ux-builder/footer.txt`.
+   - Thay `ID_LOGO_TRANG` và `ID_FORM`, sửa link mạng xã hội.
+   - Chọn Block này ở Theme Options → Footer.
+3. **Form đăng ký nhận tin (Contact Form 7):** tạo form với nội dung:
+   ```
+   [email* email-dang-ky placeholder "Nhập email của bạn"]
+   [submit "Đăng ký"]
+   ```
+4. **Mega menu (tuỳ chọn):**
+   - Tạo UX Block "Mega menu", dán `docs/ux-builder/mega-menu.txt`.
+   - Trong **Giao diện → Menu**, mở mục "Dự án" và chọn Block này làm nội dung dropdown. Flatsome 3.15 trở lên có tuỳ chọn này trong phần cài đặt của mục menu.
+   - Nếu không cần mega menu, chỉ dùng menu con thông thường cũng được và vẫn tốt cho SEO.
+
+### Bước 6 – SEO và tốc độ
+- **Thứ bậc tiêu đề đúng như đề xuất:**
+  - H1 duy nhất ở hero.
+  - Mỗi mục là một **H2** (`[tp_heading]`).
+  - Tên dự án và tên bài là H3.
+  - Trang danh sách dự án có H1 riêng, tên dự án là H2.
+- **Rank Math:**
+  - Bật Sitemap cho Dự án, Loại hình, Khu vực.
+  - Đặt schema cho Dự án (gợi ý: Product hoặc Place).
+  - Bật Breadcrumbs.
+- **Liên kết nội bộ:** các nút loại hình, ô khu vực và "Xem tất cả" đều trỏ tới trang danh sách tương ứng.
+- **LiteSpeed Cache:** bật cache trang, chuyển ảnh sang WebP, bật lazy-load ảnh. Loại trừ ảnh hero khỏi lazy-load vì đây là ảnh lớn nhất màn hình đầu.
+- Ảnh trong thẻ dự án đã có sẵn kích thước cắt riêng (`tp-card`, `tp-tile`, `tp-news`, `tp-thumb`). Với ảnh tải lên từ trước khi cài theme, chạy plugin **Regenerate Thumbnails** một lần.
+
+---
+
+## 4. Đã kiểm tra những gì
+
+Child theme được chạy trên WordPress mới nhất (PHP 8.4) với dữ liệu mẫu (12 dự án, 4 bài viết):
+
+- Trang chủ, `/du-an/`, trang Loại hình / Khu vực / Trạng thái và tìm kiếm (có từ khoá, có lọc, không có kết quả) đều hiển thị đúng, không có cảnh báo PHP.
+- Không có trang nào bị cuộn ngang ở màn hình máy tính 1440px và điện thoại 390px.
+- Lưu thông tin dự án, ảnh Loại hình và đăng ký 8 phần tử UX Builder đều hoạt động.
+
+**Chưa kiểm tra được với Flatsome thật** vì đây là theme trả phí. Bản chạy thử dùng một theme giả lập các phần tử Section/Row/Col của Flatsome. Khi cài lên site thật, cần xem lại:
+- Header trong suốt và nút ở header
+- Tên các tuỳ chọn trong Theme Options (có thể khác chút tuỳ phiên bản)
+- Tuỳ chọn Block cho menu
+- Khoảng cách giữa các Section (chỉnh bằng Padding của Section trong UX Builder)
+
+---
+
+## 5. Cần bạn cung cấp hoặc quyết định
+
+1. **Logo:** SVG hoặc PNG nền trong, gồm bản màu và bản trắng (cho footer), cộng favicon.
+2. **Ảnh thật có bản quyền:**
+   - Ảnh hero, ngang ≥ 1920px
+   - Ảnh cho từng Loại hình và Khu vực
+   - Ảnh đại diện từng dự án
+   - Ảnh bài viết
+3. **Danh sách dự án thật:** giá, vị trí, sản phẩm, trạng thái, dự án nào nổi bật hoặc "Hot".
+4. **Trang chi tiết dự án:** mockup chưa có trang này; hiện nút "Xem chi tiết" dùng bố cục bài viết mặc định của Flatsome. Bạn có muốn mình dựng trang này không? Nếu có, cần thêm các trường như diện tích, chủ đầu tư, pháp lý, tiến độ, bàn giao, thư viện ảnh, bản đồ, mặt bằng, bảng giá, form nhận báo giá.
+5. **Thông tin liên hệ:**
+   - Hotline
+   - Zalo: link Zalo OA hay số cá nhân?
+   - Email, địa chỉ
+   - Link Facebook, YouTube, TikTok
+6. **Form đăng ký nhận tin:** gửi về email nào? Có cần đẩy sang Google Sheet hoặc CRM không?
+7. **Menu chính thức:** các mục con của "Loại hình", "Giới thiệu", "Liên hệ"; có dùng mega menu không.
+8. **Nút trái tim trên thẻ dự án:** hiện chỉ lưu trong trình duyệt của khách, chưa có trang "Dự án đã lưu". Giữ, làm thêm trang đó, hay bỏ?
+9. **Nội dung cam kết trong hero** ("Hỗ trợ 24/7"…) có đúng với dịch vụ thực tế không?
+10. **Kỹ thuật:** phiên bản Flatsome đang dùng, hosting (có phải LiteSpeed không), tên miền.
