@@ -310,3 +310,62 @@ add_shortcode( 'tp_icon', function ( $atts ) {
 	$icon = tp_icon( sanitize_key( $a['name'] ), (int) $a['size'] );
 	return tp_bool( $a['badge'] ) ? '<span class="tp-icon-badge">' . $icon . '</span>' : $icon;
 } );
+
+/**
+ * [tp_mega_links taxonomy="loai_hinh" count="0" hide_empty="yes" more="" more_link=""]
+ *
+ * Danh sách link Loại hình / Khu vực / Trạng thái kèm số dự án (nhiều dự án xếp trước), dùng trong
+ * UX Block mega menu. Khu vực chỉ lấy cấp tỉnh/thành. count="0": lấy tất cả.
+ */
+add_shortcode( 'tp_mega_links', function ( $atts ) {
+	$a = shortcode_atts( array(
+		'taxonomy'  => 'loai_hinh',
+		'count'      => 0,
+		'hide_empty' => 'yes',
+		'more'       => '',
+		'more_link' => '',
+	), $atts );
+
+	if ( ! in_array( $a['taxonomy'], array( 'loai_hinh', 'khu_vuc', 'trang_thai' ), true ) ) {
+		return '';
+	}
+
+	$args = array(
+		'taxonomy'   => $a['taxonomy'],
+		'hide_empty' => tp_bool( $a['hide_empty'] ),
+		'pad_counts' => true,
+		'orderby'    => 'count',
+		'order'      => 'DESC',
+		'number'     => max( 0, (int) $a['count'] ),
+	);
+	if ( is_taxonomy_hierarchical( $a['taxonomy'] ) ) {
+		$args['parent'] = 0;
+	}
+
+	$terms = get_terms( $args );
+	if ( ! $terms || is_wp_error( $terms ) ) {
+		return '';
+	}
+
+	$html = '<ul class="tp-mega__links">';
+	foreach ( $terms as $term ) {
+		$html .= sprintf(
+			'<li><a href="%s"><span>%s</span><span class="tp-mega__count">%s</span></a></li>',
+			esc_url( get_term_link( $term ) ),
+			esc_html( $term->name ),
+			esc_html( number_format_i18n( $term->count ) )
+		);
+	}
+	$html .= '</ul>';
+
+	if ( $a['more'] ) {
+		$html .= sprintf(
+			'<a class="tp-mega__more" href="%s">%s %s</a>',
+			esc_url( $a['more_link'] ?: get_post_type_archive_link( 'du_an' ) ),
+			esc_html( $a['more'] ),
+			tp_icon( 'arrow', 14 )
+		);
+	}
+
+	return $html;
+} );

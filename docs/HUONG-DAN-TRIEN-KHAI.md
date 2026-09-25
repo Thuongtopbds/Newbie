@@ -17,7 +17,7 @@ Các shortcode này đã được đưa vào UX Builder, nằm trong nhóm **TOP
 
 | # | Phần trên mockup | Làm bằng | Chi tiết |
 |---|---|---|---|
-| 1 | Header & menu | **Flatsome Header Builder** + shortcode `[tp_contact_buttons]` | Logo, menu, sticky, mobile: dùng Header Builder. Nút "Chat Zalo" và số điện thoại: đặt shortcode vào phần tử **HTML** của header. Mega menu (tuỳ chọn): **UX Block** `mega-menu.txt`. |
+| 1 | Header & menu | **Flatsome Header Builder** + shortcode `[tp_contact_buttons]` | Logo, menu, sticky, mobile: dùng Header Builder. Nút "Chat Zalo" và số điện thoại: đặt shortcode vào phần tử **HTML** của header. Mega menu cho mục "Dự án": **UX Block** `mega-menu.txt`, các cột link lấy tự động bằng `[tp_mega_links]` (ảnh: `docs/preview/mega-menu.png`). |
 | 2 | Hero + tìm kiếm | **UX Builder** (Section, Row, Col, Text) + `[tp_hero_search]` + `[tp_trust_item]` | Ảnh nền, dòng chữ cam, H1 và mô tả: sửa trực tiếp trong UX Builder. Ô tìm kiếm là code riêng vì phải tìm trong post type Dự án. Hiệu ứng kính mờ: CSS riêng, gắn qua class `tp-glass`. |
 | 3 | Dự án nổi bật | `[tp_projects filter="featured"]` | Lấy các dự án được tick "Hiện ở mục Dự án nổi bật". |
 | 4 | Khám phá theo loại hình | `[tp_terms taxonomy="loai_hinh"]` | Ảnh và số dự án tự lấy từ mục Loại hình. |
@@ -86,6 +86,7 @@ Không cần cài ACF: các trường thông tin dùng meta box có sẵn của 
 | `[tp_projects]` | `filter` (featured / latest / selling / all), `count`, `columns`, `badge`, `button`, `loai_hinh`, `khu_vuc`, `trang_thai` |
 | `[tp_terms]` | `taxonomy` (loai_hinh / khu_vuc), `include`, `count`, `columns`, `style` (tall / short), `arrow`, `more` |
 | `[tp_news]` | `count`, `category`, `excerpt` |
+| `[tp_mega_links]` | `taxonomy` (loai_hinh / khu_vuc / trang_thai), `count` (0 = tất cả), `hide_empty`, `more`, `more_link` |
 | `[tp_contact_buttons]` | `style` (header / cta), `zalo_text`, `call_text` |
 | `[tp_trust_item]` | `icon`, `title`, `text` |
 | `[tp_icon]` | `name`, `size`, `badge` |
@@ -172,10 +173,13 @@ Vào **Giao diện → Tuỳ biến → TOPBDS – Liên hệ**, nhập Hotline 
    [email* email-dang-ky placeholder "Nhập email của bạn"]
    [submit "Đăng ký"]
    ```
-4. **Mega menu (tuỳ chọn):**
-   - Tạo UX Block "Mega menu", dán `docs/ux-builder/mega-menu.txt`.
-   - Trong **Giao diện → Menu**, mở mục "Dự án" và chọn Block này làm nội dung dropdown. Flatsome 3.15 trở lên có tuỳ chọn này trong phần cài đặt của mục menu.
-   - Nếu không cần mega menu, chỉ dùng menu con thông thường cũng được và vẫn tốt cho SEO.
+4. **Mega menu cho mục "Dự án":**
+   - Vào **UX Blocks → Thêm mới**, đặt tên "Mega menu Dự án", dán `docs/ux-builder/mega-menu.txt` rồi lưu.
+   - Bảng gồm 4 cột: **Loại hình**, **Khu vực** (6 tỉnh/thành nhiều dự án nhất), **Trạng thái**, và thẻ **1 dự án nổi bật**.
+   - Các link và số dự án tự cập nhật; mục chưa có dự án nào tự ẩn. Không cần sửa block khi thêm dự án hay loại hình mới.
+   - Vào **Giao diện → Menu**, mở mục "Dự án" trong menu chính. Ở phần cài đặt Flatsome của mục menu, chọn block "Mega menu Dự án" làm nội dung dropdown, và chọn độ rộng dropdown theo container (tên tuỳ chọn có thể hơi khác tuỳ phiên bản Flatsome).
+   - Mục "Dự án" không cần menu con. Các mục khác (Tin tức, Giới thiệu…) vẫn dùng menu con bình thường.
+   - Trên điện thoại, Flatsome dùng menu trượt riêng, có thể không hiện đầy đủ block mega menu. Hãy mở thử trên điện thoại. Nếu thiếu, tạo một menu riêng cho điện thoại (mục "Dự án" có menu con: Căn hộ, Biệt thự, Liền kề, Hà Nội…) rồi gán vào vị trí menu mobile trong **Giao diện → Menu → Quản lý vị trí**.
 
 ### Bước 6 – SEO và tốc độ
 - **Thứ bậc tiêu đề đúng như đề xuất:**
@@ -226,7 +230,7 @@ Child theme được chạy trên WordPress mới nhất (PHP 8.4) với dữ li
    - Email, địa chỉ
    - Link Facebook, YouTube, TikTok
 6. **Form đăng ký nhận tin:** gửi về email nào? Có cần đẩy sang Google Sheet hoặc CRM không?
-7. **Menu chính thức:** các mục con của "Loại hình", "Giới thiệu", "Liên hệ"; có dùng mega menu không.
+7. **Menu chính thức:** các mục con của "Giới thiệu", "Liên hệ". Mega menu: đã chốt dùng cho mục "Dự án" (xem Bước 5).
 8. **Nút trái tim trên thẻ dự án:** hiện chỉ lưu trong trình duyệt của khách, chưa có trang "Dự án đã lưu". Giữ, làm thêm trang đó, hay bỏ?
 9. **Nội dung cam kết trong hero** ("Hỗ trợ 24/7"…) có đúng với dịch vụ thực tế không?
 10. **Kỹ thuật:** phiên bản Flatsome đang dùng, hosting (có phải LiteSpeed không), tên miền.

@@ -1,41 +1,31 @@
 [row class="tp-mega"]
 
-[col span="4" span__sm="12"]
+[col span="3" span__sm="12"]
 
-<h4>Dự án</h4>
-<ul>
-<li><a href="/loai-hinh/can-ho/">Căn hộ</a></li>
-<li><a href="/loai-hinh/biet-thu/">Biệt thự</a></li>
-<li><a href="/loai-hinh/lien-ke/">Liền kề</a></li>
-<li><a href="/loai-hinh/nha-pho/">Nhà phố</a></li>
-<li><a href="/loai-hinh/dat-nen/">Đất nền</a></li>
-<li><a href="/loai-hinh/khu-do-thi/">Khu đô thị</a></li>
-</ul>
+<p class="tp-mega__title">Loại hình</p>
+
+[tp_mega_links taxonomy="loai_hinh"]
 
 [/col]
-[col span="4" span__sm="12"]
+[col span="3" span__sm="12"]
 
-<h4>Khu vực</h4>
-<ul>
-<li><a href="/khu-vuc/ha-noi/">Hà Nội</a></li>
-<li><a href="/khu-vuc/tp-ho-chi-minh/">TP. Hồ Chí Minh</a></li>
-<li><a href="/khu-vuc/hai-phong/">Hải Phòng</a></li>
-<li><a href="/khu-vuc/hung-yen/">Hưng Yên</a></li>
-<li><a href="/khu-vuc/bac-ninh/">Bắc Ninh</a></li>
-<li><a href="/du-an/">Các tỉnh thành khác</a></li>
-</ul>
+<p class="tp-mega__title">Khu vực</p>
+
+[tp_mega_links taxonomy="khu_vuc" count="6" more="Tất cả dự án"]
 
 [/col]
-[col span="4" span__sm="12"]
+[col span="2" span__sm="12"]
 
-<h4>Tin tức</h4>
-<ul>
-<li><a href="/chuyen-muc/thi-truong/">Thị trường</a></li>
-<li><a href="/chuyen-muc/phan-tich/">Phân tích</a></li>
-<li><a href="/chuyen-muc/phap-ly/">Pháp lý</a></li>
-<li><a href="/chuyen-muc/quy-hoach/">Quy hoạch</a></li>
-<li><a href="/chuyen-muc/dau-tu/">Đầu tư</a></li>
-</ul>
+<p class="tp-mega__title">Trạng thái</p>
+
+[tp_mega_links taxonomy="trang_thai"]
+
+[/col]
+[col span="4" span__sm="12" class="tp-mega__feature"]
+
+<p class="tp-mega__title">Dự án nổi bật</p>
+
+[tp_projects filter="featured" count="1" columns="1" button="no"]
 
 [/col]
 

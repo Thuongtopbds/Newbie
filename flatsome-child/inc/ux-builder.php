@@ -78,6 +78,18 @@ add_action( 'ux_builder_setup', function () {
 		),
 	) );
 
+	add_ux_builder_shortcode( 'tp_mega_links', array(
+		'name'     => 'Link mega menu (tự động)',
+		'category' => 'TOPBDS',
+		'options'  => array(
+			'taxonomy'  => array( 'type' => 'select', 'heading' => 'Hiển thị', 'default' => 'loai_hinh', 'options' => array( 'loai_hinh' => 'Loại hình', 'khu_vuc' => 'Khu vực', 'trang_thai' => 'Trạng thái' ) ),
+			'count'     => $number( 'Số link (0 = tất cả)', 0, 0, 20 ),
+			'hide_empty' => $yes_no( 'Ẩn mục chưa có dự án' ),
+			'more'      => $text( 'Link cuối "xem thêm"', '', 'VD: Tất cả khu vực. Để trống để ẩn.' ),
+			'more_link' => $text( 'Đường dẫn link cuối', '', 'Để trống: trang /du-an/.' ),
+		),
+	) );
+
 	add_ux_builder_shortcode( 'tp_news', array(
 		'name'     => 'Tin tức (1 lớn + danh sách)',
 		'category' => 'TOPBDS',
