@@ -94,25 +94,21 @@ Không cần cài ACF: các trường thông tin dùng meta box có sẵn của 
 
 ## 3. Trang chi tiết dự án
 
-Bố cục dựa trên trang bạn đang dùng, đổi sang màu và kiểu thẻ của trang chủ mới. Ảnh chụp: `docs/preview/chi-tiet-du-an-*.jpg`.
+Trang được thiết kế theo cùng phong cách với trang chủ: hero ảnh nền tối, khung kính mờ, điểm nhấn màu cam, tiêu đề mục có vạch cam, thẻ dự án giống trang chủ. Ảnh chụp: `docs/preview/chi-tiet-du-an-*.jpg`.
 
-| Vùng | Nội dung | So với trang cũ |
-|---|---|---|
-| Phần đầu (nền xám nhạt) | Breadcrumb, nhãn trạng thái, **H1**, địa chỉ, ô Giá bán + Diện tích + Phòng ngủ + Pháp lý, nút "Nhận bảng giá & tài liệu", "Chat Zalo", nút lưu. Bên phải: thẻ tư vấn viên với nút gọi | Giữ bố cục, làm rõ giá và thông số, thêm nút hành động |
-| Thư viện ảnh | Ảnh lớn + dãy ảnh nhỏ, bấm để xem phóng to (dùng phím ← →) | Như cũ, thêm xem phóng to |
-| Thanh mục lục | Tự tạo từ các tiêu đề **H2** trong bài, dính dưới header khi cuộn, tự đánh dấu mục đang đọc | Mới |
-| Đặc điểm dự án | Bảng lấy từ các ô nhập, dòng trống tự ẩn | Như cũ, đổi sang màu mới |
-| Nội dung bài | Viết bằng trình soạn thảo như hiện nay. Mỗi phần lớn (Tổng quan, Mặt bằng, Vị trí, Tiện ích, Bảng giá…) nên đặt là **Tiêu đề H2** để lên thanh mục lục | Các thanh tiêu đề xanh lá đổi thành tiêu đề có vạch cam |
-| Bản đồ | Google Maps theo ô "Vị trí trên bản đồ" | Mới |
-| Nhận báo giá | Khối nền xanh đậm với form Contact Form 7 (chưa cài form thì hiện nút Zalo + Gọi) | Thay mục "Liên hệ tư vấn miễn phí 24/7" dạng chữ |
-| Cuối bài | Các mục Loại hình / Khu vực / Trạng thái dạng nút, nút chia sẻ của Flatsome | Như cũ |
-| Cột phải | Tin tức mới nhất, Loại hình dự án (kèm số dự án), hộp "Liên hệ tư vấn miễn phí" **dính theo khi cuộn** | Đổi "Chuyên mục" thành "Loại hình dự án" để dẫn về trang danh sách |
-| Dự án liên quan | 4 thẻ dự án cùng loại hình hoặc khu vực | Thay "Bài viết cùng chủ đề" bằng thẻ dự án giống trang chủ |
-| Mobile | Cột phải chuyển xuống dưới bài, hộp liên hệ dính ẩn đi. Thanh dưới đáy có 3 nút: Chat Zalo, Gọi, Báo giá | Mới |
+| Vùng | Nội dung |
+|---|---|
+| **Hero** | Ảnh đại diện làm nền, phủ lớp tối như hero trang chủ. Bên trái: breadcrumb, nhãn trạng thái, nút Loại hình, **H1**, địa chỉ, các nút "Nhận bảng giá", "Chat Zalo", "Xem N ảnh", nút lưu. Bên phải: khung kính mờ gồm **Giá bán** (chữ cam lớn), Diện tích, Phòng ngủ, Pháp lý, Bàn giao |
+| **Thanh mục lục** | Dính dưới header khi cuộn. Gồm "Tổng quan" và các tiêu đề **H2** trong bài (tự tạo), tự đánh dấu mục đang đọc. Bên phải có nút "Nhận báo giá" |
+| **Lưới ảnh** | Các ảnh trong "Thư viện ảnh" xếp kiểu khảm: 1 ảnh lớn + 4 ảnh nhỏ, ảnh cuối ghi "+N ảnh" nếu còn. Bấm để xem phóng to, chuyển ảnh bằng phím ← → |
+| **Tổng quan dự án** | Các ô có icon: Vị trí, Chủ đầu tư, Loại hình, Quy mô, Diện tích, Phòng ngủ, Pháp lý, Bàn giao. Ô trống tự ẩn |
+| **Nội dung bài** | Viết bằng trình soạn thảo. Mỗi phần lớn (Mặt bằng, Vị trí, Tiện ích, Bảng giá…) nên đặt là **Tiêu đề H2** để lên thanh mục lục |
+| **Bản đồ** | Google Maps theo ô "Vị trí trên bản đồ" |
+| **Cột phải: thẻ "Nhận báo giá"** | Dính theo khi cuộn. Gồm giá bán, form Contact Form 7 (chưa cài form thì hiện nút Zalo + Gọi), tư vấn viên, hotline |
+| **Dự án liên quan** | 4 thẻ dự án cùng loại hình hoặc khu vực |
+| **Mobile** | Lưới ảnh thành dãy vuốt ngang, thẻ báo giá chuyển xuống cuối bài. Thanh dưới đáy có 3 nút: Chat Zalo, Gọi, Báo giá |
 
-Một số phần của trang cũ mình **bỏ hoặc gộp**:
-- Mục "Xem thêm" (danh sách link): đã có khối Dự án liên quan.
-- Chuyên mục "Bán", "Dự án nổi bật" của bài viết: dự án giờ phân loại bằng Loại hình / Khu vực / Trạng thái và ô tick "Nổi bật".
+Trang không cần UX Builder: bố cục áp dụng tự động cho mọi dự án, người quản trị chỉ nhập thông tin và viết bài.
 
 **Cài đặt cho trang chi tiết** (Giao diện → Tuỳ biến → TOPBDS – Liên hệ):
 - Tên, ảnh và lời chào của tư vấn viên.

@@ -37,58 +37,41 @@
 	sync();
 })();
 
-/* Trang dự án: thư viện ảnh (đổi ảnh lớn + xem phóng to) và mục lục đánh dấu mục đang đọc. */
+/* Trang dự án: xem ảnh phóng to và mục lục đánh dấu mục đang đọc. */
 (function () {
-	var gallery = document.querySelector('[data-tp-gallery]');
 	var dialog = document.querySelector('[data-tp-lightbox]');
 
-	if (gallery) {
-		var main = gallery.querySelector('[data-tp-gallery-open]');
-		var mainImg = main.querySelector('img');
-		var thumbs = Array.prototype.slice.call(gallery.querySelectorAll('.tp-gallery__thumb'));
-		var urls = thumbs.length ? thumbs.map(function (t) { return t.getAttribute('data-full'); }) : [main.getAttribute('href')];
+	if (dialog && typeof dialog.showModal === 'function') {
+		var photos = JSON.parse(dialog.getAttribute('data-photos') || '[]');
+		var img = dialog.querySelector('img');
+		var count = dialog.querySelector('.tp-lightbox__count');
+		var title = (document.querySelector('h1') || {}).textContent || '';
 		var current = 0;
 
 		var show = function (i) {
-			current = i;
-			var thumb = thumbs[i];
-			if (thumb) {
-				mainImg.removeAttribute('srcset');
-				mainImg.src = thumb.getAttribute('data-src');
-				if (thumb.getAttribute('data-srcset')) mainImg.srcset = thumb.getAttribute('data-srcset');
-				main.href = urls[i];
-				thumbs.forEach(function (t) { t.classList.toggle('is-active', t === thumb); });
-			}
+			current = (i + photos.length) % photos.length;
+			img.src = photos[current];
+			img.alt = title.trim() + ' – ảnh ' + (current + 1);
+			count.textContent = (current + 1) + ' / ' + photos.length;
 		};
 
-		thumbs.forEach(function (thumb, i) {
-			thumb.addEventListener('click', function () { show(i); });
+		document.addEventListener('click', function (e) {
+			var opener = e.target.closest('[data-tp-photo-open]');
+			if (!opener || !photos.length) return;
+			e.preventDefault();
+			show(parseInt(opener.getAttribute('data-tp-photo-open'), 10) || 0);
+			dialog.showModal();
 		});
-
-		if (dialog && typeof dialog.showModal === 'function') {
-			var big = dialog.querySelector('img');
-			var open = function (i) {
-				current = (i + urls.length) % urls.length;
-				big.src = urls[current];
-				big.alt = mainImg.alt + ' – ảnh ' + (current + 1) + '/' + urls.length;
-			};
-			main.addEventListener('click', function (e) {
-				e.preventDefault();
-				open(current);
-				dialog.showModal();
-			});
-			dialog.addEventListener('click', function (e) {
-				var step = e.target.closest('[data-tp-lightbox-step]');
-				if (step) { open(current + parseInt(step.getAttribute('data-tp-lightbox-step'), 10)); return; }
-				if (e.target === dialog || e.target.closest('[data-tp-lightbox-close]')) dialog.close();
-			});
-			dialog.addEventListener('keydown', function (e) {
-				if (e.key === 'ArrowRight') open(current + 1);
-				if (e.key === 'ArrowLeft') open(current - 1);
-			});
-			dialog.addEventListener('close', function () { show(current); });
-			if (urls.length < 2) dialog.querySelectorAll('[data-tp-lightbox-step]').forEach(function (b) { b.hidden = true; });
-		}
+		dialog.addEventListener('click', function (e) {
+			var step = e.target.closest('[data-tp-lightbox-step]');
+			if (step) { show(current + parseInt(step.getAttribute('data-tp-lightbox-step'), 10)); return; }
+			if (e.target === dialog || e.target.closest('[data-tp-lightbox-close]')) dialog.close();
+		});
+		dialog.addEventListener('keydown', function (e) {
+			if (e.key === 'ArrowRight') show(current + 1);
+			if (e.key === 'ArrowLeft') show(current - 1);
+		});
+		if (photos.length < 2) dialog.querySelectorAll('[data-tp-lightbox-step]').forEach(function (b) { b.hidden = true; });
 	}
 
 	var toc = document.querySelector('[data-tp-toc]');

@@ -130,34 +130,65 @@ function tp_project_gallery_ids( $post_id ) {
 }
 
 /**
- * Thẻ tư vấn viên. Tên, ảnh, lời chào sửa tại Giao diện → Tuỳ biến → TOPBDS – Liên hệ.
+ * Thông số nổi bật hiện trong khung kính ở hero.
  *
- * @param bool $compact true: hộp "Liên hệ tư vấn miễn phí" ở cột phải.
+ * @return array[] Mỗi dòng: [icon, nhãn, giá trị].
  */
-function tp_agent_card( $compact = false ) {
+function tp_project_facts( $post_id ) {
+	$facts = array();
+	foreach ( array(
+		'tp_dien_tich' => array( 'area', 'Diện tích' ),
+		'tp_phong_ngu' => array( 'bed', 'Phòng ngủ' ),
+		'tp_phap_ly'   => array( 'file', 'Pháp lý' ),
+		'tp_ban_giao'  => array( 'key', 'Bàn giao' ),
+	) as $key => list( $icon, $label ) ) {
+		$value = get_post_meta( $post_id, $key, true );
+		if ( '' !== (string) $value ) {
+			$facts[] = array( $icon, $label, $value );
+		}
+	}
+	return $facts;
+}
+
+/**
+ * Thẻ "Nhận báo giá" ở cột phải: giá, form Contact Form 7 (hoặc nút Zalo/Gọi), tư vấn viên.
+ *
+ * Tên, ảnh, lời chào tư vấn viên và shortcode form sửa tại Giao diện → Tuỳ biến → TOPBDS – Liên hệ.
+ */
+function tp_quote_card( $post_id ) {
+	$price    = get_post_meta( $post_id, 'tp_gia', true );
+	$form     = get_theme_mod( 'tp_project_form', '' );
 	$name     = get_theme_mod( 'tp_agent_name', '' ) ?: 'Chuyên viên tư vấn TOPBDS';
 	$note     = get_theme_mod( 'tp_agent_note', 'Luôn sẵn sàng giải đáp mọi thắc mắc về dự án, hỗ trợ 24/7.' );
 	$photo_id = (int) get_theme_mod( 'tp_agent_photo', 0 );
-	$photo    = $photo_id ? wp_get_attachment_image( $photo_id, 'thumbnail', false, array( 'alt' => $name, 'class' => 'tp-agent__photo' ) ) : '<span class="tp-agent__photo tp-agent__photo--empty">' . tp_icon( 'headset', 26 ) . '</span>';
+	$photo    = $photo_id
+		? wp_get_attachment_image( $photo_id, 'thumbnail', false, array( 'alt' => $name, 'class' => 'tp-quote-card__photo' ) )
+		: '<span class="tp-quote-card__photo tp-quote-card__photo--empty">' . tp_icon( 'headset', 22 ) . '</span>';
 
-	if ( $compact ) {
-		return sprintf(
-			'<section class="tp-agent tp-agent--box"><h2 class="tp-agent__heading">Liên hệ tư vấn miễn phí</h2><div class="tp-agent__who">%1$s<p>%2$s</p></div><p class="tp-agent__hotline">Hotline: <a href="%3$s">%4$s</a></p><a class="tp-btn tp-btn--primary" href="#tp-lien-he">Đăng ký nhận liên hệ lại</a><a class="tp-btn tp-btn--soft" href="#tp-lien-he">%5$s<span>Nhận tài liệu dự án</span></a></section>',
-			$photo,
-			esc_html( $note ),
-			esc_attr( tp_hotline_href() ),
-			esc_html( tp_hotline() ),
-			tp_icon( 'download', 16 )
-		);
-	}
-
-	return sprintf(
-		'<aside class="tp-agent" aria-label="Tư vấn viên">%1$s<div class="tp-agent__info"><p class="tp-agent__name">%2$s</p><p class="tp-agent__note">%3$s</p></div><a class="tp-btn tp-btn--primary tp-agent__call" href="%4$s">%5$s<span>%6$s</span></a></aside>',
-		$photo,
-		esc_html( $name ),
-		esc_html( $note ),
-		esc_attr( tp_hotline_href() ),
-		tp_icon( 'phone', 16 ),
-		esc_html( tp_hotline() )
-	);
+	ob_start();
+	?>
+	<section class="tp-quote-card" id="tp-lien-he" aria-labelledby="tp-quote-title">
+		<?php if ( $price ) : ?>
+			<p class="tp-quote-card__price"><span>Giá bán</span><strong><?php echo esc_html( $price ); ?></strong></p>
+		<?php endif; ?>
+		<h2 class="tp-quote-card__title" id="tp-quote-title">Nhận bảng giá &amp; chính sách mới nhất</h2>
+		<p class="tp-quote-card__sub">Gửi bảng giá, mặt bằng và tài liệu dự án qua Zalo trong ít phút.</p>
+		<div class="tp-quote-card__form">
+			<?php
+			echo $form
+				? do_shortcode( $form )
+				: do_shortcode( '[tp_contact_buttons style="cta" call_text="Gọi ' . esc_attr( tp_hotline() ) . '"]' );
+			?>
+		</div>
+		<div class="tp-quote-card__agent">
+			<?php echo $photo; ?>
+			<div>
+				<p class="tp-quote-card__name"><?php echo esc_html( $name ); ?></p>
+				<p class="tp-quote-card__note"><?php echo esc_html( $note ); ?></p>
+			</div>
+		</div>
+		<a class="tp-quote-card__hotline" href="<?php echo esc_attr( tp_hotline_href() ); ?>"><?php echo tp_icon( 'phone', 16 ); ?><span><?php echo esc_html( tp_hotline() ); ?></span></a>
+	</section>
+	<?php
+	return ob_get_clean();
 }
