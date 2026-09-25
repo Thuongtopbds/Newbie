@@ -219,9 +219,7 @@ Child theme được chạy trên WordPress mới nhất (PHP 8.4) với dữ li
    - Ảnh đại diện từng dự án
    - Ảnh bài viết
 3. **Danh sách dự án thật:** giá, vị trí, sản phẩm, trạng thái, dự án nào nổi bật hoặc "Hot".
-4. **Trang chi tiết dự án:**
-   - Mỗi dự án dùng chung một tư vấn viên và một hotline (cài trong Tuỳ biến). Nếu mỗi dự án có tư vấn viên hoặc hotline riêng, mình sẽ thêm ô nhập trong trang sửa dự án.
-   - Các dự án cũ đang là **bài viết** (chuyên mục "Bán", "Chung cư"…) cần chuyển sang post type **Dự án**. Bạn có bao nhiêu dự án? Nếu nhiều, mình có thể viết công cụ chuyển tự động và giữ nguyên đường dẫn cũ (hoặc chuyển hướng 301) để không mất thứ hạng SEO.
+4. ~~Trang chi tiết dự án~~ — đã chốt: mọi dự án dùng chung tư vấn viên và hotline (cài trong Tuỳ biến); dự án sẽ được nhập mới, không chuyển dữ liệu từ site cũ.
 5. **Thông tin liên hệ:**
    - Hotline
    - Zalo: link Zalo OA hay số cá nhân?
