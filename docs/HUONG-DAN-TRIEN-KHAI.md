@@ -28,7 +28,8 @@ Các shortcode này đã được đưa vào UX Builder, nằm trong nhóm **TOP
 | 9 | CTA tư vấn | **UX Builder** (Row class `tp-cta`) + `[tp_contact_buttons style="cta"]` | Chữ sửa trong UX Builder. Số điện thoại và link Zalo lấy từ cài đặt chung. |
 | 10 | Footer | **UX Block** `footer.txt` + Contact Form 7 | Theme Options → Footer: chọn UX Block này. Dòng bản quyền đặt ở phần "Absolute Footer". |
 
-Phần bổ sung (không có trong mockup nhưng cần để web chạy đủ):
+Phần bổ sung (không có trong mockup trang chủ nhưng cần để web chạy đủ):
+- **Trang chi tiết dự án.** Làm hoàn toàn bằng code (xem mục 3). Người quản trị chỉ nhập dữ liệu và viết nội dung bài, không cần dựng lại bố cục cho từng dự án.
 
 - **Trang danh sách dự án.** `/du-an/`, `/loai-hinh/...`, `/khu-vuc/...`, `/trang-thai/...` và kết quả tìm kiếm dùng chung một template, có bộ lọc Từ khoá, Loại hình, Khu vực và phân trang.
 - **Thanh "Chat Zalo / Gọi" cố định ở cuối màn hình mobile.** Bật/tắt trong Tuỳ biến.
@@ -48,11 +49,16 @@ flatsome-child/
 │   ├── template-tags.php   HTML thẻ dự án, ô loại hình/khu vực, bộ icon SVG
 │   ├── shortcodes.php      các shortcode tp_*
 │   ├── ux-builder.php      đưa shortcode vào UX Builder (nhóm TOPBDS)
-│   └── search.php          dùng template danh sách dự án cho archive/taxonomy/tìm kiếm
+│   ├── search.php          dùng template danh sách dự án cho archive/taxonomy/tìm kiếm
+│   └── single.php          hàm cho trang chi tiết: bảng đặc điểm, mục lục, breadcrumb, dự án liên quan, thẻ tư vấn viên
+├── single-du_an.php        trang chi tiết dự án
 ├── templates/archive-du-an.php
 └── assets/
     ├── css/topbds.css      toàn bộ CSS riêng (màu chỉnh ở :root)
-    └── js/topbds.js        nút trái tim lưu dự án (lưu trong trình duyệt của khách)
+    └── js/
+        ├── topbds.js                  nút trái tim, thư viện ảnh + xem phóng to, mục lục đánh dấu mục đang đọc
+        ├── admin-project-gallery.js   chọn nhiều ảnh cho "Thư viện ảnh" trong trang sửa dự án
+        └── admin-term-image.js        chọn ảnh cho Loại hình / Khu vực
 ```
 
 Không cần cài ACF: các trường thông tin dùng meta box có sẵn của WordPress.
@@ -67,6 +73,9 @@ Không cần cài ACF: các trường thông tin dùng meta box có sẵn của 
 | Sản phẩm | như trên | Để trống thì lấy các Loại hình |
 | Nổi bật / Hot | 2 ô tick | Mục "Dự án nổi bật" / nhãn đỏ "Hot" |
 | Loại hình, Khu vực, Trạng thái | Hộp bên phải | Lọc, đếm số dự án, nhãn "Đang mở bán" |
+| Địa chỉ đầy đủ, Chủ đầu tư, Quy mô, Diện tích, Phòng ngủ, Pháp lý, Bàn giao | Nhóm "Trang chi tiết" | Bảng "Đặc điểm dự án". Diện tích, Phòng ngủ, Pháp lý còn hiện thành ô thông số dưới tiêu đề. Dòng nào để trống thì ẩn |
+| Thư viện ảnh | nút "Chọn ảnh" | Ảnh đại diện là ảnh đầu, các ảnh này là dãy ảnh nhỏ; bấm ảnh lớn để xem phóng to |
+| Vị trí trên bản đồ | ô chữ | Bản đồ Google ở cuối bài. Để trống thì ẩn |
 
 ### Tham số shortcode
 
@@ -83,7 +92,41 @@ Không cần cài ACF: các trường thông tin dùng meta box có sẵn của 
 
 ---
 
-## 3. Các bước triển khai
+## 3. Trang chi tiết dự án
+
+Bố cục dựa trên trang bạn đang dùng, đổi sang màu và kiểu thẻ của trang chủ mới. Ảnh chụp: `docs/preview/chi-tiet-du-an-*.jpg`.
+
+| Vùng | Nội dung | So với trang cũ |
+|---|---|---|
+| Phần đầu (nền xám nhạt) | Breadcrumb, nhãn trạng thái, **H1**, địa chỉ, ô Giá bán + Diện tích + Phòng ngủ + Pháp lý, nút "Nhận bảng giá & tài liệu", "Chat Zalo", nút lưu. Bên phải: thẻ tư vấn viên với nút gọi | Giữ bố cục, làm rõ giá và thông số, thêm nút hành động |
+| Thư viện ảnh | Ảnh lớn + dãy ảnh nhỏ, bấm để xem phóng to (dùng phím ← →) | Như cũ, thêm xem phóng to |
+| Thanh mục lục | Tự tạo từ các tiêu đề **H2** trong bài, dính dưới header khi cuộn, tự đánh dấu mục đang đọc | Mới |
+| Đặc điểm dự án | Bảng lấy từ các ô nhập, dòng trống tự ẩn | Như cũ, đổi sang màu mới |
+| Nội dung bài | Viết bằng trình soạn thảo như hiện nay. Mỗi phần lớn (Tổng quan, Mặt bằng, Vị trí, Tiện ích, Bảng giá…) nên đặt là **Tiêu đề H2** để lên thanh mục lục | Các thanh tiêu đề xanh lá đổi thành tiêu đề có vạch cam |
+| Bản đồ | Google Maps theo ô "Vị trí trên bản đồ" | Mới |
+| Nhận báo giá | Khối nền xanh đậm với form Contact Form 7 (chưa cài form thì hiện nút Zalo + Gọi) | Thay mục "Liên hệ tư vấn miễn phí 24/7" dạng chữ |
+| Cuối bài | Các mục Loại hình / Khu vực / Trạng thái dạng nút, nút chia sẻ của Flatsome | Như cũ |
+| Cột phải | Tin tức mới nhất, Loại hình dự án (kèm số dự án), hộp "Liên hệ tư vấn miễn phí" **dính theo khi cuộn** | Đổi "Chuyên mục" thành "Loại hình dự án" để dẫn về trang danh sách |
+| Dự án liên quan | 4 thẻ dự án cùng loại hình hoặc khu vực | Thay "Bài viết cùng chủ đề" bằng thẻ dự án giống trang chủ |
+| Mobile | Cột phải chuyển xuống dưới bài, hộp liên hệ dính ẩn đi. Thanh dưới đáy có 3 nút: Chat Zalo, Gọi, Báo giá | Mới |
+
+Một số phần của trang cũ mình **bỏ hoặc gộp**:
+- Mục "Xem thêm" (danh sách link): đã có khối Dự án liên quan.
+- Chuyên mục "Bán", "Dự án nổi bật" của bài viết: dự án giờ phân loại bằng Loại hình / Khu vực / Trạng thái và ô tick "Nổi bật".
+
+**Cài đặt cho trang chi tiết** (Giao diện → Tuỳ biến → TOPBDS – Liên hệ):
+- Tên, ảnh và lời chào của tư vấn viên.
+- **Form nhận báo giá:** tạo một form Contact Form 7 rồi dán shortcode của nó (VD: `[contact-form-7 id="123" title="Nhận báo giá"]`) vào ô này. Nội dung form gợi ý:
+  ```
+  [text* ho-ten placeholder "Họ và tên"]
+  [tel* so-dien-thoai placeholder "Số điện thoại"]
+  [submit "Nhận bảng giá ngay"]
+  ```
+  Trong tab **Mail** của form, thêm dòng `Dự án: [_post_title] – [_post_url]` để biết khách đăng ký từ dự án nào.
+
+---
+
+## 4. Các bước triển khai
 
 ### Bước 1 – Cài theme và plugin
 1. Cài theme gốc **Flatsome** (bản có bản quyền). Đưa thư mục `flatsome-child` vào `wp-content/themes/`, hoặc nén thành `.zip` rồi tải lên ở Giao diện → Giao diện → Thêm mới. Sau đó **kích hoạt TOPBDS Flatsome Child**.
@@ -154,11 +197,12 @@ Vào **Giao diện → Tuỳ biến → TOPBDS – Liên hệ**, nhập Hotline 
 
 ---
 
-## 4. Đã kiểm tra những gì
+## 5. Đã kiểm tra những gì
 
 Child theme được chạy trên WordPress mới nhất (PHP 8.4) với dữ liệu mẫu (12 dự án, 4 bài viết):
 
-- Trang chủ, `/du-an/`, trang Loại hình / Khu vực / Trạng thái và tìm kiếm (có từ khoá, có lọc, không có kết quả) đều hiển thị đúng, không có cảnh báo PHP.
+- Trang chủ, trang chi tiết dự án, `/du-an/`, trang Loại hình / Khu vực / Trạng thái và tìm kiếm (có từ khoá, có lọc, không có kết quả) đều hiển thị đúng, không có cảnh báo PHP.
+- Bản đồ Google không tải được trong môi trường chạy thử (bị chặn mạng) nên chưa xem được bản đồ thật.
 - Không có trang nào bị cuộn ngang ở màn hình máy tính 1440px và điện thoại 390px.
 - Lưu thông tin dự án, ảnh Loại hình và đăng ký 8 phần tử UX Builder đều hoạt động.
 
@@ -170,7 +214,7 @@ Child theme được chạy trên WordPress mới nhất (PHP 8.4) với dữ li
 
 ---
 
-## 5. Cần bạn cung cấp hoặc quyết định
+## 6. Cần bạn cung cấp hoặc quyết định
 
 1. **Logo:** SVG hoặc PNG nền trong, gồm bản màu và bản trắng (cho footer), cộng favicon.
 2. **Ảnh thật có bản quyền:**
@@ -179,7 +223,9 @@ Child theme được chạy trên WordPress mới nhất (PHP 8.4) với dữ li
    - Ảnh đại diện từng dự án
    - Ảnh bài viết
 3. **Danh sách dự án thật:** giá, vị trí, sản phẩm, trạng thái, dự án nào nổi bật hoặc "Hot".
-4. **Trang chi tiết dự án:** mockup chưa có trang này; hiện nút "Xem chi tiết" dùng bố cục bài viết mặc định của Flatsome. Bạn có muốn mình dựng trang này không? Nếu có, cần thêm các trường như diện tích, chủ đầu tư, pháp lý, tiến độ, bàn giao, thư viện ảnh, bản đồ, mặt bằng, bảng giá, form nhận báo giá.
+4. **Trang chi tiết dự án:**
+   - Mỗi dự án dùng chung một tư vấn viên và một hotline (cài trong Tuỳ biến). Nếu mỗi dự án có tư vấn viên hoặc hotline riêng, mình sẽ thêm ô nhập trong trang sửa dự án.
+   - Các dự án cũ đang là **bài viết** (chuyên mục "Bán", "Chung cư"…) cần chuyển sang post type **Dự án**. Bạn có bao nhiêu dự án? Nếu nhiều, mình có thể viết công cụ chuyển tự động và giữ nguyên đường dẫn cũ (hoặc chuyển hướng 301) để không mất thứ hạng SEO.
 5. **Thông tin liên hệ:**
    - Hotline
    - Zalo: link Zalo OA hay số cá nhân?
