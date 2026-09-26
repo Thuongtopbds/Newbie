@@ -8,7 +8,7 @@
 
 <p>TOPBDS.VN là cổng thông tin bất động sản uy tín, cập nhật nhanh chóng các dự án mới, quy hoạch, thị trường, pháp lý. Đồng hành cùng bạn trên hành trình tìm kiếm và đầu tư bất động sản bền vững.</p>
 
-[follow style="fill" facebook="https://facebook.com/..." youtube="https://youtube.com/..." tiktok="https://tiktok.com/@..."]
+[follow style="fill" facebook="https://web.facebook.com/TrangBatDongSanTiemNang" youtube="https://www.youtube.com/channel/UCGCs7JtrDkG3On2GQBGPGPw" tiktok="https://www.tiktok.com/@thuong.topbds"]
 
 [/col]
 [col span="2" span__sm="6"]
@@ -42,7 +42,7 @@
 <ul>
 <li>[tp_icon name="phone" size="15"] Hotline: <a href="tel:0977113009">0977 113 009</a></li>
 <li>[tp_icon name="chat" size="15"] Zalo: <a href="https://zalo.me/0977113009">0977 113 009</a></li>
-<li>[tp_icon name="mail" size="15"] <a href="mailto:info@topbds.vn">info@topbds.vn</a></li>
+<li>[tp_icon name="mail" size="15"] <a href="mailto:topbds.info@gmail.com">topbds.info@gmail.com</a></li>
 <li>85 Vũ Trọng Phụng, P. Thanh Xuân, Hà Nội</li>
 </ul>
 

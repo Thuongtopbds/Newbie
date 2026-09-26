@@ -61,7 +61,6 @@ while ( have_posts() ) :
 						<?php if ( $tp_photos ) : ?>
 							<button type="button" class="tp-btn tp-btn--glass" data-tp-photo-open="0"><?php echo tp_icon( 'grid', 16 ); ?><span>Xem <?php echo esc_html( count( $tp_photos ) ); ?> ảnh</span></button>
 						<?php endif; ?>
-						<button type="button" class="tp-fav tp-fav--hero" data-tp-fav="<?php echo (int) $tp_id; ?>" aria-pressed="false" aria-label="Lưu dự án"><?php echo tp_icon( 'heart', 18 ); ?></button>
 					</div>
 				</div>
 

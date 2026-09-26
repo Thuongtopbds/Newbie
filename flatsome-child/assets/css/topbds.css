@@ -55,8 +55,7 @@
 .tp-btn--outline:hover { background: rgba(255, 255, 255, .12); }
 .tp-btn:focus-visible,
 .tp-card a:focus-visible,
-.tp-tile:focus-visible,
-.tp-fav:focus-visible { outline: 2px solid var(--tp-primary); outline-offset: 2px; }
+.tp-tile:focus-visible { outline: 2px solid var(--tp-primary); outline-offset: 2px; }
 
 .tp-contact { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 .tp-contact--header .tp-btn { min-height: 38px; padding: 0 16px; font-size: 14px; }
@@ -153,28 +152,6 @@
 }
 .tp-badge--hot { background: #e5383b; }
 
-.tp-fav {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	z-index: 1;
-	display: grid;
-	place-items: center;
-	width: 34px;
-	height: 34px;
-	min-height: 0;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	border-radius: 50%;
-	background: rgba(255, 255, 255, .92);
-	color: var(--tp-muted);
-	cursor: pointer;
-	transition: color .2s, transform .2s;
-}
-.tp-fav:hover { color: #e5383b; transform: scale(1.08); }
-.tp-fav[aria-pressed="true"] { color: #e5383b; }
-.tp-fav[aria-pressed="true"] svg { fill: currentColor; }
 
 .tp-card__body { display: flex; flex: 1; flex-direction: column; gap: 6px; padding: 14px 16px 16px; }
 .tp-card__body > .tp-card__row:last-of-type { margin-bottom: 10px; }
@@ -487,8 +464,6 @@
 .tp-phero__actions .tp-btn--outline { color: #fff; border-color: rgba(255, 255, 255, .75); }
 .tp-btn--glass { margin: 0; border: 1px solid rgba(255, 255, 255, .3); background: rgba(255, 255, 255, .14); color: #fff; text-transform: none; letter-spacing: 0; cursor: pointer; backdrop-filter: blur(6px); }
 .tp-btn--glass:hover { background: rgba(255, 255, 255, .24); color: #fff; }
-.tp-fav.tp-fav--hero { position: static; width: 44px; height: 44px; background: rgba(255, 255, 255, .14); color: #fff; backdrop-filter: blur(6px); }
-.tp-fav.tp-fav--hero:hover, .tp-fav.tp-fav--hero[aria-pressed="true"] { color: #ff6b6e; }
 
 .tp-phero__facts { display: flex; flex-direction: column; gap: 16px; margin: 0; padding: 22px; border: 1px solid rgba(255, 255, 255, .22); border-radius: var(--tp-radius-lg); background: rgba(15, 30, 51, .6); backdrop-filter: blur(10px); }
 .tp-phero__fact { display: grid; grid-template-columns: 46px minmax(0, 1fr); column-gap: 14px; align-items: center; margin: 0; }

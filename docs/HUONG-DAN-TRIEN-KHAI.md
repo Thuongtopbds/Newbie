@@ -56,7 +56,7 @@ flatsome-child/
 └── assets/
     ├── css/topbds.css      toàn bộ CSS riêng (màu chỉnh ở :root)
     └── js/
-        ├── topbds.js                  nút trái tim, thư viện ảnh + xem phóng to, mục lục đánh dấu mục đang đọc
+        ├── topbds.js                  trang dự án: xem ảnh phóng to, mục lục đánh dấu mục đang đọc
         ├── admin-project-gallery.js   chọn nhiều ảnh cho "Thư viện ảnh" trong trang sửa dự án
         └── admin-term-image.js        chọn ảnh cho Loại hình / Khu vực
 ```
@@ -99,7 +99,7 @@ Trang được thiết kế theo cùng phong cách với trang chủ: hero ảnh
 
 | Vùng | Nội dung |
 |---|---|
-| **Hero** | Ảnh đại diện làm nền, phủ lớp tối như hero trang chủ. Bên trái: breadcrumb, nhãn trạng thái, nút Loại hình, **H1**, địa chỉ, các nút "Nhận bảng giá", "Chat Zalo", "Xem N ảnh", nút lưu. Bên phải: khung kính mờ gồm **Giá bán** (chữ cam lớn), Diện tích, Phòng ngủ, Pháp lý, Bàn giao |
+| **Hero** | Ảnh đại diện làm nền, phủ lớp tối như hero trang chủ. Bên trái: breadcrumb, nhãn trạng thái, nút Loại hình, **H1**, địa chỉ, các nút "Nhận bảng giá", "Chat Zalo", "Xem N ảnh". Bên phải: khung kính mờ gồm **Giá bán** (chữ cam lớn), Diện tích, Phòng ngủ, Pháp lý, Bàn giao |
 | **Thanh mục lục** | Dính dưới header khi cuộn. Gồm "Tổng quan" và các tiêu đề **H2** trong bài (tự tạo), tự đánh dấu mục đang đọc. Bên phải có nút "Nhận báo giá" |
 | **Lưới ảnh** | Các ảnh trong "Thư viện ảnh" xếp kiểu khảm: 1 ảnh lớn + 4 ảnh nhỏ, ảnh cuối ghi "+N ảnh" nếu còn. Bấm để xem phóng to, chuyển ảnh bằng phím ← → |
 | **Tổng quan dự án** | Các ô có icon: Vị trí, Chủ đầu tư, Loại hình, Quy mô, Diện tích, Phòng ngủ, Pháp lý, Bàn giao. Ô trống tự ẩn |
@@ -119,7 +119,7 @@ Trang không cần UX Builder: bố cục áp dụng tự động cho mọi dự
   [tel* so-dien-thoai placeholder "Số điện thoại"]
   [submit "Nhận bảng giá ngay"]
   ```
-  Trong tab **Mail** của form, thêm dòng `Dự án: [_post_title] – [_post_url]` để biết khách đăng ký từ dự án nào.
+  Trong tab **Mail** của form: **To** là `thuongdkdx@gmail.com`, và thêm dòng `Dự án: [_post_title] – [_post_url]` để biết khách đăng ký từ dự án nào.
 
 ---
 
@@ -187,6 +187,12 @@ Vào **Giao diện → Tuỳ biến → TOPBDS – Liên hệ**, nhập Hotline 
    [email* email-dang-ky placeholder "Nhập email của bạn"]
    [submit "Đăng ký"]
    ```
+   Tab **Mail** của form:
+   - **To:** `thuongdkdx@gmail.com`
+   - **Subject:** `[TOPBDS] Đăng ký nhận tin: [email-dang-ky]`
+   - **Message body:** `Email đăng ký: [email-dang-ky]` và dòng `Gửi từ trang: [_url]`.
+   - Không cần nối Google Sheet hay CRM.
+   - Để thư không rơi vào mục Spam, cài plugin gửi mail qua SMTP (VD: **WP Mail SMTP**) và dùng một địa chỉ Gmail làm người gửi.
 4. **Mega menu cho mục "Dự án":**
    - Vào **UX Blocks → Thêm mới**, đặt tên "Mega menu Dự án", dán `docs/ux-builder/mega-menu.txt` rồi lưu.
    - Bảng gồm 4 cột: **Loại hình**, **Khu vực** (6 tỉnh/thành nhiều dự án nhất), **Trạng thái**, và thẻ **1 dự án nổi bật**.
@@ -241,13 +247,13 @@ Child theme được chạy trên WordPress mới nhất (PHP 8.4) với dữ li
    - Ảnh bài viết
 3. **Danh sách dự án thật:** giá, vị trí, sản phẩm, trạng thái, dự án nào nổi bật hoặc "Hot".
 4. ~~Trang chi tiết dự án~~ — đã chốt: mọi dự án dùng chung tư vấn viên và hotline (cài trong Tuỳ biến); dự án sẽ được nhập mới, không chuyển dữ liệu từ site cũ.
-5. **Thông tin liên hệ:**
-   - Hotline
-   - Zalo: link Zalo OA hay số cá nhân?
-   - Email, địa chỉ
-   - Link Facebook, YouTube, TikTok
-6. **Form đăng ký nhận tin:** gửi về email nào? Có cần đẩy sang Google Sheet hoặc CRM không?
+5. ~~Thông tin liên hệ~~ — đã nhận, đã điền vào `footer.txt`:
+   - Hotline: 0977 113 009 · Zalo (số cá nhân): https://zalo.me/0977113009
+   - Email: topbds.info@gmail.com
+   - Facebook, YouTube, TikTok: đã điền vào phần tử Follow trong footer.
+   - **Địa chỉ:** footer đang ghi "85 Vũ Trọng Phụng, P. Thanh Xuân, Hà Nội" (lấy từ site cũ). Bạn xác nhận giữ hay bỏ dòng này.
+6. ~~Form đăng ký nhận tin~~ — gửi về thuongdkdx@gmail.com (xem Bước 5).
 7. **Menu chính thức:** các mục con của "Giới thiệu", "Liên hệ". Mega menu: đã chốt dùng cho mục "Dự án" (xem Bước 5).
-8. **Nút trái tim trên thẻ dự án:** hiện chỉ lưu trong trình duyệt của khách, chưa có trang "Dự án đã lưu". Giữ, làm thêm trang đó, hay bỏ?
-9. **Nội dung cam kết trong hero** ("Hỗ trợ 24/7"…) có đúng với dịch vụ thực tế không?
+8. ~~Nút trái tim~~ — đã bỏ cùng trang "Dự án đã lưu".
+9. ~~Cam kết trong hero~~ — giữ "Hỗ trợ 24/7".
 10. **Kỹ thuật:** hosting (có phải LiteSpeed không), tên miền. Phiên bản Flatsome: 3.20.11.

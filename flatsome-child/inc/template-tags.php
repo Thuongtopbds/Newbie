@@ -16,7 +16,6 @@ function tp_icon( $name, $size = 18 ) {
 		'building' => '<path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4M10 10h4M10 14h4M10 18h4"/>',
 		'grid'     => '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/>',
 		'arrow'    => '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
-		'heart'    => '<path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/>',
 		'phone'    => '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/>',
 		'chat'     => '<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01M12 12h.01M16 12h.01"/>',
 		'shield'   => '<path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1Z"/><path d="m9 12 2 2 4-4"/>',
@@ -98,9 +97,6 @@ function tp_project_card( $post_id, $args = array() ) {
 			<?php echo tp_post_image( $post_id, 'tp-card' ); ?>
 		</a>
 		<?php if ( $args['badge'] ) { echo tp_project_badge( $post_id ); } ?>
-		<button type="button" class="tp-fav" data-tp-fav="<?php echo (int) $post_id; ?>" aria-pressed="false" aria-label="Lưu dự án <?php echo esc_attr( $title ); ?>">
-			<?php echo tp_icon( 'heart', 16 ); ?>
-		</button>
 		<div class="tp-card__body">
 			<<?php echo $tag; ?> class="tp-card__title">
 				<a href="<?php echo esc_url( $link ); ?>"><?php echo esc_html( $title ); ?></a>
