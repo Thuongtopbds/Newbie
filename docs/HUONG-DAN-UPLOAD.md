@@ -92,6 +92,8 @@ WordPress → **Cài đặt → Đọc** → tick **"Ngăn chặn các công c�
 | **WP Mail SMTP** | Gửi mail form không bị vào Spam |
 | **Safe SVG** *(tuỳ chọn)* | Cho phép tải logo dạng SVG |
 
+> Flatsome sẽ hiện thông báo gợi ý cài **Nextend Social Login, WooCommerce, YITH WooCommerce Wishlist**. **Không cần cài**: đây là gợi ý chung cho web bán hàng. Web TOPBDS không có giỏ hàng, không có đăng nhập cho khách. Bấm **Dismiss this notice** để ẩn thông báo.
+
 ---
 
 ## Bước 6 – Làm tiếp phần nội dung
