@@ -126,6 +126,8 @@ Trang không cần UX Builder: bố cục áp dụng tự động cho mọi dự
 ## 4. Các bước triển khai
 
 ### Bước 1 – Cài theme và plugin
+
+> **Phiên bản Flatsome:** bạn đang dùng 3.20.9. Nên cập nhật lên **3.20.11** (phát hành 22/09/2026) vì bản này vá một lỗ hổng bảo mật XSS trong các hiệu ứng countdown, scroll-to, lightbox, tooltip. Child theme không phụ thuộc vào bản vá này nên cập nhật không ảnh hưởng gì.
 1. Cài theme gốc **Flatsome** (bản có bản quyền). Đưa thư mục `flatsome-child` vào `wp-content/themes/`, hoặc nén thành `.zip` rồi tải lên ở Giao diện → Giao diện → Thêm mới. Sau đó **kích hoạt TOPBDS Flatsome Child**.
 2. Cài các plugin: **Rank Math SEO**, **LiteSpeed Cache**, **Contact Form 7**.
 3. Vào **Cài đặt → Đường dẫn tĩnh**, chọn "Tên bài viết" rồi bấm **Lưu**, để các đường dẫn `/du-an/`, `/loai-hinh/`… hoạt động.
@@ -177,7 +179,10 @@ Vào **Giao diện → Tuỳ biến → TOPBDS – Liên hệ**, nhập Hotline 
    - Vào **UX Blocks → Thêm mới**, đặt tên "Mega menu Dự án", dán `docs/ux-builder/mega-menu.txt` rồi lưu.
    - Bảng gồm 4 cột: **Loại hình**, **Khu vực** (6 tỉnh/thành nhiều dự án nhất), **Trạng thái**, và thẻ **1 dự án nổi bật**.
    - Các link và số dự án tự cập nhật; mục chưa có dự án nào tự ẩn. Không cần sửa block khi thêm dự án hay loại hình mới.
-   - Vào **Giao diện → Menu**, mở mục "Dự án" trong menu chính. Ở phần cài đặt Flatsome của mục menu, chọn block "Mega menu Dự án" làm nội dung dropdown, và chọn độ rộng dropdown theo container (tên tuỳ chọn có thể hơi khác tuỳ phiên bản Flatsome).
+   - Vào **Giao diện → Menu**, mở mục "Dự án" trong menu chính. Trong phần cài đặt Flatsome của mục menu:
+     - **Design:** chọn **Container width** (dropdown rộng bằng khung nội dung; từ Flatsome 3.15.4 trở lên độ rộng được tự đặt).
+     - **UX Block:** chọn block "Mega menu Dự án".
+     - Kiểu mở: **Hover** (rê chuột) hoặc **Click**. Nên chọn Hover trên máy tính.
    - Mục "Dự án" không cần menu con. Các mục khác (Tin tức, Giới thiệu…) vẫn dùng menu con bình thường.
    - Trên điện thoại, Flatsome dùng menu trượt riêng, có thể không hiện đầy đủ block mega menu. Hãy mở thử trên điện thoại. Nếu thiếu, tạo một menu riêng cho điện thoại (mục "Dự án" có menu con: Căn hộ, Biệt thự, Liền kề, Hà Nội…) rồi gán vào vị trí menu mobile trong **Giao diện → Menu → Quản lý vị trí**.
 
@@ -206,7 +211,7 @@ Child theme được chạy trên WordPress mới nhất (PHP 8.4) với dữ li
 - Không có trang nào bị cuộn ngang ở màn hình máy tính 1440px và điện thoại 390px.
 - Lưu thông tin dự án, ảnh Loại hình và đăng ký 8 phần tử UX Builder đều hoạt động.
 
-**Chưa kiểm tra được với Flatsome thật** vì đây là theme trả phí. Bản chạy thử dùng một theme giả lập các phần tử Section/Row/Col của Flatsome. Khi cài lên site thật, cần xem lại:
+**Chưa kiểm tra được với Flatsome thật** (bạn dùng 3.20.9) vì đây là theme trả phí. Bản chạy thử dùng một theme giả lập các phần tử Section/Row/Col của Flatsome. Khi cài lên site thật, cần xem lại:
 - Header trong suốt và nút ở header
 - Tên các tuỳ chọn trong Theme Options (có thể khác chút tuỳ phiên bản)
 - Tuỳ chọn Block cho menu
@@ -233,4 +238,4 @@ Child theme được chạy trên WordPress mới nhất (PHP 8.4) với dữ li
 7. **Menu chính thức:** các mục con của "Giới thiệu", "Liên hệ". Mega menu: đã chốt dùng cho mục "Dự án" (xem Bước 5).
 8. **Nút trái tim trên thẻ dự án:** hiện chỉ lưu trong trình duyệt của khách, chưa có trang "Dự án đã lưu". Giữ, làm thêm trang đó, hay bỏ?
 9. **Nội dung cam kết trong hero** ("Hỗ trợ 24/7"…) có đúng với dịch vụ thực tế không?
-10. **Kỹ thuật:** phiên bản Flatsome đang dùng, hosting (có phải LiteSpeed không), tên miền.
+10. **Kỹ thuật:** hosting (có phải LiteSpeed không), tên miền. Phiên bản Flatsome: đã biết là 3.20.9 (nên cập nhật 3.20.11).
