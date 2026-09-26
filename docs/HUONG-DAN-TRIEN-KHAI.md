@@ -251,7 +251,7 @@ Child theme được chạy trên WordPress mới nhất (PHP 8.4) với dữ li
    - Hotline: 0977 113 009 · Zalo (số cá nhân): https://zalo.me/0977113009
    - Email: topbds.info@gmail.com
    - Facebook, YouTube, TikTok: đã điền vào phần tử Follow trong footer.
-   - **Địa chỉ:** footer đang ghi "85 Vũ Trọng Phụng, P. Thanh Xuân, Hà Nội" (lấy từ site cũ). Bạn xác nhận giữ hay bỏ dòng này.
+   - Địa chỉ: 85 Vũ Trọng Phụng, P. Thanh Xuân, Hà Nội (đã xác nhận).
 6. ~~Form đăng ký nhận tin~~ — gửi về thuongdkdx@gmail.com (xem Bước 5).
 7. **Menu chính thức:** các mục con của "Giới thiệu", "Liên hệ". Mega menu: đã chốt dùng cho mục "Dự án" (xem Bước 5).
 8. ~~Nút trái tim~~ — đã bỏ cùng trang "Dự án đã lưu".
