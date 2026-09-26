@@ -240,7 +240,7 @@ Child theme được chạy trên WordPress mới nhất (PHP 8.4) với dữ li
 ## 6. Cần bạn cung cấp hoặc quyết định
 
 1. ~~Logo, favicon~~ — đã nhận (thư mục `brand/`).
-2. **Ảnh thật có bản quyền:**
+2. **Ảnh thật có bản quyền** (kích thước: xem `docs/HUONG-DAN-ANH.md`):
    - ~~Ảnh hero~~ — đã nhận (`brand/hero-trang-chu.*`)
    - Ảnh cho từng Loại hình và Khu vực
    - Ảnh đại diện từng dự án

@@ -6,6 +6,7 @@ Website bất động sản TOPBDS trên WordPress + Flatsome.
 |---|---|
 | `flatsome-child/` | Child theme Flatsome: post type Dự án, shortcode/phần tử UX Builder cho trang chủ, CSS/JS riêng |
 | `docs/HUONG-DAN-TRIEN-KHAI.md` | Hướng dẫn triển khai: phần nào làm bằng UX Blocks, phần nào code riêng, các bước cài đặt, danh sách thông tin cần bổ sung |
+| `docs/HUONG-DAN-ANH.md` | Bảng kích thước ảnh cần tải lên (hero, dự án, loại hình, khu vực, tin tức…) |
 | `docs/ux-builder/` | Nội dung dán vào UX Builder: trang chủ, footer, mega menu |
 | `docs/preview/` | Ảnh chụp bản chạy thử |
 | `brand/` | Logo (bản màu, bản trắng), favicon, ảnh hero |
