@@ -38,7 +38,7 @@ while ( have_posts() ) :
 
 		<section class="tp-phero">
 			<?php if ( has_post_thumbnail() ) : ?>
-				<div class="tp-phero__bg"><?php the_post_thumbnail( 'full', array( 'alt' => '', 'fetchpriority' => 'high', 'loading' => 'eager', 'sizes' => '100vw' ) ); ?></div>
+				<div class="tp-phero__bg"><?php the_post_thumbnail( 'full', array( 'alt' => '', 'class' => 'tp-no-lazy', 'data-no-lazy' => '1', 'fetchpriority' => 'high', 'loading' => 'eager', 'sizes' => '100vw' ) ); ?></div>
 			<?php endif; ?>
 			<div class="container tp-phero__inner">
 				<div class="tp-phero__main">

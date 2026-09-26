@@ -129,7 +129,8 @@ Trang không cần UX Builder: bố cục áp dụng tự động cho mọi dự
 
 > **Phiên bản Flatsome:** dùng **3.20.11** (bản vá bảo mật XSS so với 3.20.9). Trước khi cập nhật theme gốc trên site đang chạy, hãy sao lưu site. Child theme không cần sửa khi cập nhật trong dòng 3.20.
 1. Cài theme gốc **Flatsome** (bản có bản quyền). Đưa thư mục `flatsome-child` vào `wp-content/themes/`, hoặc nén thành `.zip` rồi tải lên ở Giao diện → Giao diện → Thêm mới. Sau đó **kích hoạt TOPBDS Flatsome Child**.
-2. Cài các plugin: **Rank Math SEO**, **LiteSpeed Cache**, **Contact Form 7**.
+2. Cài các plugin: **Rank Math SEO**, **LiteSpeed Cache**, **Contact Form 7**, **WP Mail SMTP**.
+   - Tên miền: **https://nhadep.click**. Bật SSL (Let's Encrypt) trong trang quản lý hosting, rồi vào **Cài đặt → Tổng quan** đặt cả hai ô "Địa chỉ WordPress" và "Địa chỉ trang web" là `https://nhadep.click`.
 3. Vào **Cài đặt → Đường dẫn tĩnh**, chọn "Tên bài viết" rồi bấm **Lưu**, để các đường dẫn `/du-an/`, `/loai-hinh/`… hoạt động.
 
 Khi kích hoạt, theme tự tạo sẵn các mục sau:
@@ -215,7 +216,24 @@ Vào **Giao diện → Tuỳ biến → TOPBDS – Liên hệ**, nhập Hotline 
   - Đặt schema cho Dự án (gợi ý: Product hoặc Place).
   - Bật Breadcrumbs.
 - **Liên kết nội bộ:** các nút loại hình, ô khu vực và "Xem tất cả" đều trỏ tới trang danh sách tương ứng.
-- **LiteSpeed Cache:** bật cache trang, chuyển ảnh sang WebP, bật lazy-load ảnh. Loại trừ ảnh hero khỏi lazy-load vì đây là ảnh lớn nhất màn hình đầu.
+- **LiteSpeed Cache:** cài đặt chi tiết ở mục ngay dưới.
+
+### Bước 7 – Cài đặt LiteSpeed Cache (hosting LiteSpeed)
+
+Hosting chạy LiteSpeed nên plugin LiteSpeed Cache dùng được cache ở cấp máy chủ, nhanh hơn các plugin cache khác. Các cài đặt dưới đây là mức **an toàn với Flatsome và UX Builder**; bật thêm tuỳ chọn nào thì mở thử trang chủ và trang dự án trước khi giữ lại.
+
+| Mục (LiteSpeed Cache → …) | Cài đặt | Ghi chú |
+|---|---|---|
+| **Cache → Cache** | Bật *Enable Cache*, *Cache Mobile* | Người đã đăng nhập (admin) không bị cache, nên UX Builder vẫn hoạt động bình thường |
+| **Cache → Purge** | Bật *Purge All On Upgrade* | Tự xoá cache khi cập nhật theme/plugin |
+| **Page Optimization → CSS Settings** | *CSS Minify*: Bật · *CSS Combine*: **Tắt** · *Generate UCSS*: **Tắt** | Gộp CSS và UCSS hay làm vỡ giao diện Flatsome |
+| **Page Optimization → JS Settings** | *JS Minify*: Bật · *JS Combine*: **Tắt** · *Load JS Deferred*: **Deferred** (không chọn *Delayed*) | *Delayed* làm menu, mega menu và ô tìm kiếm chỉ chạy sau khi khách rê chuột |
+| **Page Optimization → Media Settings** | *Lazy Load Images*: Bật | |
+| **Page Optimization → Media Excludes** | *Lazy Load Image Excludes*: `hero-trang-chu` · *Lazy Load Image Class Name Excludes*: `tp-no-lazy` | Không lazy-load ảnh hero (trang chủ và trang dự án): đây là ảnh lớn nhất màn hình đầu, lazy-load sẽ làm điểm tốc độ (LCP) kém đi |
+| **Image Optimization** | Bấm *Send Optimization Request* · bật *Create WebP Versions* và *Image WebP Replacement* | Tự tạo bản WebP nhẹ hơn cho toàn bộ ảnh |
+| **Cache → Object** | Bật nếu hosting có Redis/Memcached | Hỏi nhà cung cấp hosting; không có thì để tắt |
+
+Sau mỗi lần sửa CSS, đổi cài đặt trong Tuỳ biến hay sửa UX Block (header, footer, mega menu): bấm **LiteSpeed Cache → Toolbox → Purge All** để khách thấy bản mới.
 - Ảnh trong thẻ dự án đã có sẵn kích thước cắt riêng (`tp-card`, `tp-tile`, `tp-news`, `tp-thumb`). Với ảnh tải lên từ trước khi cài theme, chạy plugin **Regenerate Thumbnails** một lần.
 
 ---
@@ -256,4 +274,4 @@ Child theme được chạy trên WordPress mới nhất (PHP 8.4) với dữ li
 7. **Menu chính thức:** các mục con của "Giới thiệu", "Liên hệ". Mega menu: đã chốt dùng cho mục "Dự án" (xem Bước 5).
 8. ~~Nút trái tim~~ — đã bỏ cùng trang "Dự án đã lưu".
 9. ~~Cam kết trong hero~~ — giữ "Hỗ trợ 24/7".
-10. **Kỹ thuật:** hosting (có phải LiteSpeed không), tên miền. Phiên bản Flatsome: 3.20.11.
+10. ~~Kỹ thuật~~ — hosting LiteSpeed (xem Bước 7), tên miền `nhadep.click`, Flatsome 3.20.11.
