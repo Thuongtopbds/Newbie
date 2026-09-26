@@ -137,8 +137,20 @@ Khi kích hoạt, theme tự tạo sẵn các mục sau:
 - Khu vực: Hà Nội, TP. Hồ Chí Minh, Hải Phòng, Hưng Yên, Bắc Ninh
 - Trạng thái: Đang mở bán, Sắp mở bán, Đã bàn giao
 
+### Bước 1b – Logo, favicon, ảnh hero (thư mục `brand/`)
+
+| File | Dùng ở đâu |
+|---|---|
+| `logo-topbds.svg` / `.png` | Logo **màu** (chữ xanh đậm) cho header nền trắng: Theme Options → Header → Logo & Site Identity → **Logo image** |
+| `logo-topbds-trang.svg` / `.png` | Logo **trắng** cho nền tối: ô **Light logo** (header trong suốt ở trang chủ) và ảnh logo trong footer (thay `ID_LOGO_TRANG` trong `footer.txt`) |
+| `icon-topbds.svg`, `icon-topbds-512.png` | Favicon: **Giao diện → Tuỳ biến → Thông tin website → Biểu tượng trang web**, tải `icon-topbds-512.png` |
+| `hero-trang-chu.webp` (hoặc `.jpg`) | Ảnh nền hero trang chủ: tải vào Thư viện rồi chọn cho Section "Hero" |
+
+- WordPress **không cho tải file SVG** theo mặc định. Muốn dùng bản SVG (nét hơn), cài plugin **Safe SVG**; nếu không, dùng bản PNG (đã xuất gấp đôi kích thước để hiển thị nét trên màn hình độ phân giải cao).
+- Chiều rộng logo trong header nên đặt khoảng 190px (Theme Options → Header → Logo & Site Identity → Logo container width).
+
 ### Bước 2 – Flatsome Theme Options
-- **Style → Colors:** Primary `#F26B21`, Secondary `#0F1E33`.
+- **Style → Colors:** Primary `#F47521` (cam của logo), Secondary `#0F1E33`.
 - **Style → Typography:** font **Be Vietnam Pro** cho cả tiêu đề lẫn nội dung (đủ dấu tiếng Việt). Cỡ chữ nội dung 15px.
 - **Layout:** độ rộng container 1200px.
 - **Header:**
@@ -221,9 +233,9 @@ Child theme được chạy trên WordPress mới nhất (PHP 8.4) với dữ li
 
 ## 6. Cần bạn cung cấp hoặc quyết định
 
-1. **Logo:** SVG hoặc PNG nền trong, gồm bản màu và bản trắng (cho footer), cộng favicon.
+1. ~~Logo, favicon~~ — đã nhận (thư mục `brand/`).
 2. **Ảnh thật có bản quyền:**
-   - Ảnh hero, ngang ≥ 1920px
+   - ~~Ảnh hero~~ — đã nhận (`brand/hero-trang-chu.*`)
    - Ảnh cho từng Loại hình và Khu vực
    - Ảnh đại diện từng dự án
    - Ảnh bài viết

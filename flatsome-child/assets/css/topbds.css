@@ -6,8 +6,8 @@
    ========================================================================== */
 
 :root {
-	--tp-primary: #f26b21;
-	--tp-primary-dark: #d9570f;
+	--tp-primary: #f47521; /* cam của logo */
+	--tp-primary-dark: #d95f12;
 	--tp-primary-soft: #fff1e8;
 	--tp-navy: #0f1e33;
 	--tp-navy-2: #16294a;
@@ -309,7 +309,7 @@
 	font-size: 15px;
 }
 .tp-search input[type="search"]:focus { box-shadow: none; outline: none; }
-.tp-search:focus-within { box-shadow: 0 0 0 3px rgba(242, 107, 33, .45), 0 10px 30px rgba(0, 0, 0, .25); }
+.tp-search:focus-within { box-shadow: 0 0 0 3px rgba(244, 117, 33, .45), 0 10px 30px rgba(0, 0, 0, .25); }
 .tp-search button {
 	display: inline-flex;
 	align-items: center;
@@ -539,7 +539,7 @@
 /* Tổng quan dự án: ô icon */
 .tp-specgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0; }
 .tp-specgrid__item { display: flex; align-items: center; gap: 14px; margin: 0; padding: 14px 16px; border: 1px solid var(--tp-line); border-radius: var(--tp-radius); background: #fff; transition: border-color .2s, box-shadow .2s; }
-.tp-specgrid__item:hover { border-color: rgba(242, 107, 33, .45); box-shadow: var(--tp-shadow); }
+.tp-specgrid__item:hover { border-color: rgba(244, 117, 33, .45); box-shadow: var(--tp-shadow); }
 .tp-specgrid__icon { display: grid; flex: none; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--tp-primary-soft); color: var(--tp-primary); }
 .tp-specgrid dt { margin: 0 0 2px; color: var(--tp-muted); font-size: 13px; font-weight: 500; }
 .tp-specgrid dd { margin: 0; color: var(--tp-ink); font-size: 15px; font-weight: 700; line-height: 1.4; }
