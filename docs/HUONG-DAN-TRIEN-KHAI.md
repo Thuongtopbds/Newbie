@@ -130,7 +130,8 @@ Trang không cần UX Builder: bố cục áp dụng tự động cho mọi dự
 > **Phiên bản Flatsome:** dùng **3.20.11** (bản vá bảo mật XSS so với 3.20.9). Trước khi cập nhật theme gốc trên site đang chạy, hãy sao lưu site. Child theme không cần sửa khi cập nhật trong dòng 3.20.
 1. Cài theme gốc **Flatsome** (bản có bản quyền). Đưa thư mục `flatsome-child` vào `wp-content/themes/`, hoặc nén thành `.zip` rồi tải lên ở Giao diện → Giao diện → Thêm mới. Sau đó **kích hoạt TOPBDS Flatsome Child**.
 2. Cài các plugin: **Rank Math SEO**, **LiteSpeed Cache**, **Contact Form 7**, **WP Mail SMTP**.
-   - Tên miền: **https://nhadep.click**. Bật SSL (Let's Encrypt) trong trang quản lý hosting, rồi vào **Cài đặt → Tổng quan** đặt cả hai ô "Địa chỉ WordPress" và "Địa chỉ trang web" là `https://nhadep.click`.
+   - Tên miền **tạm để dựng site**: **https://nhadep.click**. Bật SSL (Let's Encrypt) trong trang quản lý hosting, rồi vào **Cài đặt → Tổng quan** đặt cả hai ô "Địa chỉ WordPress" và "Địa chỉ trang web" là `https://nhadep.click`.
+   - Trong thời gian dựng, vào **Cài đặt → Đọc**, tick **"Ngăn chặn các công cụ tìm kiếm đánh chỉ mục trang web này"**. Làm vậy để Google không lưu bản nháp dưới tên miền tạm, tránh trùng lặp nội dung với tên miền chính sau này. Chuyển sang tên miền chính thì bỏ tick (xem Bước 8).
 3. Vào **Cài đặt → Đường dẫn tĩnh**, chọn "Tên bài viết" rồi bấm **Lưu**, để các đường dẫn `/du-an/`, `/loai-hinh/`… hoạt động.
 
 Khi kích hoạt, theme tự tạo sẵn các mục sau:
@@ -236,6 +237,19 @@ Hosting chạy LiteSpeed nên plugin LiteSpeed Cache dùng được cache ở c�
 Sau mỗi lần sửa CSS, đổi cài đặt trong Tuỳ biến hay sửa UX Block (header, footer, mega menu): bấm **LiteSpeed Cache → Toolbox → Purge All** để khách thấy bản mới.
 - Ảnh trong thẻ dự án đã có sẵn kích thước cắt riêng (`tp-card`, `tp-tile`, `tp-news`, `tp-thumb`). Với ảnh tải lên từ trước khi cài theme, chạy plugin **Regenerate Thumbnails** một lần.
 
+### Bước 8 – Chuyển từ nhadep.click sang tên miền chính
+
+Làm khi site đã dựng xong. Các link trong UX Block (menu, footer, mega menu) đều là đường dẫn tương đối (`/du-an/`…), nên đổi tên miền không phải sửa các block này.
+
+1. **Sao lưu** toàn bộ site (file và cơ sở dữ liệu).
+2. Trỏ tên miền chính về hosting và bật SSL cho tên miền đó.
+3. **Đổi địa chỉ site:** cài plugin **Better Search Replace**, thay `https://nhadep.click` bằng `https://<tên-miền-chính>` trong toàn bộ bảng dữ liệu. Chạy thử chế độ *dry run* trước, sau đó chạy thật. Bước này đổi luôn "Địa chỉ WordPress" và các link ảnh trong bài.
+4. Vào **Cài đặt → Đọc**, **bỏ tick** "Ngăn chặn các công cụ tìm kiếm…".
+5. **Chuyển hướng 301** toàn bộ `nhadep.click` sang tên miền chính (nhờ hosting cài, hoặc dùng mục Redirections của Rank Math). Mọi link cũ sẽ dẫn đúng về trang mới.
+6. **LiteSpeed Cache → Toolbox → Purge All**.
+7. **Rank Math:** kiểm tra sitemap `/sitemap_index.xml` đã mang tên miền mới. Thêm tên miền chính vào **Google Search Console** và gửi sitemap.
+8. Kiểm tra lại: form gửi mail, nút Zalo/Gọi, tìm kiếm dự án, ảnh chia sẻ Facebook (dùng công cụ Sharing Debugger của Facebook để làm mới ảnh).
+
 ---
 
 ## 5. Đã kiểm tra những gì
@@ -274,4 +288,4 @@ Child theme được chạy trên WordPress mới nhất (PHP 8.4) với dữ li
 7. **Menu chính thức:** các mục con của "Giới thiệu", "Liên hệ". Mega menu: đã chốt dùng cho mục "Dự án" (xem Bước 5).
 8. ~~Nút trái tim~~ — đã bỏ cùng trang "Dự án đã lưu".
 9. ~~Cam kết trong hero~~ — giữ "Hỗ trợ 24/7".
-10. ~~Kỹ thuật~~ — hosting LiteSpeed (xem Bước 7), tên miền `nhadep.click`, Flatsome 3.20.11.
+10. ~~Kỹ thuật~~ — hosting LiteSpeed (xem Bước 7), tên miền tạm `nhadep.click` (chuyển sang tên miền chính theo Bước 8), Flatsome 3.20.11.
