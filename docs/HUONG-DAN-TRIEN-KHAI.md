@@ -156,6 +156,7 @@ Khi kích hoạt, theme tự tạo sẵn các mục sau:
 - **Style → Typography:** font **Be Vietnam Pro** cho cả tiêu đề lẫn nội dung (đủ dấu tiếng Việt). Base Font Size để **100** (= 16px; Flatsome đặt theo %: 94 ≈ 15px).
 - **Layout:** độ rộng container 1200px.
 - **Header:**
+  - **Header → Header Main:** nếu nền header màu tối (xanh đậm), đặt **Text Color = Light** để chữ menu và nút số điện thoại chuyển sang trắng. Màu chữ menu và màu khi rê chuột chỉnh ở **Nav Color / Nav Color :hover** trong cùng mục (gợi ý: trắng / cam `#F47521`).
   - Logo bên trái, menu chính ở giữa.
   - Bên phải thêm phần tử **HTML 1** với nội dung `[tp_contact_buttons]`.
   - Bật Sticky header.
