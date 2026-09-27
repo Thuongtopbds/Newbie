@@ -21,7 +21,7 @@ function tp_slugs( $value ) {
  */
 add_shortcode( 'tp_heading', function ( $atts ) {
 	$a = shortcode_atts( array(
-		'title'     => '',
+		'title'     => 'Dự án nổi bật',
 		'sub'       => '',
 		'link'      => '',
 		'link_text' => 'Xem tất cả',
@@ -293,7 +293,7 @@ add_shortcode( 'tp_contact_buttons', function ( $atts ) {
  * [tp_trust_item icon="shield" title="Thông tin chính xác" text="Cập nhật liên tục"]
  */
 add_shortcode( 'tp_trust_item', function ( $atts ) {
-	$a = shortcode_atts( array( 'icon' => 'shield', 'title' => '', 'text' => '' ), $atts );
+	$a = shortcode_atts( array( 'icon' => 'shield', 'title' => 'Thông tin chính xác', 'text' => 'Cập nhật liên tục' ), $atts );
 	return sprintf(
 		'<div class="tp-trust"><span class="tp-trust__icon">%s</span><span class="tp-trust__text"><strong>%s</strong>%s</span></div>',
 		tp_icon( sanitize_key( $a['icon'] ), 22 ),

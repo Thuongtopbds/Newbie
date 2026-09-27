@@ -1,6 +1,9 @@
 <?php
 /**
  * Đưa các shortcode TOPBDS vào UX Builder (nhóm "TOPBDS") để kéo thả và sửa tuỳ chọn như phần tử gốc của Flatsome.
+ *
+ * Lưu ý: UX Builder bỏ các thuộc tính có giá trị trùng 'default' khi lưu, nên mỗi 'default' ở đây
+ * phải trùng giá trị mặc định trong shortcode_atts() của shortcode tương ứng (inc/shortcodes.php).
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -104,7 +107,7 @@ add_action( 'ux_builder_setup', function () {
 		'name'     => 'Nút Zalo + Gọi',
 		'category' => 'TOPBDS',
 		'options'  => array(
-			'style'     => array( 'type' => 'select', 'heading' => 'Kiểu', 'default' => 'cta', 'options' => array( 'cta' => 'Lớn (khối CTA)', 'header' => 'Nhỏ (header)' ) ),
+			'style'     => array( 'type' => 'select', 'heading' => 'Kiểu', 'default' => 'header', 'options' => array( 'header' => 'Nhỏ (header)', 'cta' => 'Lớn (khối CTA)' ) ),
 			'zalo_text' => $text( 'Chữ nút Zalo', 'Chat Zalo' ),
 			'call_text' => $text( 'Chữ nút gọi', '', 'Để trống: tự lấy hotline.' ),
 		),
@@ -125,8 +128,8 @@ add_action( 'ux_builder_setup', function () {
 		'category' => 'TOPBDS',
 		'options'  => array(
 			'name'  => array( 'type' => 'select', 'heading' => 'Icon', 'default' => 'bulb', 'options' => $icons ),
-			'size'  => $number( 'Cỡ', 28, 12, 64 ),
-			'badge' => $yes_no( 'Nền tròn màu cam', 'yes' ),
+			'size'  => $number( 'Cỡ', 24, 12, 64 ),
+			'badge' => $yes_no( 'Nền tròn màu cam', 'no' ),
 		),
 	) );
 } );
