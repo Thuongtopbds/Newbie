@@ -199,12 +199,12 @@ Vào **Giao diện → Tuỳ biến → TOPBDS – Liên hệ**, nhập Hotline 
    - Vào **UX Blocks → Thêm mới**, đặt tên "Mega menu Dự án", dán `docs/ux-builder/mega-menu.txt` rồi lưu.
    - Bảng gồm 4 cột: **Loại hình**, **Khu vực** (6 tỉnh/thành nhiều dự án nhất), **Trạng thái**, và thẻ **1 dự án nổi bật**.
    - Các link và số dự án tự cập nhật; mục chưa có dự án nào tự ẩn. Không cần sửa block khi thêm dự án hay loại hình mới.
-   - Vào **Giao diện → Menu**, mở mục "Dự án" trong menu chính. Trong phần cài đặt Flatsome của mục menu:
+   - Vào **Giao diện → Thiết lập Menu** (bản tiếng Anh: Appearance → Menus), mở mục "Dự án" trong menu chính. Trong phần cài đặt Flatsome của mục menu:
      - **Design:** chọn **Container width** (dropdown rộng bằng khung nội dung; từ Flatsome 3.15.4 trở lên độ rộng được tự đặt).
      - **UX Block:** chọn block "Mega menu Dự án".
      - Kiểu mở: **Hover** (rê chuột) hoặc **Click**. Nên chọn Hover trên máy tính.
    - Mục "Dự án" không cần menu con. Các mục khác (Tin tức, Giới thiệu…) vẫn dùng menu con bình thường.
-   - Trên điện thoại, Flatsome dùng menu trượt riêng, có thể không hiện đầy đủ block mega menu. Hãy mở thử trên điện thoại. Nếu thiếu, tạo một menu riêng cho điện thoại (mục "Dự án" có menu con: Căn hộ, Biệt thự, Liền kề, Hà Nội…) rồi gán vào vị trí menu mobile trong **Giao diện → Menu → Quản lý vị trí**.
+   - Trên điện thoại, Flatsome dùng menu trượt riêng, có thể không hiện đầy đủ block mega menu. Hãy mở thử trên điện thoại. Nếu thiếu, tạo một menu riêng cho điện thoại (mục "Dự án" có menu con: Căn hộ, Biệt thự, Liền kề, Hà Nội…) rồi gán vào vị trí menu mobile trong **Giao diện → Thiết lập Menu → Quản lý vị trí**.
 
 ### Bước 6 – SEO và tốc độ
 - **Thứ bậc tiêu đề đúng như đề xuất:**
