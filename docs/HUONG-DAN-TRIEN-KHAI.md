@@ -153,7 +153,7 @@ Khi kích hoạt, theme tự tạo sẵn các mục sau:
 
 ### Bước 2 – Flatsome Theme Options
 - **Style → Colors:** Primary `#F47521` (cam của logo), Secondary `#0F1E33`.
-- **Style → Typography:** font **Be Vietnam Pro** cho cả tiêu đề lẫn nội dung (đủ dấu tiếng Việt). Cỡ chữ nội dung 15px.
+- **Style → Typography:** font **Be Vietnam Pro** cho cả tiêu đề lẫn nội dung (đủ dấu tiếng Việt). Base Font Size để **100** (= 16px; Flatsome đặt theo %: 94 ≈ 15px).
 - **Layout:** độ rộng container 1200px.
 - **Header:**
   - Logo bên trái, menu chính ở giữa.
