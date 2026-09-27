@@ -119,7 +119,24 @@ Trang không cần UX Builder: bố cục áp dụng tự động cho mọi dự
   [tel* so-dien-thoai placeholder "Số điện thoại"]
   [submit "Nhận bảng giá ngay"]
   ```
-  Trong tab **Mail** của form: **To** là `thuongdkdx@gmail.com`, và thêm dòng `Dự án: [_post_title] – [_post_url]` để biết khách đăng ký từ dự án nào.
+  Trong tab **Cấu hình Mail** của form:
+  - **Mail nhận:** `thuongdkdx@gmail.com` · **Mail gửi:** giữ mặc định · **Tiêu đề bổ sung:** để trống
+  - **Tiêu đề:** `[TOPBDS] Nhận báo giá: [_post_title] – [ho-ten]`
+  - **Nội dung tin nhắn:**
+    ```
+    Khách hàng đăng ký nhận báo giá
+
+    Họ tên: [ho-ten]
+    Số điện thoại: [so-dien-thoai]
+
+    Dự án: [_post_title]
+    Link dự án: [_post_url]
+    Thời gian gửi: [_date] [_time]
+
+    --
+    Gửi từ form "Nhận báo giá" trên [_site_title] ([_site_url])
+    ```
+  `[_post_title]` / `[_post_url]` tự điền tên và link của trang dự án khách đang xem.
 
 ---
 
