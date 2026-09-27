@@ -214,6 +214,16 @@ Vào **Giao diện → Tuỳ biến → TOPBDS – Liên hệ**, nhập Hotline 
    - **Message body:** `Email đăng ký: [email-dang-ky]` và dòng `Gửi từ trang: [_url]`.
    - Không cần nối Google Sheet hay CRM.
    - Để thư không rơi vào mục Spam, cài plugin gửi mail qua SMTP (VD: **WP Mail SMTP**) và dùng một địa chỉ Gmail làm người gửi.
+   - **Nếu form báo "Có lỗi xảy ra trong quá trình gửi":** hosting không gửi được mail. Cách khắc phục:
+     1. Bật **Xác minh 2 bước** cho Gmail `topbds.info@gmail.com`, rồi tạo **Mật khẩu ứng dụng** (16 ký tự) tại myaccount.google.com/apppasswords.
+     2. Vào **WP Mail SMTP → Cài đặt**:
+        - From Email: `topbds.info@gmail.com`, tick **Force From Email**
+        - From Name: `TOPBDS`, tick **Force From Name**
+        - Mailer: **Other SMTP**
+        - SMTP Host: `smtp.gmail.com`, Encryption: **TLS**, Port: `587`, Auto TLS: bật
+        - Authentication: bật; Username: `topbds.info@gmail.com`; Password: mật khẩu ứng dụng
+     3. Trong tab **Cấu hình Mail** của từng form, sửa ô **Mail gửi** thành `TOPBDS <topbds.info@gmail.com>`.
+     4. Kiểm tra bằng **WP Mail SMTP → Công cụ → Email Test**, gửi tới `thuongdkdx@gmail.com`.
 4. **Mega menu cho mục "Dự án":**
    - Vào **UX Blocks → Thêm mới**, đặt tên "Mega menu Dự án", dán `docs/ux-builder/mega-menu.txt` rồi lưu.
    - Bảng gồm 4 cột: **Loại hình**, **Khu vực** (6 tỉnh/thành nhiều dự án nhất), **Trạng thái**, và thẻ **1 dự án nổi bật**.
