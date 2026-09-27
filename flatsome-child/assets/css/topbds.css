@@ -461,6 +461,12 @@
 .tp-crumbs a { color: var(--tp-muted); }
 .tp-crumbs a:hover { color: var(--tp-primary); }
 
+/* Bỏ kiểu dt/dd mặc định của Flatsome (in hoa, nằm cùng dòng) trong các khối nhãn – giá trị của trang dự án */
+.tp-project dl dt,
+.tp-project dl dd { display: block; float: none; width: auto; margin: 0; padding: 0; text-transform: none; letter-spacing: 0; }
+.tp-project dl dt { font-weight: 500; line-height: 1.35; }
+.tp-project dl dd { margin-top: 3px; line-height: 1.35; }
+
 /* Hero: ảnh đại diện làm nền, cùng kiểu với hero trang chủ */
 .tp-phero { position: relative; overflow: hidden; padding: 40px 0 48px; background: var(--tp-navy); color: #fff; isolation: isolate; }
 .tp-phero__bg { position: absolute; inset: 0; z-index: -1; }
