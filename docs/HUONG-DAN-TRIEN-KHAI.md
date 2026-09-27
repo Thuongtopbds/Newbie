@@ -143,8 +143,8 @@ Khi kích hoạt, theme tự tạo sẵn các mục sau:
 
 | File | Dùng ở đâu |
 |---|---|
-| `logo-topbds.svg` / `.png` | Logo **màu** (chữ xanh đậm) cho header nền trắng: Theme Options → Header → Logo & Site Identity → **Logo image** |
-| `logo-topbds-trang.svg` / `.png` | Logo **trắng** cho nền tối: ô **Light logo** (header trong suốt ở trang chủ) và ảnh logo trong footer (thay `ID_LOGO_TRANG` trong `footer.txt`) |
+| `logo-topbds.svg` / `.png` | Logo **màu** (chữ xanh đậm) cho chỗ nền trắng (VD: tài liệu, email). Header dùng logo trắng vì nền header xanh đậm |
+| `logo-topbds-trang.svg` / `.png` | Logo **trắng**: ô **Logo image** và **Light logo** trong Theme Options → Header → Logo & Site Identity, và ảnh logo trong footer (thay `ID_LOGO_TRANG` trong `footer.txt`) |
 | `icon-topbds.svg`, `icon-topbds-512.png` | Favicon: **Giao diện → Tuỳ biến → Thông tin website → Biểu tượng trang web**, tải `icon-topbds-512.png` |
 | `hero-trang-chu.webp` (hoặc `.jpg`) | Ảnh nền hero trang chủ: tải vào Thư viện rồi chọn cho Section "Hero" |
 
@@ -156,7 +156,8 @@ Khi kích hoạt, theme tự tạo sẵn các mục sau:
 - **Style → Typography:** font **Be Vietnam Pro** cho cả tiêu đề lẫn nội dung (đủ dấu tiếng Việt). Base Font Size để **100** (= 16px; Flatsome đặt theo %: 94 ≈ 15px).
 - **Layout:** độ rộng container 1200px.
 - **Header:**
-  - **Header → Header Main:** nếu nền header màu tối (xanh đậm), đặt **Text Color = Light** để chữ menu và nút số điện thoại chuyển sang trắng. Màu chữ menu và màu khi rê chuột chỉnh ở **Nav Color / Nav Color :hover** trong cùng mục (gợi ý: trắng / cam `#F47521`).
+  - **Header → Header Main:** **Background Color = `#0F1E33`** (xanh đậm) và **Text Color = Light**, để mọi trang (dự án, tin tức, danh sách…) có header nền tối, cùng tông với trang chủ. Chữ menu và nút số điện thoại khi đó chuyển sang trắng. Màu chữ menu và màu khi rê chuột chỉnh ở **Nav Color / Nav Color :hover** (gợi ý: trắng / cam `#F47521`). Nếu bật Sticky Header, đặt cùng màu nền cho header khi dính.
+  - **Logo:** cả **Logo image** và **Light logo** đều dùng **logo trắng** (`brand/logo-topbds-trang.png`), vì header nền tối ở mọi trang. Logo màu (`logo-topbds.png`) để dành cho chỗ nền trắng khác nếu cần.
   - Logo bên trái, menu chính ở giữa.
   - Bên phải thêm phần tử **HTML 1** với nội dung `[tp_contact_buttons]`.
   - Bật Sticky header.
