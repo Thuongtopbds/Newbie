@@ -67,6 +67,15 @@
 .tp-contact--cta .tp-btn { min-height: 52px; padding: 0 30px; font-size: 16px; }
 .tp-contact--cta .tp-btn--outline { color: #fff; border-color: rgba(255, 255, 255, .8); }
 
+/* ---------- Menu chính trên header: rê chuột / trang đang mở chuyển màu cam ---------- */
+
+#header .header-nav-main > li > a { transition: color .2s; }
+#header .header-nav-main > li > a:hover,
+#header .header-nav-main > li:hover > a,
+#header .header-nav-main > li.active > a,
+#header .header-nav-main > li.current-menu-item > a,
+#header .header-nav-main > li.current-menu-ancestor > a { color: var(--tp-primary); }
+
 /* ---------- Tiêu đề mục ---------- */
 
 .tp-head {
