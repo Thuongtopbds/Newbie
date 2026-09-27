@@ -354,6 +354,13 @@
 .tp-trust__text { display: flex; flex-direction: column; gap: 2px; font-size: 13px; line-height: 1.4; }
 .tp-trust__text strong { font-size: 15px; }
 .tp-trust__text span { opacity: .8; }
+/* Khoá màu chữ trong khung kính: UX Builder có thể bọc thêm <p> / phần tử Text mang màu riêng */
+.tp-glass p,
+.tp-glass .text { margin: 0; color: inherit; }
+.tp-glass .tp-trust,
+.tp-glass .tp-trust .tp-trust__text,
+.tp-glass .tp-trust .tp-trust__text strong,
+.tp-glass .tp-trust .tp-trust__text span { color: #fff; }
 
 /* ---------- Khối CTA (Row có class tp-cta) ---------- */
 
