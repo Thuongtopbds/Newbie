@@ -488,20 +488,6 @@ a.tp-infocard:hover { border-color: var(--tp-primary); box-shadow: var(--tp-shad
 .tp-map iframe { display: block; width: 100%; height: 420px; border: 0; }
 .tp-map__note { margin: 12px 0 0; color: var(--tp-muted); font-size: 14px; }
 
-/* ---------- Bài viết tin tức: luôn giữ chữ màu tối trên nền trắng ---------- */
-
-.single-post .entry-header .entry-title,
-.single-post .entry-content h1, .single-post .entry-content h2, .single-post .entry-content h3,
-.single-post .entry-content h4, .single-post .entry-content h5, .single-post .entry-content h6 { color: var(--tp-ink); }
-.single-post .entry-header .entry-meta,
-.single-post .entry-header .entry-meta a { color: var(--tp-muted); }
-.single-post .entry-content,
-.single-post .entry-content p,
-.single-post .entry-content li,
-.single-post .entry-content td { color: var(--tp-ink); }
-.single-post .entry-content a { color: var(--tp-primary-dark); }
-.single-post .entry-header .entry-category a { color: var(--tp-primary); }
-
 /* ---------- Trang danh sách dự án ---------- */
 
 .tp-archive { padding: 32px 0 48px; }
