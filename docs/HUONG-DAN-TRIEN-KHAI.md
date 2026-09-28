@@ -240,7 +240,7 @@ Vào **Giao diện → Tuỳ biến → TOPBDS – Liên hệ**, nhập Hotline 
 Footer và trang chủ đã trỏ sẵn tới `/tin-tuc/` và `/chuyen-muc/<tên-chuyên-mục>/`, nên đặt đúng các đường dẫn dưới đây.
 
 1. **Chuyên mục** (Bài viết → Chuyên mục): Thị trường `thi-truong`, Phân tích `phan-tich`, Pháp lý `phap-ly`, Quy hoạch `quy-hoach`, Đầu tư `dau-tu`. Đổi "Chưa phân loại" thành "Tin tổng hợp" (`tin-tong-hop`).
-2. **Đường dẫn tĩnh** (Cài đặt → Đường dẫn tĩnh): chọn *Tên bài viết*; ô **Cơ sở chuyên mục** (Category base) nhập `chuyen-muc`. Rank Math: để **tắt** "Strip Category Base".
+2. **Đường dẫn tĩnh** (Cài đặt → Đường dẫn tĩnh): chọn *Tiêu đề bài viết*; ô **Đường dẫn danh mục** (Category base) nhập `chuyen-muc`, ô **Đường dẫn thẻ** nhập `the`. Rank Math: để **tắt** "Strip Category Base".
 3. **Trang Tin tức:** Trang → Thêm mới, tiêu đề `Tin tức`, đường dẫn `tin-tuc`, để trống nội dung, Đăng. Vào **Cài đặt → Đọc → Trang chủ hiển thị: Một trang tĩnh**, Trang chủ = *Trang chủ*, Trang bài viết = *Tin tức*.
 4. **Menu:** Giao diện → Thiết lập Menu, chọn menu chính.
    - Nếu không thấy hộp **Chuyên mục** ở cột trái: bấm **Tuỳ chọn hiển thị** (góc trên phải) và tick *Chuyên mục*.
