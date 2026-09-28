@@ -235,6 +235,20 @@ Vào **Giao diện → Tuỳ biến → TOPBDS – Liên hệ**, nhập Hotline 
    - Mục "Dự án" không cần menu con. Các mục khác (Tin tức, Giới thiệu…) vẫn dùng menu con bình thường.
    - Trên điện thoại, Flatsome dùng menu trượt riêng, có thể không hiện đầy đủ block mega menu. Hãy mở thử trên điện thoại. Nếu thiếu, tạo một menu riêng cho điện thoại (mục "Dự án" có menu con: Căn hộ, Biệt thự, Liền kề, Hà Nội…) rồi gán vào vị trí menu mobile trong **Giao diện → Thiết lập Menu → Quản lý vị trí**.
 
+### Bước 5a – Mục "Tin tức" và menu con
+
+Footer và trang chủ đã trỏ sẵn tới `/tin-tuc/` và `/chuyen-muc/<tên-chuyên-mục>/`, nên đặt đúng các đường dẫn dưới đây.
+
+1. **Chuyên mục** (Bài viết → Chuyên mục): Thị trường `thi-truong`, Phân tích `phan-tich`, Pháp lý `phap-ly`, Quy hoạch `quy-hoach`, Đầu tư `dau-tu`. Đổi "Chưa phân loại" thành "Tin tổng hợp" (`tin-tong-hop`).
+2. **Đường dẫn tĩnh** (Cài đặt → Đường dẫn tĩnh): chọn *Tên bài viết*; ô **Cơ sở chuyên mục** (Category base) nhập `chuyen-muc`. Rank Math: để **tắt** "Strip Category Base".
+3. **Trang Tin tức:** Trang → Thêm mới, tiêu đề `Tin tức`, đường dẫn `tin-tuc`, để trống nội dung, Đăng. Vào **Cài đặt → Đọc → Trang chủ hiển thị: Một trang tĩnh**, Trang chủ = *Trang chủ*, Trang bài viết = *Tin tức*.
+4. **Menu:** Giao diện → Thiết lập Menu, chọn menu chính.
+   - Nếu không thấy hộp **Chuyên mục** ở cột trái: bấm **Tuỳ chọn hiển thị** (góc trên phải) và tick *Chuyên mục*.
+   - Mục cha "Tin tức": dùng trang *Tin tức* (hoặc liên kết tuỳ chỉnh URL `/tin-tuc/`).
+   - Tick các chuyên mục → **Thêm vào menu**, rồi kéo từng mục **thụt vào một nấc** dưới "Tin tức" (hiện chữ *mục con*). Lưu menu.
+5. Kiểu dropdown: **Flatsome → Theme Options → Header → Dropdown Style**. Trên điện thoại, menu con tự thu gọn thành nút mũi tên.
+6. Giao diện trang tin: **Theme Options → Blog → Blog Archive** (bố cục lưới/danh sách) và **Blog Single** (sidebar). Nên chọn ảnh đại diện bài viết tỉ lệ 16:9 (tối thiểu 880×500).
+
 ### Bước 5b – Trang Giới thiệu và Liên hệ
 
 Mẫu dán sẵn: `docs/ux-builder/gioi-thieu.txt` và `docs/ux-builder/lien-he.txt`. CSS có sẵn trong theme từ bản 1.0.7.
