@@ -310,6 +310,29 @@ Có sẵn trong theme (`404.php`), **không cần tạo trang**. Mọi địa ch
 
 Xem thử: mở `nhadep.click/trang-khong-ton-tai/`.
 
+### Bước 5d – Menu riêng cho điện thoại
+
+Mega menu "Dự án" không hiện trong menu trượt trên điện thoại, nên tạo một menu riêng:
+
+1. **Giao diện → Thiết lập Menu → tạo menu mới**, đặt tên `Menu điện thoại`.
+2. Thêm mục (hộp **Loại hình**, **Khu vực**, **Trạng thái**, **Danh mục** ở cột trái; không thấy thì bật trong **Tuỳ chọn hiển thị**):
+   ```
+   Trang chủ
+   Dự án                 (liên kết tự tạo: /du-an/)
+      Tất cả dự án       (/du-an/)
+      Đang mở bán        (Trạng thái)
+      Căn hộ, Biệt thự, Liền kề, Nhà phố, Đất nền   (Loại hình)
+   Khu vực               (liên kết tự tạo: /du-an/)
+      Hà Nội, TP. Hồ Chí Minh, …                    (Khu vực)
+   Tin tức               (trang Tin tức)
+      Thị trường, Phân tích, Pháp lý, Quy hoạch, Đầu tư   (Danh mục)
+   Giới thiệu
+   Liên hệ
+   ```
+3. Cuối trang, **Vị trí hiển thị**: chỉ tick **Main Menu - Mobile** (bản Việt có thể là "Menu chính - Di động"). Lưu menu.
+4. Tuỳ chọn: **Flatsome → Theme Options → Header → Header Builder**, chuyển sang chế độ Mobile, kéo phần tử **Search** và **HTML 1** vào khung **Mobile Sidebar**; ô HTML 1 (Header → HTML) nhập `[tp_contact_buttons style="cta"]` để có nút Zalo/Gọi trong menu trượt.
+5. Xoá cache LiteSpeed rồi mở thử trên điện thoại.
+
 ### Bước 6 – SEO và tốc độ
 - **Thứ bậc tiêu đề đúng như đề xuất:**
   - H1 duy nhất ở hero.
