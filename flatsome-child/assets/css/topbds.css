@@ -421,8 +421,12 @@
 .tp-footer a { color: rgba(255, 255, 255, .78); }
 .tp-footer a:hover { color: var(--tp-primary); }
 .tp-footer ul { margin: 0; padding: 0; list-style: none; }
-.tp-footer li { margin: 0 0 10px; }
-.tp-footer li .tp-icon { margin-right: 6px; color: var(--tp-primary); vertical-align: -3px; }
+.tp-footer ul li { margin: 0 0 10px; }
+/* Dòng có icon: icon và chữ luôn trên cùng một dòng, kể cả khi trình soạn thảo chèn <br> hoặc <p> */
+.tp-footer ul li:has(> .tp-icon, > p > .tp-icon) { display: flex; align-items: flex-start; gap: 0 6px; }
+.tp-footer ul li br { display: none; }
+.tp-footer ul li p { display: contents; }
+.tp-footer li .tp-icon { flex: none; margin-top: .2em; color: var(--tp-primary); }
 .tp-footer .wpcf7 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
 .tp-footer .wpcf7 textarea { width: 100%; height: 44px; border: 1px solid rgba(255, 255, 255, .2); border-radius: 8px; background: rgba(255, 255, 255, .06); color: #fff; box-shadow: none; }
 .tp-footer .wpcf7 input:not([type="submit"]):focus,
