@@ -235,6 +235,58 @@ Vào **Giao diện → Tuỳ biến → TOPBDS – Liên hệ**, nhập Hotline 
    - Mục "Dự án" không cần menu con. Các mục khác (Tin tức, Giới thiệu…) vẫn dùng menu con bình thường.
    - Trên điện thoại, Flatsome dùng menu trượt riêng, có thể không hiện đầy đủ block mega menu. Hãy mở thử trên điện thoại. Nếu thiếu, tạo một menu riêng cho điện thoại (mục "Dự án" có menu con: Căn hộ, Biệt thự, Liền kề, Hà Nội…) rồi gán vào vị trí menu mobile trong **Giao diện → Thiết lập Menu → Quản lý vị trí**.
 
+### Bước 5b – Trang Giới thiệu và Liên hệ
+
+Mẫu dán sẵn: `docs/ux-builder/gioi-thieu.txt` và `docs/ux-builder/lien-he.txt`. CSS có sẵn trong theme từ bản 1.0.7.
+
+**Tạo trang (làm 2 lần, mỗi trang một lần):**
+1. **Trang → Thêm trang mới.** Đặt tiêu đề `Giới thiệu` (đường dẫn `gioi-thieu`) hoặc `Liên hệ` (đường dẫn `lien-he`).
+2. Cột phải → **Thuộc tính trang → Giao diện (Template)**: chọn **Page - Full Width**.
+3. Chuyển trình soạn thảo sang chế độ **Code/Văn bản** (Classic Editor: tab *Văn bản*; Gutenberg: menu ⋮ → *Trình soạn thảo mã*), dán toàn bộ nội dung file mẫu, bấm **Đăng**. Sau đó có thể bấm **Edit with UX Builder** để sửa chữ, ảnh bằng kéo thả.
+
+**Trang Giới thiệu:** thay `ID_ANH_GIOI_THIEU` bằng ID một ảnh văn phòng/đội ngũ/dự án (ảnh ngang, 1200×900). Nội dung chữ sửa trực tiếp trong UX Builder.
+
+**Trang Liên hệ:** cần một form Contact Form 7 riêng tên **"Liên hệ"**:
+
+- **Nội dung Form:**
+  ```
+  <div class="tp-form-2col">
+  <label> Họ và tên *
+      [text* ho-ten autocomplete:name placeholder "Nguyễn Văn A"] </label>
+  <label> Số điện thoại *
+      [tel* so-dien-thoai autocomplete:tel placeholder "09xx xxx xxx"] </label>
+  </div>
+  <div class="tp-form-2col">
+  <label> Email
+      [email email autocomplete:email placeholder "ban@email.com"] </label>
+  <label> Nhu cầu
+      [select nhu-cau "Mua để ở" "Đầu tư" "Thuê" "Cần tư vấn thêm"] </label>
+  </div>
+  <label> Lời nhắn
+      [textarea loi-nhan placeholder "Dự án bạn quan tâm, khu vực, ngân sách..."] </label>
+  [submit "Gửi yêu cầu tư vấn"]
+  ```
+- **Cấu hình Mail:**
+  - Mail nhận `thuongdkdx@gmail.com`; Mail gửi `TOPBDS <topbds.info@gmail.com>`; Tiêu đề bổ sung để trống
+  - Tiêu đề: `[TOPBDS] Liên hệ mới: [ho-ten] – [so-dien-thoai]`
+  - Nội dung:
+    ```
+    Khách hàng gửi yêu cầu tư vấn
+
+    Họ tên: [ho-ten]
+    Số điện thoại: [so-dien-thoai]
+    Email: [email]
+    Nhu cầu: [nhu-cau]
+    Lời nhắn: [loi-nhan]
+
+    Thời gian gửi: [_date] [_time]
+    --
+    Gửi từ trang Liên hệ trên [_site_title] ([_site_url])
+    ```
+- Lưu form, copy mã ID trong shortcode và thay cho `ID_FORM_LIEN_HE` trong trang Liên hệ.
+
+**Gắn vào menu:** Giao diện → Menu → chọn menu chính. Ở cột trái mục **Trang**, tick *Giới thiệu* và *Liên hệ* → **Thêm vào menu**. Nếu menu đã có mục "Giới thiệu"/"Liên hệ" dạng liên kết tuỳ chỉnh (`#`), xoá mục cũ hoặc sửa URL thành `/gioi-thieu/`, `/lien-he/`. Lưu menu, xoá cache LiteSpeed.
+
 ### Bước 6 – SEO và tốc độ
 - **Thứ bậc tiêu đề đúng như đề xuất:**
   - H1 duy nhất ở hero.

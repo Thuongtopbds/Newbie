@@ -430,6 +430,64 @@
 .tp-footer .wpcf7 ::placeholder { color: rgba(255, 255, 255, .5); }
 .tp-footer .wpcf7 input[type="submit"] { width: 100%; height: 44px; margin: 0; border-radius: 8px; background: var(--tp-primary); color: #fff; text-transform: none; font-weight: 700; }
 
+/* ---------- Trang Giới thiệu / Liên hệ (dán từ docs/ux-builder/gioi-thieu.txt, lien-he.txt) ---------- */
+
+/* Section đầu trang có class tp-pagehero */
+.tp-pagehero { background: linear-gradient(110deg, var(--tp-navy) 0%, var(--tp-navy-2) 100%); color: #fff; }
+.tp-pagehero .section-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10, 22, 40, .88) 0%, rgba(10, 22, 40, .55) 100%); }
+.tp-pagehero h1 { max-width: 760px; margin: 0 0 12px; text-wrap: balance; color: #fff; font-size: clamp(28px, 3.6vw, 44px); font-weight: 800; line-height: 1.2; }
+.tp-pagehero .tp-hero__lead { max-width: 640px; margin: 0; }
+
+/* Đoạn giới thiệu + ảnh */
+.tp-prose { color: var(--tp-ink); font-size: 16px; line-height: 1.75; }
+.tp-prose h2 { margin: 0 0 14px; font-size: clamp(22px, 2.4vw, 30px); font-weight: 800; line-height: 1.3; }
+.tp-prose p { margin: 0 0 14px; }
+.tp-prose ul { margin: 0 0 14px; padding: 0; list-style: none; }
+.tp-prose li { position: relative; margin: 0 0 8px; padding-left: 26px; }
+.tp-prose li::before { content: ""; position: absolute; left: 0; top: .55em; width: 14px; height: 8px; border-left: 2.5px solid var(--tp-primary); border-bottom: 2.5px solid var(--tp-primary); transform: rotate(-45deg); }
+.tp-rounded img { border-radius: var(--tp-radius-lg); box-shadow: var(--tp-shadow); }
+
+/* Thẻ giá trị: Col có class tp-feature */
+.tp-feature > .col-inner { height: 100%; padding: 26px 22px; border: 1px solid var(--tp-line); border-radius: var(--tp-radius-lg); background: #fff; transition: box-shadow .2s, transform .2s; }
+.tp-feature > .col-inner:hover { box-shadow: var(--tp-shadow-hover); transform: translateY(-2px); }
+.tp-feature .tp-icon-badge { width: 52px; height: 52px; margin-bottom: 16px; border-radius: 12px; }
+.tp-feature h3 { margin: 0 0 8px; font-size: 18px; font-weight: 700; }
+.tp-feature p { margin: 0; color: var(--tp-muted); font-size: 15px; line-height: 1.6; }
+
+/* Quy trình: Col có class tp-step */
+.tp-step > .col-inner { position: relative; height: 100%; padding: 24px 22px; border-radius: var(--tp-radius-lg); background: var(--tp-soft); }
+.tp-step__no { display: inline-grid; place-items: center; width: 40px; height: 40px; margin: 0 0 14px; border-radius: 999px; background: var(--tp-navy); color: #fff; font-size: 16px; font-weight: 800; }
+.tp-step h3 { margin: 0 0 6px; font-size: 17px; font-weight: 700; }
+.tp-step p { margin: 0; color: var(--tp-muted); font-size: 15px; line-height: 1.6; }
+
+/* Thẻ thông tin liên hệ */
+.tp-infocard { display: flex; align-items: center; gap: 14px; min-height: 104px; padding: 18px; border: 1px solid var(--tp-line); border-radius: var(--tp-radius-lg); background: #fff; color: var(--tp-ink); transition: border-color .2s, box-shadow .2s; }
+a.tp-infocard:hover { border-color: var(--tp-primary); box-shadow: var(--tp-shadow-hover); color: var(--tp-ink); }
+.tp-infocard .tp-icon-badge { flex: none; width: 48px; height: 48px; border-radius: 12px; }
+.tp-infocard__label { display: block; color: var(--tp-muted); font-size: 13px; }
+.tp-infocard__value { display: block; font-size: 15px; font-weight: 700; line-height: 1.4; overflow-wrap: break-word; }
+
+/* Form liên hệ: Col có class tp-formcard */
+.tp-formcard > .col-inner { padding: 30px 28px; border: 1px solid var(--tp-line); border-radius: var(--tp-radius-lg); background: #fff; box-shadow: var(--tp-shadow); }
+.tp-formcard h2 { margin: 0 0 6px; font-size: 24px; font-weight: 800; }
+.tp-formcard .tp-formcard__sub { margin: 0 0 20px; color: var(--tp-muted); }
+.tp-formcard .wpcf7 label { display: block; margin: 0 0 6px; color: var(--tp-ink); font-size: 14px; font-weight: 600; }
+.tp-formcard .wpcf7 input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+.tp-formcard .wpcf7 select,
+.tp-formcard .wpcf7 textarea { width: 100%; height: 46px; font-family: inherit; margin: 0 0 14px; border: 1px solid var(--tp-line); border-radius: 8px; background: #fff; box-shadow: none; font-size: 15px; }
+.tp-formcard .wpcf7 textarea { height: 120px; font-family: inherit; padding-top: 10px; resize: vertical; }
+.tp-formcard .wpcf7 input:focus,
+.tp-formcard .wpcf7 select:focus,
+.tp-formcard .wpcf7 textarea:focus { border-color: var(--tp-primary); }
+.tp-formcard .wpcf7 input[type="submit"] { width: 100%; height: 50px; margin: 4px 0 0; border-radius: 999px; background: var(--tp-primary); color: #fff; font-size: 16px; font-weight: 700; text-transform: none; }
+.tp-formcard .wpcf7 input[type="submit"]:hover { background: var(--tp-primary-dark); }
+.tp-form-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
+
+/* Bản đồ */
+.tp-map { overflow: hidden; border-radius: var(--tp-radius-lg); background: var(--tp-soft); box-shadow: var(--tp-shadow); }
+.tp-map iframe { display: block; width: 100%; height: 420px; border: 0; }
+.tp-map__note { margin: 12px 0 0; color: var(--tp-muted); font-size: 14px; }
+
 /* ---------- Trang danh sách dự án ---------- */
 
 .tp-archive { padding: 32px 0 48px; }
@@ -649,6 +707,7 @@
 	.tp-filter label:first-of-type { grid-column: 1 / -1; }
 	.tp-cta { text-align: center; }
 	.tp-cta .tp-contact { justify-content: center; }
+	.tp-map iframe { height: 320px; }
 
 	.tp-phero__inner,
 	.tp-project__body { grid-template-columns: 1fr; }
@@ -702,6 +761,8 @@
 	.tp-specgrid { grid-template-columns: 1fr; }
 	.tp-section__title, .tp-content h2 { font-size: 19px; }
 	.tp-quote-card { padding: 20px 16px; }
+	.tp-formcard > .col-inner { padding: 22px 16px; }
+	.tp-form-2col { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {

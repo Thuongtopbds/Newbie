@@ -1,0 +1,158 @@
+[section label="Đầu trang" padding="72px" padding__sm="48px" dark="true" class="tp-pagehero"]
+
+[row]
+
+[col span="12"]
+
+<p class="tp-eyebrow">VỀ CHÚNG TÔI</p>
+<h1>TOPBDS.VN – Đồng hành cùng bạn tìm đúng dự án</h1>
+<p class="tp-hero__lead">Cổng thông tin bất động sản cập nhật dự án mới, quy hoạch, pháp lý và chính sách bán hàng, kèm tư vấn tận tâm từ tìm kiếm đến giao dịch.</p>
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Chúng tôi là ai" padding="64px" padding__sm="40px"]
+
+[row v_align="middle"]
+
+[col span="6" span__sm="12" class="tp-prose"]
+
+<h2>Chúng tôi là ai?</h2>
+<p>TOPBDS.VN là cổng thông tin bất động sản tập trung vào các dự án căn hộ, biệt thự, liền kề, nhà phố và đất nền. Chúng tôi tổng hợp thông tin dự án một cách rõ ràng, dễ so sánh, để bạn ra quyết định mua ở hay đầu tư với đầy đủ dữ liệu.</p>
+<p>Đội ngũ tư vấn của TOPBDS theo sát thị trường mỗi ngày, trực tiếp tìm hiểu vị trí, pháp lý và chính sách của từng dự án trước khi giới thiệu tới khách hàng.</p>
+<ul>
+<li>Thông tin dự án cập nhật liên tục, có nguồn rõ ràng</li>
+<li>Bảng giá, mặt bằng và tài liệu gửi nhanh qua Zalo</li>
+<li>Hỗ trợ đi xem dự án và thủ tục giao dịch</li>
+</ul>
+
+[/col]
+[col span="6" span__sm="12"]
+
+[ux_image id="ID_ANH_GIOI_THIEU" class="tp-rounded"]
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Giá trị cốt lõi" bg_color="#f6f7f9" padding="64px" padding__sm="40px"]
+
+[row]
+
+[col span="12"]
+
+[tp_heading title="Vì sao chọn TOPBDS?" sub="Bốn cam kết chúng tôi giữ với mọi khách hàng"]
+
+[/col]
+
+[/row]
+[row]
+
+[col span="3" span__md="6" span__sm="12" class="tp-feature"]
+
+[tp_icon name="shield" size="26" badge="yes"]
+
+<h3>Thông tin chính xác</h3>
+<p>Dữ liệu dự án được kiểm tra và cập nhật liên tục, không thổi phồng, không che giấu.</p>
+
+[/col]
+[col span="3" span__md="6" span__sm="12" class="tp-feature"]
+
+[tp_icon name="headset" size="26" badge="yes"]
+
+<h3>Tư vấn tận tâm</h3>
+<p>Hỗ trợ 24/7 qua hotline và Zalo, tư vấn đúng nhu cầu và khả năng tài chính của bạn.</p>
+
+[/col]
+[col span="3" span__md="6" span__sm="12" class="tp-feature"]
+
+[tp_icon name="file" size="26" badge="yes"]
+
+<h3>Pháp lý minh bạch</h3>
+<p>Giải thích rõ tình trạng pháp lý, tiến độ và điều khoản hợp đồng trước khi bạn xuống tiền.</p>
+
+[/col]
+[col span="3" span__md="6" span__sm="12" class="tp-feature"]
+
+[tp_icon name="users" size="26" badge="yes"]
+
+<h3>Đồng hành lâu dài</h3>
+<p>Tiếp tục hỗ trợ sau giao dịch: bàn giao, cho thuê lại hoặc chuyển nhượng khi bạn cần.</p>
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Quy trình tư vấn" padding="64px" padding__sm="40px"]
+
+[row]
+
+[col span="12"]
+
+[tp_heading title="Quy trình tư vấn" sub="Đơn giản, rõ ràng, bạn chủ động ở mọi bước"]
+
+[/col]
+
+[/row]
+[row]
+
+[col span="3" span__md="6" span__sm="12" class="tp-step"]
+
+<p class="tp-step__no">1</p>
+<h3>Tiếp nhận nhu cầu</h3>
+<p>Lắng nghe mục đích mua, khu vực, loại hình và ngân sách của bạn.</p>
+
+[/col]
+[col span="3" span__md="6" span__sm="12" class="tp-step"]
+
+<p class="tp-step__no">2</p>
+<h3>Đề xuất dự án</h3>
+<p>Gửi danh sách dự án phù hợp kèm bảng giá, mặt bằng và so sánh.</p>
+
+[/col]
+[col span="3" span__md="6" span__sm="12" class="tp-step"]
+
+<p class="tp-step__no">3</p>
+<h3>Xem dự án thực tế</h3>
+<p>Đưa bạn đi xem nhà mẫu, vị trí và tiện ích xung quanh.</p>
+
+[/col]
+[col span="3" span__md="6" span__sm="12" class="tp-step"]
+
+<p class="tp-step__no">4</p>
+<h3>Hỗ trợ giao dịch</h3>
+<p>Đồng hành đặt cọc, ký hợp đồng, vay ngân hàng và nhận bàn giao.</p>
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="CTA tư vấn" padding="40px" padding__sm="24px"]
+
+[row v_align="middle" class="tp-cta"]
+
+[col span="1" span__sm="12"]
+
+[tp_icon name="bulb" size="30" badge="yes"]
+
+[/col]
+[col span="6" span__sm="12"]
+
+<p class="tp-cta__title">Bạn đang tìm dự án phù hợp?</p>
+<p>Nhận tư vấn miễn phí về dự án, vị trí, mặt bằng và chính sách bán hàng.</p>
+
+[/col]
+[col span="5" span__sm="12"]
+
+[tp_contact_buttons style="cta"]
+
+[/col]
+
+[/row]
+
+[/section]
