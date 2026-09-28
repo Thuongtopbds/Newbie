@@ -243,9 +243,9 @@ Footer và trang chủ đã trỏ sẵn tới `/tin-tuc/` và `/chuyen-muc/<tên
 2. **Đường dẫn tĩnh** (Cài đặt → Đường dẫn tĩnh): chọn *Tiêu đề bài viết*; ô **Đường dẫn danh mục** (Category base) nhập `chuyen-muc`, ô **Đường dẫn thẻ** nhập `the`. Rank Math: để **tắt** "Strip Category Base".
 3. **Trang Tin tức:** Trang → Thêm mới, tiêu đề `Tin tức`, đường dẫn `tin-tuc`, để trống nội dung, Đăng. Vào **Cài đặt → Đọc → Trang chủ hiển thị: Một trang tĩnh**, Trang chủ = *Trang chủ*, Trang bài viết = *Tin tức*.
 4. **Menu:** Giao diện → Thiết lập Menu, chọn menu chính.
-   - Nếu không thấy hộp **Chuyên mục** ở cột trái: bấm **Tuỳ chọn hiển thị** (góc trên phải) và tick *Chuyên mục*.
+   - Hộp chuyên mục ở cột trái có tên **Danh mục** (WordPress tiếng Việt gọi chuyên mục là "danh mục"). Nếu không thấy: bấm **Tuỳ chọn hiển thị** (góc trên phải) và tick *Danh mục*.
    - Mục cha "Tin tức": dùng trang *Tin tức* (hoặc liên kết tuỳ chỉnh URL `/tin-tuc/`).
-   - Tick các chuyên mục → **Thêm vào menu**, rồi kéo từng mục **thụt vào một nấc** dưới "Tin tức" (hiện chữ *mục con*). Lưu menu.
+   - Trong hộp **Danh mục** → tab *Xem tất cả*, tick các chuyên mục → **Thêm vào menu**, rồi kéo từng mục **thụt vào một nấc** dưới "Tin tức" (hiện chữ *mục con*). Lưu menu.
 5. Kiểu dropdown: **Flatsome → Theme Options → Header → Dropdown Style**. Trên điện thoại, menu con tự thu gọn thành nút mũi tên.
 6. Giao diện trang tin: **Theme Options → Blog → Blog Archive** (bố cục lưới/danh sách) và **Blog Single** (sidebar). Nên chọn ảnh đại diện bài viết tỉ lệ 16:9 (tối thiểu 880×500).
 
