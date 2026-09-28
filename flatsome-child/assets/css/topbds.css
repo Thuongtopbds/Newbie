@@ -678,6 +678,113 @@ a.tp-infocard:hover { border-color: var(--tp-primary); box-shadow: var(--tp-shad
 .tp-lightbox__nav--prev { left: 16px; top: 50%; transform: translateY(-50%); }
 .tp-lightbox__nav--next { right: 16px; top: 50%; transform: translateY(-50%); }
 
+/* ---------- Trang 404 (404.php) ---------- */
+
+.tp-404 { padding-bottom: 64px; }
+.tp-404__hero { position: relative; overflow: hidden; padding: 56px 0 64px; background: linear-gradient(180deg, #f3f6fa 0%, #fff 100%); }
+.tp-404__hero::before { content: ""; position: absolute; inset: auto -10% -40% auto; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, rgba(244, 117, 33, .10), transparent 65%); pointer-events: none; }
+.tp-404__hero-inner { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 48px; align-items: center; }
+.tp-404__code { position: relative; display: inline-block; margin: 0 0 8px; color: var(--tp-navy); font-size: clamp(88px, 12vw, 150px); font-weight: 800; line-height: .95; letter-spacing: -.04em; }
+.tp-404__spark { position: absolute; top: -6px; right: -34px; width: 34px; height: 34px; }
+.tp-404__spark i { position: absolute; left: 50%; bottom: 0; width: 4px; height: 16px; margin-left: -2px; border-radius: 4px; background: var(--tp-primary); transform-origin: 50% 30px; animation: tp404Spark 1.8s ease-in-out infinite; }
+.tp-404__spark i:nth-child(1) { transform: rotate(-50deg); }
+.tp-404__spark i:nth-child(2) { transform: rotate(-5deg); animation-delay: .15s; }
+.tp-404__spark i:nth-child(3) { transform: rotate(40deg); animation-delay: .3s; }
+.tp-404__heading { max-width: 520px; margin: 0 0 12px; color: var(--tp-navy); font-size: clamp(24px, 2.8vw, 34px); font-weight: 800; line-height: 1.25; text-wrap: balance; }
+.tp-404__lead { max-width: 480px; margin: 0 0 24px; color: var(--tp-muted); font-size: 16px; line-height: 1.65; }
+.tp-404__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.tp-404__actions .tp-btn { min-height: 50px; padding: 0 24px; }
+.tp-btn--ghost { border-color: var(--tp-navy); color: var(--tp-navy); background: #fff; }
+.tp-btn--ghost:hover { background: var(--tp-navy); color: #fff; }
+.tp-404__help { margin: 18px 0 0; color: var(--tp-muted); font-size: 14px; }
+.tp-404__help a { color: var(--tp-primary-dark); font-weight: 700; }
+.tp-404__art { position: relative; }
+.tp-404-art, .tp-404-photo { display: block; width: 100%; height: auto; border-radius: 24px; box-shadow: 0 24px 60px rgba(15, 30, 51, .14); }
+.tp-404-photo { aspect-ratio: 4 / 3; object-fit: cover; }
+
+/* Hình minh hoạ động */
+.tp-404-tower { transform-box: fill-box; transform-origin: 50% 100%; animation: tp404Rise .9s cubic-bezier(.2, .8, .2, 1) both; animation-delay: var(--d, 0s); }
+.tp-404-light { animation: tp404Blink 3.6s ease-in-out infinite; animation-delay: var(--d, 0s); }
+.tp-404-beacon { animation: tp404Blink 1.4s ease-in-out infinite; }
+.tp-404-hook { transform-box: view-box; transform-origin: 392px 103px; animation: tp404Swing 3.2s ease-in-out infinite; }
+.tp-404-cloud--1 { animation: tp404Drift 16s ease-in-out infinite alternate; }
+.tp-404-cloud--2 { animation: tp404Drift 12s ease-in-out -4s infinite alternate-reverse; }
+.tp-404-sun { animation: tp404Pulse 5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.tp-404-road { animation: tp404Road 1.6s linear infinite; }
+.tp-404-digits { animation: tp404Pop .8s .55s cubic-bezier(.2, 1.4, .4, 1) both; transform-box: fill-box; transform-origin: 50% 100%; }
+
+@keyframes tp404Rise { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes tp404Blink { 0%, 100% { opacity: .15; } 45%, 60% { opacity: 1; } }
+@keyframes tp404Swing { 0%, 100% { transform: rotate(-5deg); } 50% { transform: rotate(5deg); } }
+@keyframes tp404Drift { from { transform: translateX(-12px); } to { transform: translateX(26px); } }
+@keyframes tp404Pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+@keyframes tp404Road { to { stroke-dashoffset: -26; } }
+@keyframes tp404Pop { from { opacity: 0; transform: translateY(24px) scale(.9); } to { opacity: 1; transform: none; } }
+@keyframes tp404Spark { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+
+/* Gợi ý theo địa chỉ sai */
+.tp-404__maybe { margin: 32px 0 0; padding: 20px 24px; border: 1px dashed #f6b58a; border-radius: var(--tp-radius-lg); background: var(--tp-primary-soft); }
+.tp-404__maybe-title { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; color: var(--tp-navy); font-size: 17px; font-weight: 700; }
+.tp-404__maybe-title .tp-icon { color: var(--tp-primary); }
+.tp-404__maybe ul { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.tp-404__maybe li { margin: 0; }
+.tp-404__maybe a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; background: #fff; color: var(--tp-navy); font-weight: 600; box-shadow: var(--tp-shadow); }
+.tp-404__maybe a:hover { color: var(--tp-primary-dark); }
+
+/* Ô tìm kiếm */
+.tp-404__search { display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1.25fr); gap: 20px; align-items: center; margin: 32px 0 0; padding: 24px 28px; border: 1px solid var(--tp-line); border-radius: var(--tp-radius-lg); background: #fff; box-shadow: var(--tp-shadow); }
+.tp-404__search-icon { display: grid; place-items: center; width: 60px; height: 60px; border-radius: 50%; background: var(--tp-soft); color: var(--tp-navy); }
+.tp-404__search-text h2 { margin: 0 0 4px; color: var(--tp-navy); font-size: 19px; font-weight: 700; }
+.tp-404__search-text p { margin: 0; color: var(--tp-muted); font-size: 14px; }
+.tp-404__form { display: flex; gap: 8px; margin: 0; }
+.tp-404__form input[type="search"] { flex: 1; min-width: 0; height: 50px; margin: 0; padding: 0 16px; border: 1px solid var(--tp-line); border-radius: 10px; box-shadow: none; font-size: 15px; }
+.tp-404__form input[type="search"]:focus { border-color: var(--tp-primary); }
+.tp-404__form button { display: inline-flex; align-items: center; gap: 8px; height: 50px; margin: 0; padding: 0 22px; border: 0; border-radius: 10px; background: var(--tp-navy); color: #fff; font-weight: 700; text-transform: none; }
+.tp-404__form button:hover { background: var(--tp-primary); }
+
+/* Khối nội dung */
+.tp-404__block { margin: 56px 0 0; }
+.tp-404__title { margin: 0 0 28px; color: var(--tp-navy); font-size: clamp(20px, 2.2vw, 26px); font-weight: 800; text-align: center; text-transform: uppercase; }
+.tp-404__title::after { content: ""; display: block; width: 44px; height: 3px; margin: 12px auto 0; border-radius: 3px; background: var(--tp-primary); }
+.tp-404__more { margin: 24px 0 0; text-align: center; }
+.tp-btn--line { min-height: 46px; border-color: var(--tp-line); color: var(--tp-navy); background: #fff; font-size: 14px; }
+.tp-btn--line:hover { border-color: var(--tp-navy); background: var(--tp-navy); color: #fff; }
+.tp-btn--line .tp-icon { transition: transform .2s; }
+.tp-btn--line:hover .tp-icon { transform: translateX(3px); }
+
+.tp-404__types { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; }
+.tp-404__type { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 24px 12px 20px; border: 1px solid var(--tp-line); border-radius: var(--tp-radius-lg); background: #fff; color: var(--tp-muted); font-size: 13px; text-align: center; transition: border-color .2s, box-shadow .2s, transform .2s; }
+.tp-404__type strong { color: var(--tp-navy); font-size: 15px; text-transform: uppercase; }
+.tp-404__type-icon { display: grid; place-items: center; width: 60px; height: 60px; margin-bottom: 6px; border-radius: 16px; background: var(--tp-soft); color: var(--tp-navy); transition: background-color .2s, color .2s; }
+.tp-404__type:hover { border-color: var(--tp-primary); box-shadow: var(--tp-shadow-hover); transform: translateY(-3px); color: var(--tp-muted); }
+.tp-404__type:hover .tp-404__type-icon { background: var(--tp-primary); color: #fff; }
+
+.tp-404__news { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.tp-404__post { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 14px; align-items: start; color: var(--tp-ink); }
+.tp-404__post-thumb { display: block; overflow: hidden; aspect-ratio: 4 / 3; border-radius: var(--tp-radius); }
+.tp-404__post-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s; }
+.tp-404__post:hover img { transform: scale(1.05); }
+.tp-404__post-body strong { display: -webkit-box; overflow: hidden; margin-bottom: 8px; font-size: 15px; line-height: 1.45; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+.tp-404__post:hover strong { color: var(--tp-primary-dark); }
+.tp-404__post-date { display: inline-flex; align-items: center; gap: 6px; color: var(--tp-muted); font-size: 13px; }
+
+@media (max-width: 849px) {
+	.tp-404__hero { padding: 32px 0 40px; }
+	.tp-404__hero-inner { grid-template-columns: 1fr; gap: 28px; }
+	.tp-404__search { grid-template-columns: auto minmax(0, 1fr); }
+	.tp-404__form { grid-column: 1 / -1; }
+	.tp-404__news { grid-template-columns: 1fr; }
+}
+@media (max-width: 549px) {
+	.tp-404__actions .tp-btn { flex: 1 1 100%; }
+	.tp-404__search { padding: 20px 16px; }
+	.tp-404__search-icon { width: 48px; height: 48px; }
+	.tp-404__form button span { display: none; }
+	.tp-404__form button { padding: 0 16px; }
+	.tp-404__types { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+	.tp-404__block { margin-top: 44px; }
+}
+
 /* ---------- Thanh Zalo/Gọi cố định trên mobile ---------- */
 
 .tp-mobile-bar { display: none; }
@@ -770,6 +877,8 @@ a.tp-infocard:hover { border-color: var(--tp-primary); box-shadow: var(--tp-shad
 }
 
 @media (prefers-reduced-motion: reduce) {
+	.tp-404-art *, .tp-404__spark i { animation: none !important; }
+	.tp-404__type, .tp-404__post img { transition: none; }
 	.tp-card, .tp-card__media img, .tp-tile img, .tp-news__media img, .tp-head__more .tp-icon { transition: none; }
 	.tp-card:hover { transform: none; }
 	.tp-card:hover .tp-card__media img, .tp-tile:hover img, .tp-news__lead:hover .tp-news__media img { transform: none; }

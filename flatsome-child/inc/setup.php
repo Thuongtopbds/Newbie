@@ -54,6 +54,14 @@ add_action( 'customize_register', function ( WP_Customize_Manager $wp_customize 
 		'section'   => 'tp_contact',
 		'mime_type' => 'image',
 	) ) );
+
+	$wp_customize->add_setting( 'tp_404_image', array( 'default' => 0, 'sanitize_callback' => 'absint' ) );
+	$wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'tp_404_image', array(
+		'label'       => 'Ảnh trang 404',
+		'description' => 'Để trống: dùng hình minh hoạ động có sẵn. Nên dùng ảnh 1120×840.',
+		'section'     => 'tp_contact',
+		'mime_type'   => 'image',
+	) ) );
 } );
 
 function tp_hotline() {

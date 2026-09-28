@@ -7,10 +7,10 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'TP_VERSION', '1.0.9' );
+define( 'TP_VERSION', '1.0.10' );
 define( 'TP_DIR', get_stylesheet_directory() );
 define( 'TP_URI', get_stylesheet_directory_uri() );
 
-foreach ( array( 'setup', 'post-types', 'meta', 'template-tags', 'shortcodes', 'ux-builder', 'search', 'single' ) as $tp_file ) {
+foreach ( array( 'setup', 'post-types', 'meta', 'template-tags', 'shortcodes', 'ux-builder', 'search', 'single', 'not-found' ) as $tp_file ) {
 	require_once TP_DIR . '/inc/' . $tp_file . '.php';
 }

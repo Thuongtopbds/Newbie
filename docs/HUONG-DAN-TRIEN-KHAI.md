@@ -301,6 +301,15 @@ Mẫu dán sẵn: `docs/ux-builder/gioi-thieu.txt` và `docs/ux-builder/lien-he.
 
 **Gắn vào menu:** Giao diện → Menu → chọn menu chính. Ở cột trái mục **Trang**, tick *Giới thiệu* và *Liên hệ* → **Thêm vào menu**. Nếu menu đã có mục "Giới thiệu"/"Liên hệ" dạng liên kết tuỳ chỉnh (`#`), xoá mục cũ hoặc sửa URL thành `/gioi-thieu/`, `/lien-he/`. Lưu menu, xoá cache LiteSpeed.
 
+### Bước 5c – Trang 404
+
+Có sẵn trong theme (`404.php`), **không cần tạo trang**. Mọi địa chỉ không tồn tại tự hiện trang này, gồm:
+- Hình minh hoạ động (toà nhà mọc lên, cần cẩu, cửa sổ sáng đèn). Muốn dùng ảnh riêng: **Giao diện → Tuỳ biến → TOPBDS – Liên hệ → Ảnh trang 404** (ảnh 1120×840).
+- **"Có phải bạn đang tìm"**: tự đoán dự án/bài viết gần giống từ địa chỉ khách gõ sai (VD `/du-an/vinhomes-smart-cty/` → gợi ý *Vinhomes Smart City*). Ô tìm kiếm được điền sẵn các từ đó.
+- Ô loại hình (5 loại nhiều dự án nhất), 3 dự án nổi bật, 3 tin mới nhất, nút gọi hotline/Zalo.
+
+Xem thử: mở `nhadep.click/trang-khong-ton-tai/`.
+
 ### Bước 6 – SEO và tốc độ
 - **Thứ bậc tiêu đề đúng như đề xuất:**
   - H1 duy nhất ở hero.
