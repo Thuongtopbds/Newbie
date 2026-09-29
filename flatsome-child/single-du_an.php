@@ -29,6 +29,14 @@ while ( have_posts() ) :
 	list( $tp_content, $tp_toc ) = tp_content_toc( apply_filters( 'the_content', get_the_content() ) );
 
 	$tp_nav = $tp_specs ? array( array( 'tong-quan', 'Tổng quan' ) ) : array();
+	// Nhãn trên thanh mục lục bỏ tên dự án cho gọn: "Có nên mua Noble Palace?" → "Có nên mua?".
+	foreach ( $tp_toc as &$tp_item ) {
+		$tp_short = trim( preg_replace( '/\s+([?!:.,])/u', '$1', preg_replace( '/\s{2,}/u', ' ', str_ireplace( get_the_title(), '', $tp_item[1] ) ) ) );
+		if ( mb_strlen( $tp_short ) >= 4 ) {
+			$tp_item[1] = $tp_short;
+		}
+	}
+	unset( $tp_item );
 	$tp_nav = array_merge( $tp_nav, $tp_toc );
 	if ( $tp_map ) {
 		$tp_nav[] = array( 'ban-do', 'Bản đồ' );
@@ -84,10 +92,14 @@ while ( have_posts() ) :
 		<?php if ( count( $tp_nav ) > 1 ) : ?>
 			<nav class="tp-subnav" aria-label="Mục lục dự án">
 				<div class="container tp-subnav__inner">
-					<div class="tp-toc" data-tp-toc>
-						<?php foreach ( $tp_nav as list( $tp_anchor, $tp_label ) ) : ?>
-							<a href="#<?php echo esc_attr( $tp_anchor ); ?>"><?php echo esc_html( $tp_label ); ?></a>
-						<?php endforeach; ?>
+					<div class="tp-toc-wrap" data-tp-toc-wrap>
+						<button type="button" class="tp-toc-arrow tp-toc-arrow--prev" data-tp-toc-step="-1" aria-label="Mục trước" hidden><?php echo tp_icon( 'arrow', 16 ); ?></button>
+						<div class="tp-toc" data-tp-toc>
+							<?php foreach ( $tp_nav as list( $tp_anchor, $tp_label ) ) : ?>
+								<a href="#<?php echo esc_attr( $tp_anchor ); ?>"><?php echo esc_html( $tp_label ); ?></a>
+							<?php endforeach; ?>
+						</div>
+						<button type="button" class="tp-toc-arrow tp-toc-arrow--next" data-tp-toc-step="1" aria-label="Mục tiếp theo" hidden><?php echo tp_icon( 'arrow', 16 ); ?></button>
 					</div>
 					<a class="tp-btn tp-btn--primary tp-subnav__cta" href="#tp-lien-he">Nhận báo giá</a>
 				</div>

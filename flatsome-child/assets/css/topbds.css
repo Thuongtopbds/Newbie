@@ -567,7 +567,23 @@ a.tp-infocard:hover { border-color: var(--tp-primary); box-shadow: var(--tp-shad
 .tp-subnav { position: sticky; top: var(--tp-sticky-top, 70px); z-index: 20; border-bottom: 1px solid var(--tp-line); background: #fff; box-shadow: 0 4px 14px rgba(16, 24, 40, .05); }
 .admin-bar .tp-subnav { top: calc(var(--tp-sticky-top, 70px) + 32px); }
 .tp-subnav__inner { display: flex; align-items: center; gap: 16px; }
-.tp-toc { display: flex; flex: 1; gap: 4px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.tp-toc-wrap { position: relative; flex: 1; min-width: 0; }
+.tp-toc { display: flex; gap: 4px; min-width: 0; overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; }
+.tp-toc.is-dragging { cursor: grabbing; user-select: none; }
+.tp-toc.is-dragging a { pointer-events: none; }
+/* Mờ dần ở mép còn nội dung bị khuất + nút mũi tên cuộn */
+.tp-toc-wrap::before,
+.tp-toc-wrap::after { content: ""; position: absolute; top: 0; bottom: 0; z-index: 1; width: 64px; pointer-events: none; opacity: 0; transition: opacity .2s; }
+.tp-toc-wrap::before { left: 0; background: linear-gradient(90deg, #fff 35%, rgba(255, 255, 255, 0)); }
+.tp-toc-wrap::after { right: 0; background: linear-gradient(270deg, #fff 35%, rgba(255, 255, 255, 0)); }
+.tp-toc-wrap.can-prev::before,
+.tp-toc-wrap.can-next::after { opacity: 1; }
+.tp-toc-arrow { position: absolute; top: 50%; z-index: 2; display: grid; place-items: center; width: 32px; height: 32px; min-height: 0; margin: -16px 0 0; padding: 0; border: 1px solid var(--tp-line); border-radius: 50%; background: #fff; color: var(--tp-navy); box-shadow: var(--tp-shadow); cursor: pointer; }
+.tp-toc-arrow:hover { border-color: var(--tp-primary); color: var(--tp-primary); }
+.tp-toc-arrow--prev { left: 0; }
+.tp-toc-arrow--prev .tp-icon { transform: rotate(180deg); }
+.tp-toc-arrow--next { right: 0; }
+.tp-toc-arrow[hidden] { display: none; }
 .tp-toc::-webkit-scrollbar { display: none; }
 .tp-toc a { flex: none; padding: 16px 14px 14px; border-bottom: 2px solid transparent; color: var(--tp-muted); font-size: 14px; font-weight: 600; white-space: nowrap; }
 .tp-toc a:hover { color: var(--tp-ink); }
