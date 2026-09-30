@@ -365,7 +365,10 @@ Hosting chạy LiteSpeed nên plugin LiteSpeed Cache dùng được cache ở c�
 
 | Mục (LiteSpeed Cache → …) | Cài đặt | Ghi chú |
 |---|---|---|
-| **Cache → Cache** | Bật *Enable Cache*, *Cache Mobile* | Người đã đăng nhập (admin) không bị cache, nên UX Builder vẫn hoạt động bình thường |
+| **Cài đặt chung** | *Tự động nâng cấp*: Bật · kết nối **QUIC.cloud** (miễn phí, dùng ẩn danh) | Cần QUIC.cloud để tối ưu ảnh. **Chưa** bật CDN của QUIC.cloud khi còn dùng tên miền tạm |
+| **Cache → Cache** | Bật *Enable Cache*, *Cache Mobile* · **Tắt** *Cache Logged-in Users* | Website không có tài khoản thành viên; tắt để admin luôn thấy bản mới khi sửa |
+| **Cache → Browser** | *Browser Cache*: Bật (TTL mặc định 31536000) | Trình duyệt giữ lại CSS/JS/ảnh; theme tự đổi số phiên bản mỗi lần cập nhật nên không bị dùng file cũ |
+| **Cache → ESI** | Tắt | Không cần cho website này |
 | **Cache → Purge** | Bật *Purge All On Upgrade* | Tự xoá cache khi cập nhật theme/plugin |
 | **Page Optimization → CSS Settings** | *CSS Minify*: Bật · *CSS Combine*: **Tắt** · *Generate UCSS*: **Tắt** | Gộp CSS và UCSS hay làm vỡ giao diện Flatsome |
 | **Page Optimization → JS Settings** | *JS Minify*: Bật · *JS Combine*: **Tắt** · *Load JS Deferred*: **Deferred** (không chọn *Delayed*) | *Delayed* làm menu, mega menu và ô tìm kiếm chỉ chạy sau khi khách rê chuột |
@@ -373,6 +376,10 @@ Hosting chạy LiteSpeed nên plugin LiteSpeed Cache dùng được cache ở c�
 | **Page Optimization → Media Excludes** | *Lazy Load Image Excludes*: `hero-trang-chu` · *Lazy Load Image Class Name Excludes*: `tp-no-lazy` | Không lazy-load ảnh hero (trang chủ và trang dự án): đây là ảnh lớn nhất màn hình đầu, lazy-load sẽ làm điểm tốc độ (LCP) kém đi |
 | **Image Optimization** | Bấm *Send Optimization Request* · bật *Create WebP Versions* và *Image WebP Replacement* | Tự tạo bản WebP nhẹ hơn cho toàn bộ ảnh |
 | **Cache → Object** | Bật nếu hosting có Redis/Memcached | Hỏi nhà cung cấp hosting; không có thì để tắt |
+| **Page Optimization → HTML Settings** | *Remove WordPress Emoji*: Bật · *Remove Google Fonts*: **Tắt** | Giữ Google Fonts vì font Be Vietnam Pro tải qua đây |
+| **Page Optimization → Tuning** | *Guest Mode* / *Guest Optimization*: **Tắt** | Có thể làm lệch giao diện lần xem đầu |
+| **Crawler** | Tắt | Trên hosting dùng chung, crawler tốn tài nguyên; cache sẽ tự tạo khi có khách truy cập |
+| **Database** | Thỉnh thoảng bấm *Clean All* (bản nháp tự động, revisions, transient) | Nên sao lưu trước |
 
 Sau mỗi lần sửa CSS, đổi cài đặt trong Tuỳ biến hay sửa UX Block (header, footer, mega menu): bấm **LiteSpeed Cache → Toolbox → Purge All** để khách thấy bản mới.
 - Ảnh trong thẻ dự án đã có sẵn kích thước cắt riêng (`tp-card`, `tp-tile`, `tp-news`, `tp-thumb`). Với ảnh tải lên từ trước khi cài theme, chạy plugin **Regenerate Thumbnails** một lần.
