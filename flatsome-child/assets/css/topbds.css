@@ -901,6 +901,19 @@ a.tp-infocard:hover { border-color: var(--tp-primary); box-shadow: var(--tp-shad
 .tp-msearch__chips a { display: inline-block; padding: 6px 12px; border: 1px solid var(--tp-line); border-radius: 999px; background: #fff; color: var(--tp-ink); font-size: 13px; font-weight: 600; line-height: 1.3; text-decoration: none; text-transform: none; }
 .tp-msearch__chips a:hover { border-color: var(--tp-primary); color: var(--tp-primary-dark); }
 
+/* Menu trượt của Flatsome là nền tối (.dark / .off-canvas-dark) và tự tô trắng mọi chữ, link, danh sách con:
+   ép lại màu chữ tối và bố cục cho thẻ tìm dự án nền trắng. */
+.tp-msearch .tp-msearch__title,
+.dark .tp-msearch .tp-msearch__title { color: var(--tp-navy) !important; }
+.tp-msearch .tp-msearch__form input[type="search"] { color: var(--tp-ink) !important; }
+.tp-msearch .tp-msearch__form input[type="search"]::placeholder { color: #8a94a6 !important; opacity: 1; }
+.tp-msearch .tp-msearch__form button { color: #fff !important; }
+.tp-msearch ul.tp-msearch__chips { display: flex !important; flex-wrap: wrap; gap: 8px; margin: 12px 0 0 !important; padding: 0 !important; }
+.tp-msearch ul.tp-msearch__chips > li { display: block !important; width: auto !important; margin: 0 !important; padding: 0 !important; border: 0 !important; }
+.tp-msearch ul.tp-msearch__chips > li > a,
+.dark .tp-msearch ul.tp-msearch__chips > li > a { display: inline-block !important; padding: 6px 12px !important; border: 1px solid var(--tp-line) !important; border-radius: 999px; background: #fff !important; color: var(--tp-ink) !important; font-size: 13px !important; font-weight: 600 !important; line-height: 1.3 !important; letter-spacing: 0 !important; text-transform: none !important; opacity: 1 !important; }
+.tp-msearch ul.tp-msearch__chips > li > a:hover { border-color: var(--tp-primary) !important; color: var(--tp-primary-dark) !important; }
+
 /* ---------- Thanh Zalo/Gọi cố định trên mobile ---------- */
 
 .tp-mobile-bar { display: none; }
