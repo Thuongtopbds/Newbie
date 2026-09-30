@@ -32,7 +32,7 @@
 <li><a href="/chuyen-muc/thi-truong/">Thị trường</a></li>
 <li><a href="/chuyen-muc/quy-hoach/">Quy hoạch</a></li>
 <li><a href="/chuyen-muc/phap-ly/">Pháp lý</a></li>
-<li><a href="/chinh-sach/">Chính sách</a></li>
+<li><a href="/chinh-sach-bao-mat/">Chính sách bảo mật</a></li>
 </ul>
 
 [/col]

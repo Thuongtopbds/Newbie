@@ -333,6 +333,19 @@ Mega menu "Dự án" không hiện trong menu trượt trên điện thoại, n�
 4. Tuỳ chọn: **Flatsome → Theme Options → Header → Header Builder**, chuyển sang chế độ Mobile, kéo phần tử **Search** và **HTML 1** vào khung **Mobile Sidebar**; ô HTML 1 (Header → HTML) nhập `[tp_contact_buttons style="cta"]` để có nút Zalo/Gọi trong menu trượt.
 5. Xoá cache LiteSpeed rồi mở thử trên điện thoại.
 
+### Bước 5e – Trang Chính sách bảo mật
+
+Nội dung dán sẵn: `docs/trang/chinh-sach-bao-mat.html` (theo Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 và Nghị định 356/2025/NĐ-CP).
+
+1. **Trang → Thêm mới**, tiêu đề `Chính sách bảo mật`, đường dẫn `chinh-sach-bao-mat`, dán nội dung ở chế độ Code. Thay các chỗ `[trong ngoặc vuông]` (tên đơn vị chủ quản, ngày cập nhật, công cụ thống kê đang dùng).
+2. **Cài đặt → Riêng tư**: chọn trang này làm trang chính sách bảo mật.
+3. Footer: link "Chính sách bảo mật" trỏ tới `/chinh-sach-bao-mat/` (mẫu `footer.txt` đã sửa).
+4. Thêm ô tick đồng ý vào **từng form** Contact Form 7, đặt ngay trên nút gửi:
+   ```
+   [acceptance dong-y] Tôi đồng ý với <a href="/chinh-sach-bao-mat/" target="_blank">Chính sách bảo mật</a> [/acceptance]
+   ```
+   Theme đã có CSS cho ô tick này ở form báo giá, form liên hệ và form footer (từ bản 1.0.12). Khách phải tick mới gửi được form.
+
 ### Bước 6 – SEO và tốc độ
 - **Thứ bậc tiêu đề đúng như đề xuất:**
   - H1 duy nhất ở hero.
