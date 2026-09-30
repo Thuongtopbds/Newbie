@@ -379,7 +379,7 @@ Hosting chạy LiteSpeed nên plugin LiteSpeed Cache dùng được cache ở c�
 | **Page Optimization → JS Settings** | *JS Minify*: Bật · *JS Combine*: **Tắt** · *Load JS Deferred*: **Deferred** (không chọn *Delayed*) | *Delayed* làm menu, mega menu và ô tìm kiếm chỉ chạy sau khi khách rê chuột |
 | **Page Optimization → Media Settings** | *Lazy Load Images*: Bật | |
 | **Page Optimization → Media Excludes** | *Lazy Load Image Excludes*: `hero-trang-chu` · *Lazy Load Image Class Name Excludes*: `tp-no-lazy` | Không lazy-load ảnh hero (trang chủ và trang dự án): đây là ảnh lớn nhất màn hình đầu, lazy-load sẽ làm điểm tốc độ (LCP) kém đi |
-| **Image Optimization** | Bấm *Send Optimization Request* · bật *Create WebP Versions* và *Image WebP Replacement* | Tự tạo bản WebP nhẹ hơn cho toàn bộ ảnh |
+| **Image Optimization → Cài đặt** | *Yêu cầu tự động Cron*: Bật · *Tối ưu hóa hình ảnh gốc*: Bật · *Xóa bản sao lưu gốc*: **Tắt** · *Lossless*: Tắt · *Giữ nguyên EXIF/XMP*: **Tắt** · *Định dạng hình ảnh thế hệ tiếp theo*: **WebP** (AVIF tốn phí) · các ô còn lại để mặc định | Sau đó ở tab Tóm tắt bấm *Gửi yêu cầu tối ưu hóa*; ảnh tự gửi tiếp theo cron |
 | **Cache → Object** | Bật nếu hosting có Redis/Memcached | Hỏi nhà cung cấp hosting; không có thì để tắt |
 | **Page Optimization → HTML Settings** | *Remove WordPress Emoji*: Bật · *Remove Google Fonts*: **Tắt** | Giữ Google Fonts vì font Be Vietnam Pro tải qua đây |
 | **Page Optimization → Tuning** | *Guest Mode* / *Guest Optimization*: **Tắt** | Có thể làm lệch giao diện lần xem đầu |
