@@ -192,3 +192,16 @@ function tp_quote_card( $post_id ) {
 	<?php
 	return ob_get_clean();
 }
+
+/**
+ * Rank Math chỉ nhận mục lục từ plugin nên báo lỗi "không dùng Table of Contents plugin", dù trang dự án
+ * (thanh mục lục dính) và trang văn bản (mục lục cột trái) đã tự tạo mục lục từ các H2.
+ * Khai báo mục lục của theme cho đúng hai loại trang này; bài viết tin tức không có mục lục nên vẫn giữ cảnh báo.
+ */
+add_filter( 'rank_math/researches/toc_plugins', function ( $plugins ) {
+	$post = get_post();
+	if ( $post && ( 'du_an' === $post->post_type || 'page-van-ban.php' === get_page_template_slug( $post ) ) ) {
+		$plugins['seo-by-rank-math/rank-math.php'] = 'Mục lục tự động của theme TOPBDS';
+	}
+	return $plugins;
+} );
