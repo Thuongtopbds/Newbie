@@ -4,11 +4,11 @@
  *
  * Hình minh hoạ → gợi ý theo địa chỉ khách gõ sai → ô tìm kiếm → loại hình → dự án nổi bật → tin tức.
  *
- * Dòng @version khớp với 404.php của Flatsome để trang Flatsome → Status không báo "lỗi thời".
+ * Dòng @flatsome-version khớp với 404.php của Flatsome để trang Flatsome → Status không báo "lỗi thời".
  * Khi Flatsome nâng phiên bản file 404.php, chỉ cần sửa số này cho khớp.
  *
  * @package Flatsome\Templates
- * @version 3.20.0
+ * @flatsome-version 3.20.0
  */
 
 defined( 'ABSPATH' ) || exit;

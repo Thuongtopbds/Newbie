@@ -310,6 +310,8 @@ Có sẵn trong theme (`404.php`), **không cần tạo trang**. Mọi địa ch
 
 Xem thử: mở `nhadep.click/trang-khong-ton-tai/`.
 
+Nếu trang **Flatsome → Status** báo `flatsome-child/404.php` "đã lỗi thời": mở `404.php`, sửa dòng `@flatsome-version` ở đầu file cho khớp số phiên bản Flatsome báo (hiện là `3.20.0`).
+
 ### Bước 5d – Menu riêng cho điện thoại
 
 Mega menu "Dự án" không hiện trong menu trượt trên điện thoại, nên tạo một menu riêng:
