@@ -492,6 +492,56 @@ a.tp-infocard:hover { border-color: var(--tp-primary); box-shadow: var(--tp-shad
 .tp-map iframe { display: block; width: 100%; height: 420px; border: 0; }
 .tp-map__note { margin: 12px 0 0; color: var(--tp-muted); font-size: 14px; }
 
+/* ---------- Trang văn bản: chính sách, điều khoản (page-van-ban.php) ---------- */
+
+.tp-doc__hero { padding: 48px 0 44px; }
+.tp-doc__hero .tp-crumbs { margin-bottom: 14px; color: rgba(255, 255, 255, .7); }
+.tp-doc__hero .tp-crumbs a { color: rgba(255, 255, 255, .85); }
+.tp-doc__hero .tp-crumbs a:hover { color: #fff; }
+.tp-doc__hero .tp-crumbs__sep { color: rgba(255, 255, 255, .45); }
+.tp-doc__meta { display: inline-flex; align-items: center; gap: 8px; margin: 4px 0 0; color: rgba(255, 255, 255, .75); font-size: 14px; }
+.tp-doc__body { display: grid; grid-template-columns: 260px minmax(0, 760px); gap: 56px; justify-content: center; padding-top: 44px; padding-bottom: 72px; }
+.tp-doc__body--single { grid-template-columns: minmax(0, 800px); }
+
+.tp-doc__toc { position: sticky; top: calc(var(--tp-sticky-top, 70px) + 20px); align-self: start; max-height: calc(100vh - 120px); overflow: auto; padding: 20px; border: 1px solid var(--tp-line); border-radius: var(--tp-radius-lg); background: var(--tp-soft); }
+.tp-doc__toc-title { margin: 0 0 10px; color: var(--tp-navy); font-size: 13px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+.tp-doc__toc ol { margin: 0; padding: 0 0 0 20px; color: var(--tp-muted); font-size: 14px; }
+.tp-doc__toc li { margin: 0 0 8px; padding-left: 2px; }
+.tp-doc__toc a { color: var(--tp-ink); line-height: 1.45; }
+.tp-doc__toc a:hover { color: var(--tp-primary-dark); }
+
+.tp-doc__content { color: var(--tp-ink); font-size: 16px; line-height: 1.75; }
+.tp-doc__content > :first-child { margin-top: 0; }
+.tp-doc__content h2 { margin: 40px 0 14px; padding-top: 4px; scroll-margin-top: calc(var(--tp-sticky-top, 70px) + 24px); color: var(--tp-navy); font-size: 22px; font-weight: 800; line-height: 1.35; }
+.tp-doc__content h3 { margin: 28px 0 10px; color: var(--tp-navy); font-size: 18px; font-weight: 700; }
+.tp-doc__content p { margin: 0 0 14px; }
+.tp-doc__content ul, .tp-doc__content ol { margin: 0 0 16px; padding-left: 22px; }
+.tp-doc__content ul { list-style: disc; }
+.tp-doc__content li { margin: 0 0 8px; padding-left: 4px; }
+.tp-doc__content li::marker { color: var(--tp-primary); }
+.tp-doc__content a { color: var(--tp-primary-dark); text-decoration: underline; text-underline-offset: 2px; }
+.tp-doc__content table { width: 100%; margin: 8px 0 20px; border-collapse: separate; border-spacing: 0; overflow: hidden; border: 1px solid var(--tp-line); border-radius: var(--tp-radius); font-size: 15px; }
+.tp-doc__content th, .tp-doc__content td { padding: 12px 14px; border: 0; border-bottom: 1px solid var(--tp-line); color: var(--tp-ink); text-align: left; vertical-align: top; line-height: 1.55; }
+.tp-doc__content th { background: var(--tp-soft); color: var(--tp-navy); font-size: 13px; font-weight: 700; letter-spacing: 0; text-transform: none; }
+.tp-doc__content tr:last-child td { border-bottom: 0; }
+.tp-doc__content td:first-child { width: 42%; font-weight: 600; }
+
+@media (max-width: 849px) {
+	.tp-doc__body { grid-template-columns: minmax(0, 1fr); gap: 24px; padding-top: 28px; }
+	.tp-doc__toc { position: static; max-height: none; }
+}
+@media (max-width: 549px) {
+	.tp-doc__hero { padding: 32px 0 30px; }
+	.tp-doc__content { font-size: 15px; }
+	.tp-doc__content h2 { font-size: 19px; }
+	.tp-doc__content table, .tp-doc__content tbody, .tp-doc__content tr, .tp-doc__content td { display: block; width: 100%; }
+	.tp-doc__content thead { display: none; }
+	.tp-doc__content td { padding: 8px 14px; border: 0; }
+	.tp-doc__content td:first-child { width: 100%; padding-top: 12px; color: var(--tp-navy); }
+	.tp-doc__content tr { border-bottom: 1px solid var(--tp-line); padding-bottom: 6px; }
+	.tp-doc__content tr:last-child { border-bottom: 0; }
+}
+
 /* ---------- Ô tick "Tôi đồng ý với Chính sách bảo mật" (CF7 [acceptance]) trong mọi form ---------- */
 
 .wpcf7-acceptance { display: block; margin: 0 0 12px; }

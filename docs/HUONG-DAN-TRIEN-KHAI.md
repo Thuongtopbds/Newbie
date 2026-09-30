@@ -337,7 +337,7 @@ Mega menu "Dự án" không hiện trong menu trượt trên điện thoại, n�
 
 Nội dung dán sẵn: `docs/trang/chinh-sach-bao-mat.html` (theo Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 và Nghị định 356/2025/NĐ-CP).
 
-1. **Trang → Thêm mới**, tiêu đề `Chính sách bảo mật`, đường dẫn `chinh-sach-bao-mat`, dán nội dung ở chế độ Code. Thay các chỗ `[trong ngoặc vuông]` (tên đơn vị chủ quản, ngày cập nhật, công cụ thống kê đang dùng).
+1. **Trang → Thêm mới**, tiêu đề `Chính sách bảo mật`, đường dẫn `chinh-sach-bao-mat`, dán nội dung ở chế độ Code. **Thuộc tính trang → Giao diện: chọn `TOPBDS – Văn bản (chính sách, điều khoản)`** (không dùng Page - Full Width). Thay các chỗ `[trong ngoặc vuông]` và xoá luôn dấu ngoặc. Ngày cập nhật và mục lục hiển thị tự động.
 2. **Cài đặt → Riêng tư**: chọn trang này làm trang chính sách bảo mật.
 3. Footer: link "Chính sách bảo mật" trỏ tới `/chinh-sach-bao-mat/` (mẫu `footer.txt` đã sửa).
 4. Thêm ô tick đồng ý vào **từng form** Contact Form 7, đặt ngay trên nút gửi:
