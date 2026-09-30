@@ -862,6 +862,45 @@ a.tp-infocard:hover { border-color: var(--tp-primary); box-shadow: var(--tp-shad
 	.tp-404__block { margin-top: 44px; }
 }
 
+/* ---------- Ô tìm kiếm trong menu trượt điện thoại ---------- */
+
+/* Phương án A – "Viên thuốc": phần tử Search gốc của Flatsome trong Mobile Sidebar */
+.mobile-sidebar .searchform .flex-row { position: relative; }
+.mobile-sidebar .searchform .flex-row > .flex-col:last-child { position: absolute; top: 5px; right: 5px; }
+.mobile-sidebar .searchform input.search-field {
+	width: 100%;
+	height: 52px;
+	margin: 0;
+	padding: 0 60px 0 46px;
+	border: 1px solid rgba(255, 255, 255, .18);
+	border-radius: 999px;
+	background: rgba(255, 255, 255, .08) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,.6)' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.3-4.3'/%3E%3C/svg%3E") no-repeat 18px 50%;
+	box-shadow: none;
+	color: #fff;
+	font-size: 15px;
+	transition: border-color .2s, background-color .2s, box-shadow .2s;
+}
+.mobile-sidebar .searchform input.search-field::placeholder { color: rgba(255, 255, 255, .55); }
+.mobile-sidebar .searchform input.search-field:focus { border-color: var(--tp-primary); background-color: rgba(255, 255, 255, .12); box-shadow: 0 0 0 3px rgba(244, 117, 33, .25); }
+.mobile-sidebar .searchform .ux-search-submit { width: 42px; height: 42px; min-height: 0; margin: 0; padding: 0; border: 0; border-radius: 50%; background: var(--tp-primary); color: #fff; line-height: 42px; box-shadow: 0 4px 12px rgba(244, 117, 33, .4); }
+.mobile-sidebar .searchform .ux-search-submit:hover { background: var(--tp-primary-dark); }
+.mobile-sidebar .header-search-form { padding-top: 18px; padding-bottom: 18px; }
+
+/* Phương án B – "Thẻ tìm dự án": shortcode [tp_mobile_search] đặt trong phần tử HTML */
+.tp-msearch { margin: 6px 0; padding: 16px; border-radius: 16px; background: #fff; box-shadow: 0 10px 30px rgba(0, 0, 0, .35); text-align: left; }
+.tp-msearch__title { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; color: var(--tp-navy); font-size: 14px; font-weight: 800; letter-spacing: .02em; text-transform: uppercase; }
+.tp-msearch__title .tp-icon { color: var(--tp-primary); }
+.tp-msearch__form { position: relative; display: flex; gap: 8px; margin: 0; }
+.tp-msearch__icon { position: absolute; top: 50%; left: 14px; display: flex; color: var(--tp-muted); transform: translateY(-50%); pointer-events: none; }
+.tp-msearch__form input[type="search"] { flex: 1; min-width: 0; height: 48px; margin: 0; padding: 0 12px 0 42px; border: 1.5px solid var(--tp-line); border-radius: 12px; background: var(--tp-soft); box-shadow: none; color: var(--tp-ink); font-size: 15px; }
+.tp-msearch__form input[type="search"]:focus { border-color: var(--tp-primary); background: #fff; }
+.tp-msearch__form button { flex: none; height: 48px; min-height: 0; margin: 0; padding: 0 16px; border: 0; border-radius: 12px; background: var(--tp-primary); color: #fff; font-size: 15px; font-weight: 700; text-transform: none; line-height: 48px; }
+.tp-msearch__form button:hover { background: var(--tp-primary-dark); }
+.tp-msearch__chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 0; padding: 0; list-style: none; }
+.tp-msearch__chips li { margin: 0; padding: 0; border: 0; }
+.tp-msearch__chips a { display: inline-block; padding: 6px 12px; border: 1px solid var(--tp-line); border-radius: 999px; background: #fff; color: var(--tp-ink); font-size: 13px; font-weight: 600; line-height: 1.3; text-decoration: none; text-transform: none; }
+.tp-msearch__chips a:hover { border-color: var(--tp-primary); color: var(--tp-primary-dark); }
+
 /* ---------- Thanh Zalo/Gọi cố định trên mobile ---------- */
 
 .tp-mobile-bar { display: none; }

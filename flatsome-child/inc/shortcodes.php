@@ -369,3 +369,44 @@ add_shortcode( 'tp_mega_links', function ( $atts ) {
 
 	return $html;
 } );
+
+/**
+ * [tp_mobile_search title="Tìm dự án" chips="6"]
+ *
+ * Ô tìm kiếm dạng thẻ cho menu trượt trên điện thoại (Flatsome → Header → HTML, kéo vào Mobile Sidebar):
+ * tìm trong dự án, bên dưới là các nút loại hình nhiều dự án nhất.
+ */
+add_shortcode( 'tp_mobile_search', function ( $atts ) {
+	$a = shortcode_atts( array(
+		'title'       => 'Tìm dự án',
+		'placeholder' => 'Tên dự án…',
+		'chips'       => 6,
+	), $atts );
+
+	$id   = wp_unique_id( 'tp-msearch-' );
+	$html = '<div class="tp-msearch">';
+	if ( $a['title'] ) {
+		$html .= '<p class="tp-msearch__title">' . tp_icon( 'building', 16 ) . esc_html( $a['title'] ) . '</p>';
+	}
+	$html .= '<form class="tp-msearch__form" role="search" method="get" action="' . esc_url( home_url( '/' ) ) . '">';
+	$html .= '<label class="screen-reader-text" for="' . esc_attr( $id ) . '">Tìm kiếm dự án</label>';
+	$html .= '<span class="tp-msearch__icon" aria-hidden="true">' . tp_icon( 'search', 18 ) . '</span>';
+	$html .= '<input type="search" id="' . esc_attr( $id ) . '" name="s" placeholder="' . esc_attr( $a['placeholder'] ) . '" autocomplete="off">';
+	$html .= '<input type="hidden" name="post_type" value="du_an">';
+	$html .= '<button type="submit">Tìm</button>';
+	$html .= '</form>';
+
+	$count = max( 0, (int) $a['chips'] );
+	if ( $count ) {
+		$terms = get_terms( array( 'taxonomy' => 'loai_hinh', 'orderby' => 'count', 'order' => 'DESC', 'number' => $count, 'hide_empty' => true ) );
+		if ( $terms && ! is_wp_error( $terms ) ) {
+			$html .= '<ul class="tp-msearch__chips" aria-label="Tìm theo loại hình">';
+			foreach ( $terms as $term ) {
+				$html .= '<li><a href="' . esc_url( get_term_link( $term ) ) . '">' . esc_html( $term->name ) . '</a></li>';
+			}
+			$html .= '</ul>';
+		}
+	}
+
+	return $html . '</div>';
+} );

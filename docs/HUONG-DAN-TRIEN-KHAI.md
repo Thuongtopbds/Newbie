@@ -332,6 +332,9 @@ Mega menu "Dự án" không hiện trong menu trượt trên điện thoại, n�
 3. Cuối trang, **Vị trí hiển thị**: chỉ tick **Main Menu - Mobile** (bản Việt có thể là "Menu chính - Di động"). Lưu menu.
 4. Tuỳ chọn: **Flatsome → Theme Options → Header → Header Builder**, chuyển sang chế độ Mobile, kéo phần tử **Search** và **HTML 1** vào khung **Mobile Sidebar**; ô HTML 1 (Header → HTML) nhập `[tp_contact_buttons style="cta"]` để có nút Zalo/Gọi trong menu trượt.
 5. Xoá cache LiteSpeed rồi mở thử trên điện thoại.
+6. Ô tìm kiếm trong menu trượt có 2 kiểu (ảnh so sánh: `docs/preview/o-tim-kiem-menu-mobile.png`):
+   - **A – Viên thuốc:** giữ phần tử **Search** gốc của Flatsome trong Mobile Sidebar, theme tự tạo kiểu (nền trong, nút tròn cam).
+   - **B – Thẻ tìm dự án:** xoá phần tử Search khỏi Mobile Sidebar, kéo **HTML 2** vào vị trí đó và nhập `[tp_mobile_search]` ở **Header → HTML → HTML 2**. Thẻ trắng tìm riêng trong dự án, có nút loại hình bấm nhanh.
 
 ### Bước 5e – Trang Chính sách bảo mật
 
