@@ -43,3 +43,35 @@ Theme cắt ảnh **từ giữa ra**. Hãy đặt chủ thể (toà nhà, mặt 
 ## Ảnh đã tải từ trước
 
 Ảnh tải lên **trước khi** kích hoạt child theme sẽ chưa có các bản cắt `tp-card`, `tp-tile`, `tp-news`, `tp-thumb`. Cài plugin **Regenerate Thumbnails**, chạy một lần cho toàn bộ ảnh, rồi có thể gỡ plugin.
+
+## Đặt tên file ảnh và văn bản thay thế (Alt) chuẩn SEO
+
+**Quy tắc tên file** (đặt trên máy tính, *trước khi* tải lên – WordPress không đổi được tên file sau khi tải):
+
+- Viết thường, **không dấu**, nối các từ bằng dấu gạch ngang `-`. Không dùng khoảng trắng, dấu `_`, ký tự đặc biệt.
+- Cấu trúc: **`[tên-dự-án]-[nội-dung-ảnh]-[số thứ tự nếu nhiều ảnh].webp`**, 3–7 từ.
+- Đúng nội dung ảnh, không nhồi từ khoá, không đặt `IMG_2034.jpg`, `anh-1.jpg`, `z5123...jpg` (ảnh tải từ Zalo).
+
+| Loại ảnh | Tên file mẫu |
+|---|---|
+| Ảnh đại diện dự án | `noble-palace-tay-thang-long-phoi-canh-tong-the.webp` |
+| Vị trí | `vi-tri-noble-palace-tay-thang-long.webp` |
+| Mặt bằng | `mat-bang-tong-the-noble-palace-tay-thang-long.webp` |
+| Sản phẩm | `grand-shophouse-5-tang-noble-palace.webp` |
+| Tiện ích (nhiều ảnh) | `tien-ich-be-boi-noble-palace-01.webp`, `…-02.webp` |
+| Tiến độ | `tien-do-noble-palace-thang-09-2026.webp` |
+| Ô loại hình / khu vực | `loai-hinh-biet-thu.webp`, `khu-vuc-ha-noi.webp` |
+| Tin tức | `[tu-khoa-chinh-bai-viet].webp`, VD `thi-truong-can-ho-ha-noi-quy-3-2026.webp` |
+
+**Sau khi tải lên** (Thư viện → bấm vào ảnh, ô bên phải):
+
+| Ô | Điền | Ví dụ |
+|---|---|---|
+| **Văn bản thay thế (Alt)** – quan trọng nhất | Câu mô tả ngắn, **có dấu**, đúng nội dung ảnh, có tên dự án | Phối cảnh tổng thể Noble Palace Tây Thăng Long |
+| Tiêu đề | Giống Alt (hoặc để mặc định) | |
+| Chú thích | Chỉ điền nếu muốn chữ hiện dưới ảnh trong bài | Ảnh phối cảnh do chủ đầu tư cung cấp |
+| Mô tả | Để trống | |
+
+- Alt khác nhau cho từng ảnh, không chép một câu cho cả thư viện ảnh.
+- Ảnh trang trí (hoa văn, nền) để Alt trống.
+- Nén và chuyển sang WebP trước khi tải (squoosh.app), dung lượng nên dưới 300 KB/ảnh, ảnh hero dưới 500 KB.
