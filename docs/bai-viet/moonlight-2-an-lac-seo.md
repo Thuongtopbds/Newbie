@@ -84,7 +84,7 @@ Nội dung bài viết nằm trong file `moonlight-2-an-lac.html` (cùng thư m�
 | Mục | Nội dung |
 |---|---|
 | Từ khóa chính | `Moonlight 2 An Lạc` (nhập trước), sau đó thêm `Moonlight 2`. Rank Math cho nhập nhiều từ khóa, từ đầu tiên được coi là chính |
-| Từ khóa phụ | `chung cư Moonlight 2`, `giá chung cư Moonlight 2`, `Moonlight 2 An Lạc Green Symphony` |
+| Từ khóa phụ | `chung cư Moonlight 2`, `giá chung cư Moonlight 2`, `Moonlight 2 An Lạc Green Symphony`. Thứ tự đầy đủ trong ô Rank Math: **Moonlight 2 An Lạc → Moonlight 2 → chung cư Moonlight 2 → giá chung cư Moonlight 2 → Moonlight 2 An Lạc Green Symphony** (5 từ, đúng giới hạn bản miễn phí) |
 | SEO Title (≤ 60 ký tự) | `Moonlight 2 An Lạc: Giá Bán, Mặt Bằng, Tiến Độ 2026` |
 | Permalink | `moonlight-2-an-lac` |
 | Meta Description (≤ 160 ký tự) | `Moonlight 2 An Lạc – chung cư 494 căn hộ 2-3PN tại An Lạc Green Symphony, bể bơi bốn mùa, đối diện Moonlight 1. Cập nhật giá bán, mặt bằng, tiến độ 2026.` |
