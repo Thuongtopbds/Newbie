@@ -9,7 +9,7 @@ Nội dung bài viết: `van-bay-van-don.html` (cùng thư mục). Khoảng 1.70
 | Ô | Nhập |
 |---|---|
 | Tiêu đề | `Chung cư Vân Bay Vân Đồn` |
-| Đường dẫn (slug) | `van-bay-van-don` |
+| Đường dẫn (slug) | `chung-cu-van-bay-van-don` |
 | Nội dung | Chuyển sang chế độ **Code/Văn bản**, dán toàn bộ file `.html` |
 | Tóm tắt (Excerpt) | Toà căn hộ 30 tầng, 500 căn sở hữu lâu dài trên đại lộ 58m, trung tâm KĐT Phương Đông, view vịnh Bái Tử Long, đặc khu Vân Đồn. |
 | Loại hình | Căn hộ chung cư |
@@ -47,14 +47,16 @@ Nội dung bài viết: `van-bay-van-don.html` (cùng thư mục). Khoảng 1.70
 | Từ khoá chính | `chung cư Vân Bay Vân Đồn` |
 | Từ khoá phụ | `chung cư Vân Bay Phương Đông`, `Vân Bay Tower`, `Vân Bay Vân Đồn`, `giá chung cư Vân Bay` |
 | SEO Title (≤ 60 ký tự) | `Chung Cư Vân Bay Vân Đồn: Giá, Mặt Bằng, Chính Sách 2026` |
-| Permalink | `van-bay-van-don` |
-| Meta Description (≤ 160 ký tự) | `Chung cư Vân Bay Vân Đồn: 500 căn sở hữu lâu dài tại KĐT Phương Đông, view vịnh Bái Tử Long, cách sân bay 7km. Cập nhật giá, mặt bằng, chính sách 2026.` |
+| Permalink | `chung-cu-van-bay-van-don` |
+| Meta Description (≤ 160 ký tự) | `Chung cư Vân Bay Vân Đồn (Vân Bay Tower): 500 căn sở hữu lâu dài tại KĐT Phương Đông, view vịnh Bái Tử Long. Cập nhật giá chung cư Vân Bay, mặt bằng 2026.` |
 | Schema | **Article** (hoặc Place) |
 | Facebook/Zalo title | `Chung cư Vân Bay Vân Đồn – Bảng giá & quỹ căn mới nhất` |
 
 **FAQ Schema (nên làm):** chuyển 5 câu hỏi H3 ở mục "Câu hỏi thường gặp" sang khối **FAQ by Rank Math**.
 
-**Đã tối ưu sẵn trong bài:** từ khoá chính ở câu đầu tiên, trong 2 tiêu đề H2 và câu hỏi FAQ; biến thể "chung cư Vân Bay Phương Đông" có trong H2/FAQ; có bảng thông số, bảng loại căn, liên kết nội bộ (`/khu-vuc/quang-ninh/`, `/du-an/`) và nút "Nhận bảng giá" (`#tp-lien-he`).
+**Đã tối ưu sẵn trong bài:** từ khoá chính ở câu đầu tiên, trong 2 tiêu đề H2 và câu hỏi FAQ (9 lần). Mỗi từ khoá phụ có ở ít nhất 1 tiêu đề H2/H3 và 4 – 5 lần trong bài: "chung cư Vân Bay Phương Đông" (5), "Vân Bay Tower" (5), "giá chung cư Vân Bay" (4), "Vân Bay Vân Đồn" (9). Có bảng thông số, bảng loại căn, liên kết nội bộ (`/khu-vuc/quang-ninh/`, `/du-an/`) và nút "Nhận bảng giá" (`#tp-lien-he`).
+
+**Từ khoá phụ hiện màu vàng là bình thường:** Rank Math chấm từ khoá phụ theo cùng bộ tiêu chí với từ khoá chính (tiêu đề SEO, meta description, đường dẫn, đoạn mở đầu, Alt ảnh…), mà tiêu đề và đường dẫn chỉ nên chứa từ khoá chính. Để điểm từ khoá phụ cao hơn: dùng meta description ở bảng trên (đã chứa "Vân Bay Tower" và "giá chung cư Vân Bay") và điền Alt ảnh theo mục 3 (mỗi từ khoá phụ có trong ít nhất 1 Alt). Không nên nhồi thêm từ khoá vào bài.
 
 **Nên thêm:** liên kết ra bài báo về đặc khu Vân Đồn hoặc cao tốc Vân Đồn – Móng Cái (link ở mục 4).
 
@@ -62,12 +64,13 @@ Nội dung bài viết: `van-bay-van-don.html` (cùng thư mục). Khoảng 1.70
 
 | Tên file | Alt |
 |---|---|
-| `chung-cu-van-bay-van-don-phoi-canh.jpg` | Phối cảnh chung cư Vân Bay Vân Đồn |
-| `vi-tri-chung-cu-van-bay-van-don.jpg` | Vị trí chung cư Vân Bay trong KĐT Phương Đông Vân Đồn |
+| `chung-cu-van-bay-van-don-phoi-canh.jpg` | Phối cảnh chung cư Vân Bay Vân Đồn – Vân Bay Tower |
+| `vi-tri-chung-cu-van-bay-van-don.jpg` | Vị trí chung cư Vân Bay Phương Đông trong KĐT Phương Đông Vân Đồn |
 | `mat-bang-chung-cu-van-bay.jpg` | Mặt bằng tầng điển hình chung cư Vân Bay Vân Đồn |
 | `can-ho-studio-van-bay.jpg` | Căn hộ studio chung cư Vân Bay Vân Đồn |
 | `can-ho-2pn-van-bay.jpg` | Căn hộ 2 phòng ngủ chung cư Vân Bay Phương Đông |
-| `view-vinh-bai-tu-long-van-bay.jpg` | View vịnh Bái Tử Long từ chung cư Vân Bay |
+| `view-vinh-bai-tu-long-van-bay.jpg` | View vịnh Bái Tử Long từ Vân Bay Tower |
+| `bang-gia-chung-cu-van-bay.jpg` | Bảng giá chung cư Vân Bay Vân Đồn |
 | `kdt-phuong-dong-van-don.jpg` | Khu đô thị Phương Đông Vân Đồn |
 
 ## 4. Nguồn và số liệu cần kiểm tra lại trước khi đăng
