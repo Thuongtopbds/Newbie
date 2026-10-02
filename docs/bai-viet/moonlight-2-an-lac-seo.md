@@ -1,37 +1,45 @@
-# Chung cư Moonlight 2 – nghiên cứu từ khóa, cách đăng bài và cài SEO
+# Moonlight 2 An Lạc – nghiên cứu từ khóa, cách đăng bài và cài SEO
 
-Nội dung bài viết nằm trong file `chung-cu-moonlight-2.html` (cùng thư mục). Bài dài khoảng 1.700 chữ, gồm 9 mục H2, 5 câu hỏi thường gặp, 3 bảng.
+Nội dung bài viết nằm trong file `moonlight-2-an-lac.html` (cùng thư mục). Bài dài khoảng 1.700 chữ, gồm 9 mục H2, 5 câu hỏi thường gặp, 3 bảng.
 
 ## 1. Nghiên cứu từ khóa
 
-### Chọn giữa "Moonlight 2" và "Chung cư Moonlight 2"
+### Dữ liệu thực tế (Google Trends + Keyword Planner, Việt Nam, 9/2025 – 9/2026)
 
-**Chọn `Chung cư Moonlight 2` làm từ khóa chính**, vì:
+| Từ khóa | Lượng tìm/tháng (Keyword Planner) | Thay đổi so với năm trước | Cạnh tranh | Google Trends (trung bình 12 tháng) |
+|---|---|---|---|---|
+| `moonlight 2` | 100 – 1.000 | +900% | Thấp | 11, tăng mạnh từ tháng 6/2026 |
+| `moonlight 2 an lạc` | 100 – 1.000 | +900% | Thấp | ~0, bắt đầu tăng từ tháng 9/2026 |
+| `chung cư moonlight 2` | 10 – 100 | Mới xuất hiện | Thấp | ~0, bắt đầu tăng từ tháng 9/2026 |
 
-- **"Moonlight 2" đứng một mình bị trùng tên.** Khi search, Google trả về lẫn các dự án khác: Moonlight Residences (Thủ Đức), Moonlight Boulevard (Bình Tân), Moonlight Park View… Người gõ "Moonlight 2" chưa chắc đang tìm dự án ở An Lạc, nên rất khó cạnh tranh.
-- **"Chung cư + tên dự án" là cách người mua ở Hà Nội hay tìm.** Trong Nam người ta hay gõ "căn hộ…", còn ở Hà Nội thường gõ "chung cư…". Từ khóa này rõ mục đích: người tìm đang quan tâm mua hoặc thuê căn hộ.
-- **Cụm "chung cư Moonlight 2" đã chứa sẵn "Moonlight 2".** Trang vẫn có cơ hội xuất hiện khi người dùng tìm cụm ngắn.
-- Các trang đang xếp hạng đầu (trang dự án của đại lý, batdongsan.com.vn) đều đặt tên dạng "Chung cư Moonlight 2…" hoặc "Moonlight 2 An Lạc…", cho thấy Google hiểu đây là hai cách gọi chính.
+**Nhận xét:**
+- **`moonlight 2` có lượng tìm cao nhất.** Các đỉnh trên Google Trends trùng với giai đoạn ký kết phân phối và nhận đặt chỗ (tháng 6 – 9/2026), nên phần lớn lượt tìm là về dự án này chứ không phải dự án khác cùng tên.
+- **`moonlight 2 an lạc` cùng mức lượng tìm với `moonlight 2`** và rõ nghĩa hơn: người gõ cụm này chắc chắn đang tìm dự án ở An Lạc.
+- **`chung cư moonlight 2` thấp hơn khoảng 10 lần.** Dự đoán ban đầu của mình (người Hà Nội hay gõ "chung cư + tên") chưa đúng với dự án này, nên cụm này chuyển xuống làm từ khóa phụ.
+- Cả 3 từ khóa đều **cạnh tranh thấp**. Đây là cơ hội tốt cho web mới vì nhu cầu tìm kiếm đang tăng nhanh mà ít trang tối ưu kỹ.
 
-### Danh sách từ khóa
+### Từ khóa đã chọn
 
 | Nhóm | Từ khóa | Dùng ở đâu |
 |---|---|---|
-| **Chính** | `chung cư Moonlight 2` | Tiêu đề, slug, câu đầu, 2 H2, FAQ |
-| Phụ – tên gọi | `Moonlight 2 An Lạc`, `Moonlight 2 An Lạc Green Symphony`, `Moonlight 2 Hoài Đức` | Đoạn mở bài, bảng thông tin, Meta Description |
-| Phụ – mua bán | `giá chung cư Moonlight 2`, `bảng giá Moonlight 2`, `căn hộ Moonlight 2` | Mục "Giá bán và chính sách" |
-| Phụ – tìm hiểu | `mặt bằng Moonlight 2`, `chủ đầu tư Moonlight 2`, `tiến độ Moonlight 2` | Các H2 và FAQ tương ứng |
-| Câu hỏi (FAQ) | ở đâu, chủ đầu tư là ai, bao nhiêu căn, giá bao nhiêu, khi nào bàn giao | Mục "Câu hỏi thường gặp" |
+| **Chính** | `Moonlight 2 An Lạc` | Tiêu đề, slug, câu đầu, 2 H2, 2 câu hỏi FAQ |
+| **Chính (cụm ngắn)** | `Moonlight 2` | Nằm sẵn trong cụm chính, nên có mặt ở mọi vị trí trên. Thêm 1 H2 riêng: "Giá bán Moonlight 2 và chính sách" |
+| Phụ | `chung cư Moonlight 2`, `giá chung cư Moonlight 2`, `Moonlight 2 An Lạc Green Symphony`, `Moonlight 2 Hoài Đức` | Mở bài, thân bài, FAQ |
+| Liên quan (Keyword Planner gợi ý) | `moonlight 1`, `moonlight 1 an lạc`, `chung cư moonlight 1` | Bài đã nhắc Moonlight 1 nhiều lần. Có thể viết bài riêng về Moonlight 1 rồi đặt liên kết qua lại |
 
-### Bạn nên tự kiểm tra thêm (5 phút)
+**Lý do để "Moonlight 2 An Lạc" làm cụm chính thay vì chỉ "Moonlight 2":** cụm này bắt đầu bằng "Moonlight 2", nên một tiêu đề như "Moonlight 2 An Lạc: …" khớp được cả hai từ khóa có lượng tìm cao nhất. Ngoài ra, cụm này giúp Google không nhầm trang với các dự án Moonlight ở TP.HCM.
 
-Mình không truy cập được Google Keyword Planner và Google Trends từ môi trường làm việc. Danh sách trên được chọn dựa trên kết quả tìm kiếm và tên các trang đang xếp hạng. Bạn nên kiểm tra lại theo các bước đã hướng dẫn trước đó:
+### Đã sửa trong bài
 
-1. **Google Trends**: so sánh `chung cư moonlight 2`, `moonlight 2 an lạc`, `moonlight 2`, chọn khu vực Việt Nam, thời gian 12 tháng.
-2. **Google Keyword Planner**: nhập 3 cụm trên để xem khoảng lượng tìm kiếm.
-3. **Gợi ý của Google**: gõ `chung cư moonlight 2 ` (có dấu cách ở cuối) để xem các gợi ý tự động.
-4. Nếu `Moonlight 2 An Lạc` có lượng tìm kiếm cao hơn hẳn, đổi từ khóa chính trong Rank Math và SEO Title sang cụm đó. Không cần sửa nội dung bài vì cụm này đã có sẵn trong bài.
-5. Sau 2 – 4 tuần, vào **Search Console** xem các truy vấn thực tế và bổ sung vào bài.
+- Câu đầu: **Moonlight 2 An Lạc** (chung cư Moonlight 2) là…
+- H2: "Thông tin dự án Moonlight 2 An Lạc", "Giá bán Moonlight 2 và chính sách", "Có nên mua Moonlight 2 An Lạc?"
+- FAQ: "Moonlight 2 An Lạc ở đâu?", "Khi nào Moonlight 2 An Lạc bàn giao?", giữ "Giá chung cư Moonlight 2 bao nhiêu?"
+- Số lần xuất hiện: `Moonlight 2` 23 lần (mật độ khoảng 1,3%), `Moonlight 2 An Lạc` 8 lần, `chung cư Moonlight 2` 7 lần.
+
+### Theo dõi tiếp
+
+- Lượng tìm đang ở giai đoạn đầu và tăng nhanh. Sau khi đăng bài 2 – 4 tuần, vào **Search Console → Hiệu suất** để xem từ nào mang lại lượt hiển thị nhiều nhất.
+- Kiểm tra lại Google Trends sau 1 – 2 tháng. Nếu `chung cư moonlight 2` vượt `moonlight 2 an lạc`, chỉ cần đổi thứ tự từ khóa trong Rank Math, không phải sửa bài.
 
 ## 2. Đăng dự án
 
@@ -39,8 +47,8 @@ Mình không truy cập được Google Keyword Planner và Google Trends từ m
 
 | Ô | Nhập |
 |---|---|
-| Tiêu đề | `Chung cư Moonlight 2 An Lạc` |
-| Đường dẫn (slug) | `chung-cu-moonlight-2` |
+| Tiêu đề | `Moonlight 2 An Lạc` |
+| Đường dẫn (slug) | `moonlight-2-an-lac` |
 | Nội dung | Chuyển sang chế độ **Code/Văn bản**, dán toàn bộ file `.html` |
 | Tóm tắt (Excerpt) | Tòa căn hộ 21 tầng, 494 căn 2 – 3 phòng ngủ trên đại lộ Ánh Trăng 58m, khu đô thị An Lạc Green Symphony, đối diện Moonlight 1 đã bàn giao. |
 | Loại hình | Căn hộ |
@@ -75,19 +83,18 @@ Mình không truy cập được Google Keyword Planner và Google Trends từ m
 
 | Mục | Nội dung |
 |---|---|
-| Từ khóa chính | `chung cư Moonlight 2` |
-| Từ khóa phụ | `Moonlight 2 An Lạc`, `Moonlight 2 An Lạc Green Symphony`, `giá chung cư Moonlight 2`, `Moonlight 2 Hoài Đức` |
-| SEO Title (≤ 60 ký tự) | `Chung Cư Moonlight 2 An Lạc: Giá Bán, Mặt Bằng 2026` |
-| Permalink | `chung-cu-moonlight-2` |
-| Meta Description (≤ 160 ký tự) | `Chung cư Moonlight 2 An Lạc Green Symphony – 494 căn hộ 2-3PN, bể bơi bốn mùa, đối diện Moonlight 1. Cập nhật giá bán, mặt bằng, tiến độ mới nhất 2026.` |
+| Từ khóa chính | `Moonlight 2 An Lạc` (nhập trước), sau đó thêm `Moonlight 2`. Rank Math cho nhập nhiều từ khóa, từ đầu tiên được coi là chính |
+| Từ khóa phụ | `chung cư Moonlight 2`, `giá chung cư Moonlight 2`, `Moonlight 2 An Lạc Green Symphony` |
+| SEO Title (≤ 60 ký tự) | `Moonlight 2 An Lạc: Giá Bán, Mặt Bằng, Tiến Độ 2026` |
+| Permalink | `moonlight-2-an-lac` |
+| Meta Description (≤ 160 ký tự) | `Moonlight 2 An Lạc – chung cư 494 căn hộ 2-3PN tại An Lạc Green Symphony, bể bơi bốn mùa, đối diện Moonlight 1. Cập nhật giá bán, mặt bằng, tiến độ 2026.` |
 | Schema | **Article**. Không chọn Product vì giá chưa cố định |
-| Facebook/Zalo title | `Chung cư Moonlight 2 – Bảng giá & mặt bằng căn hộ mới nhất` |
+| Facebook/Zalo title | `Moonlight 2 An Lạc – Bảng giá & mặt bằng căn hộ mới nhất` |
 
 **FAQ Schema (nên làm):** mục "Câu hỏi thường gặp" có 5 câu hỏi H3. Nếu dùng trình soạn thảo khối (Gutenberg), chuyển 5 câu hỏi này sang khối **FAQ by Rank Math**.
 
 **Đã tối ưu sẵn trong bài:**
-- Từ khóa chính `chung cư Moonlight 2` xuất hiện ở câu đầu tiên, trong 2 tiêu đề H2, trong FAQ và rải đều trong bài (14 lần). Cụm "Moonlight 2" xuất hiện tổng cộng 21 lần, mật độ khoảng 1%.
-- Các từ khóa phụ `Moonlight 2 An Lạc Green Symphony`, `Hoài Đức`, `giá`, `mặt bằng`, `tiến độ`, `chủ đầu tư` có trong H2 hoặc FAQ.
+- Từ khóa chính có ở câu đầu, trong 3 H2 và FAQ (chi tiết ở mục 1).
 - Có bảng thông số, bảng loại căn, bảng tiến độ thanh toán, câu hỏi thường gặp, liên kết nội bộ (`/khu-vuc/ha-noi/`, `/du-an/`) và nút dẫn tới form "Nhận bảng giá" (`#tp-lien-he`).
 
 **Nên làm thêm:** đặt 1 liên kết ra bài báo uy tín, ví dụ bài của Báo Đầu tư về việc ký kết phân phối, ở mục "Pháp lý và tiến độ". Nếu web đã có bài về Moonlight 1 hoặc An Lạc Green Symphony, đặt liên kết qua lại giữa các bài.
@@ -98,8 +105,8 @@ Bạn tự chọn ảnh để tải lên. Nên đặt tên file không dấu, c�
 
 | Tên file | Alt |
 |---|---|
-| `chung-cu-moonlight-2-phoi-canh.webp` | Phối cảnh 2 tòa tháp chung cư Moonlight 2 An Lạc |
-| `vi-tri-chung-cu-moonlight-2.webp` | Vị trí chung cư Moonlight 2 trên đại lộ Ánh Trăng, An Lạc Green Symphony |
+| `moonlight-2-an-lac-phoi-canh.webp` | Phối cảnh 2 tòa tháp Moonlight 2 An Lạc |
+| `vi-tri-moonlight-2-an-lac.webp` | Vị trí Moonlight 2 An Lạc trên đại lộ Ánh Trăng, An Lạc Green Symphony |
 | `mat-bang-tang-moonlight-2.webp` | Mặt bằng tầng điển hình chung cư Moonlight 2 |
 | `can-ho-2pn-moonlight-2.webp` | Căn hộ 2 phòng ngủ chung cư Moonlight 2 |
 | `can-ho-3pn-moonlight-2.webp` | Căn hộ 3 phòng ngủ chung cư Moonlight 2 |
