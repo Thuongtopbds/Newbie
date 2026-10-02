@@ -73,13 +73,13 @@ Bạn tự chọn ảnh để tải lên. Nên đặt tên file không dấu, c�
 
 | Tên file | Alt |
 |---|---|
-| `benhill-thuan-an-phoi-canh.jpg` | Phối cảnh 2 tòa tháp BenHill Thuận An |
-| `vi-tri-benhill-thuan-an.jpg` | Vị trí BenHill Thuận An trên đường Thuận Giao 25 |
-| `benhill-thuan-an-5-tang-xanh.jpg` | 5 tầng không gian xanh tại BenHill Thuận An |
-| `mat-bang-can-ho-benhill.jpg` | Mặt bằng căn hộ BenHill Thuận An |
-| `can-ho-2pn-benhill-thuan-an.jpg` | Căn hộ 2 phòng ngủ BenHill Thuận An |
-| `ho-boi-benhill-thuan-an.jpg` | Hồ bơi tại chung cư BenHill Thuận An |
-| `benhill-thuan-an-thuc-te.jpg` | Hình ảnh thực tế chung cư BenHill Thuận An |
+| `benhill-thuan-an-phoi-canh.webp` | Phối cảnh 2 tòa tháp BenHill Thuận An |
+| `vi-tri-benhill-thuan-an.webp` | Vị trí BenHill Thuận An trên đường Thuận Giao 25 |
+| `benhill-thuan-an-5-tang-xanh.webp` | 5 tầng không gian xanh tại BenHill Thuận An |
+| `mat-bang-can-ho-benhill.webp` | Mặt bằng căn hộ BenHill Thuận An |
+| `can-ho-2pn-benhill-thuan-an.webp` | Căn hộ 2 phòng ngủ BenHill Thuận An |
+| `ho-boi-benhill-thuan-an.webp` | Hồ bơi tại chung cư BenHill Thuận An |
+| `benhill-thuan-an-thuc-te.webp` | Hình ảnh thực tế chung cư BenHill Thuận An |
 
 Có thể chèn ảnh ngay dưới H2 tương ứng trong bài: vị trí, thiết kế 5 tầng xanh, mặt bằng, tiện ích, tiến độ.
 
