@@ -1,6 +1,6 @@
 # An Quý Villa Dương Nội – cách đăng bài và cài SEO
 
-Nội dung bài viết: `an-quy-villa-duong-noi.html` (cùng thư mục). Khoảng 1.900 chữ, 10 mục H2, 5 câu hỏi thường gặp.
+Nội dung bài viết: `an-quy-villa-duong-noi.html` (cùng thư mục). Khoảng 1.700 chữ, 9 mục H2, 5 câu hỏi thường gặp.
 
 ## 1. Đăng dự án
 
