@@ -351,6 +351,13 @@ Nội dung dán sẵn: `docs/trang/chinh-sach-bao-mat.html` (theo Luật Bảo v
    ```
    Theme đã có CSS cho ô tick này ở form báo giá, form liên hệ và form footer (từ bản 1.0.12). Khách phải tick mới gửi được form.
 
+### Bước 5e2 – Banner quảng cáo hai bên
+
+**Giao diện → Tuỳ biến → TOPBDS – Banner hai bên**: chọn ảnh và link cho banner trái, phải; tick trang muốn hiện (mặc định: trang chủ + trang dự án).
+- Ảnh: rộng **320px** (hiển thị 160px), cao 900–1200px, WebP, dưới 80 KB. Điền Alt cho ảnh trong Thư viện.
+- Chỉ hiện trên màn hình **từ 1600px** (để không đè nội dung 1200px). Laptop nhỏ, máy tính bảng, điện thoại không hiện và **không tải ảnh**.
+- Khách bấm ✕ thì banner ẩn đến khi đóng tab. Link ngoài website (Zalo…) tự mở tab mới.
+
 ### Bước 6 – SEO và tốc độ
 - **Thứ bậc tiêu đề đúng như đề xuất:**
   - H1 duy nhất ở hero.

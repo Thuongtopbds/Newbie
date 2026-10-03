@@ -916,6 +916,32 @@ a.tp-infocard:hover { border-color: var(--tp-primary); box-shadow: var(--tp-shad
 .dark .tp-msearch ul.tp-msearch__chips > li > a { display: inline-block !important; padding: 6px 12px !important; border: 1px solid var(--tp-line) !important; border-radius: 999px; background: #fff !important; color: var(--tp-ink) !important; font-size: 13px !important; font-weight: 600 !important; line-height: 1.3 !important; letter-spacing: 0 !important; text-transform: none !important; opacity: 1 !important; }
 .tp-msearch ul.tp-msearch__chips > li > a:hover { border-color: var(--tp-primary) !important; color: var(--tp-primary-dark) !important; }
 
+/* ---------- Banner dọc ghim hai bên (inc/side-banners.php) ---------- */
+
+.tp-side { display: none; }
+@media (min-width: 1600px) {
+	.tp-side {
+		position: fixed;
+		top: calc(var(--tp-sticky-top, 70px) + 24px);
+		z-index: 30;
+		display: block;
+		width: 160px;
+	}
+	/* Khung nội dung rộng 1200px: banner nằm sát mép ngoài, cách khung 24px */
+	.tp-side--left { left: calc(50% - 600px - 24px - 160px); }
+	.tp-side--right { right: calc(50% - 600px - 24px - 160px); }
+	.admin-bar .tp-side { top: calc(var(--tp-sticky-top, 70px) + 56px); }
+	/* Trang dự án có thanh mục lục dính (~56px) ngay dưới header: banner nằm dưới thanh này */
+	.single-du_an .tp-side { top: calc(var(--tp-sticky-top, 70px) + 80px); }
+	.admin-bar.single-du_an .tp-side { top: calc(var(--tp-sticky-top, 70px) + 112px); }
+	.tp-side a, .tp-side picture { display: block; }
+	.tp-side img { display: block; width: 160px; height: auto; max-height: calc(100vh - var(--tp-sticky-top, 70px) - 48px); object-fit: contain; border-radius: var(--tp-radius); box-shadow: var(--tp-shadow); }
+	.tp-side a:hover img { box-shadow: var(--tp-shadow-hover); }
+	.tp-side__close { position: absolute; top: -10px; right: -10px; display: grid; place-items: center; width: 24px; height: 24px; min-height: 0; margin: 0; padding: 0; border: 0; border-radius: 50%; background: var(--tp-navy); color: #fff; font-size: 16px; line-height: 1; cursor: pointer; opacity: .75; }
+	.tp-side__close:hover { opacity: 1; }
+	.tp-side-closed .tp-side { display: none; }
+}
+
 /* ---------- Thanh Zalo/Gọi cố định trên mobile ---------- */
 
 .tp-mobile-bar { display: none; }
