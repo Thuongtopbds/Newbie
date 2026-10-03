@@ -44,10 +44,7 @@ Dán nguyên khối dưới đây (định dạng Markdown):
 ```
 ## Trang chính
 
-- [Tất cả dự án](https://topbds.vn/du-an/): Danh sách dự án đang mở bán và sắp mở bán, lọc theo loại hình và khu vực.
-- [Tin tức](https://topbds.vn/tin-tuc/): Tin thị trường, phân tích, pháp lý, quy hoạch bất động sản.
-- [Giới thiệu](https://topbds.vn/gioi-thieu/): Về TOPBDS.VN và đội ngũ tư vấn.
-- [Liên hệ](https://topbds.vn/lien-he/): Nhận bảng giá, tài liệu dự án và đặt lịch xem dự án.
+- [Tất cả dự án](https://topbds.vn/du-an/): Danh sách dự án đang mở bán, sắp mở bán và đã bàn giao, lọc theo loại hình và khu vực.
 
 ## Về nội dung
 
@@ -62,12 +59,26 @@ Dán nguyên khối dưới đây (định dạng Markdown):
 - Email: topbds.info@gmail.com
 ```
 
+Chỉ cần thêm link **Tất cả dự án** vì Rank Math không tự liệt kê trang lưu trữ `/du-an/`. Các trang Giới thiệu, Liên hệ, Tin tức đã được Rank Math tự đưa vào mục "Trang", không cần lặp lại.
+
 Bấm **Lưu thay đổi**, sau đó xoá cache LiteSpeed (LiteSpeed Cache → Purge All) và mở `https://topbds.vn/llms.txt` để kiểm tra.
 
 ## 6. Lưu ý
 
-- **Kiểm tra slug** `/gioi-thieu/`, `/lien-he/`, `/tin-tuc/` trong khối trên có đúng với website không; sửa nếu khác.
 - **Tiêu đề và mô tả** của từng link trong llms.txt lấy từ **SEO Title** và **Meta Description** của Rank Math, nên các trang dự án cần điền đủ 2 ô này.
 - **Trang bị đặt `noindex`** trong Rank Math sẽ tự bị loại khỏi llms.txt.
 - **Cập nhật tự động:** khi đăng dự án hoặc bài mới, Rank Math tự cập nhật danh sách link. Chỉ cần sửa lại phần Summary và Additional Content khi đổi hotline, email hoặc slug trang.
 - **Chặn bot AI:** nếu muốn chặn bot AI thu thập dữ liệu, phải làm trong **robots.txt**, không làm trong llms.txt.
+
+## 7. Meta Description cho các trang tĩnh
+
+Rank Math lấy mô tả link từ Meta Description; trang nào để trống thì lấy dòng chữ đầu trang (ví dụ "LIÊN HỆ", "VỀ CHÚNG TÔI"). Điền Meta Description trong ô Rank Math của từng trang:
+
+| Trang | Meta Description |
+|---|---|
+| Trang chủ | `TOPBDS.VN – cổng thông tin bất động sản: dự án căn hộ, biệt thự, liền kề, shophouse, đất nền tại Hà Nội, TP.HCM và các tỉnh; giá, pháp lý, tiến độ cập nhật.` |
+| Giới thiệu (`/gioi-thieu-topbds/`) | `Về TOPBDS.VN: cổng thông tin bất động sản tổng hợp dự án rõ ràng, có nguồn, kèm đội ngũ tư vấn hỗ trợ từ tìm hiểu dự án, xem nhà mẫu đến giao dịch.` |
+| Liên hệ | `Liên hệ TOPBDS.VN để nhận bảng giá, tài liệu dự án và đặt lịch xem dự án. Hotline/Zalo 0977 113 009, email topbds.info@gmail.com.` |
+| Tin tức | `Tin tức bất động sản: thị trường, pháp lý, quy hoạch, phân tích đầu tư cập nhật hằng ngày từ TOPBDS.VN.` |
+
+Loại hình **Chung cư** chưa có mô tả: dán phần "Mô tả trang" và "Meta" của Chung cư trong `docs/trang/mo-ta-loai-hinh-khu-vuc.md`.
