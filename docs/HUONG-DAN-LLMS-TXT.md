@@ -65,19 +65,21 @@ Bấm **Lưu thay đổi**, sau đó xoá cache LiteSpeed (LiteSpeed Cache → P
 
 ## 6. Lưu ý
 
-- **Tiêu đề và mô tả** của từng link trong llms.txt lấy từ **SEO Title** và **Meta Description** của Rank Math, nên các trang dự án cần điền đủ 2 ô này.
+- **Mô tả** của từng link trong llms.txt lấy từ ô **Tóm tắt (Excerpt)**; để trống thì Rank Math lấy đoạn chữ đầu nội dung. Meta Description trong ô Rank Math chỉ dùng cho Google, không đưa vào llms.txt. Vì vậy bài viết, dự án và các trang tĩnh nên điền cả 2 ô.
 - **Trang bị đặt `noindex`** trong Rank Math sẽ tự bị loại khỏi llms.txt.
 - **Cập nhật tự động:** khi đăng dự án hoặc bài mới, Rank Math tự cập nhật danh sách link. Chỉ cần sửa lại phần Summary và Additional Content khi đổi hotline, email hoặc slug trang.
 - **Chặn bot AI:** nếu muốn chặn bot AI thu thập dữ liệu, phải làm trong **robots.txt**, không làm trong llms.txt.
 
-## 7. Meta Description cho các trang tĩnh
+## 7. Mô tả cho các trang tĩnh
 
-Rank Math lấy mô tả link từ Meta Description; trang nào để trống thì lấy dòng chữ đầu trang (ví dụ "LIÊN HỆ", "VỀ CHÚNG TÔI"). Điền Meta Description trong ô Rank Math của từng trang (Rank Math → Chỉnh sửa đoạn trích → Mô tả). **Không** dán vào ô "Tóm tắt" (Excerpt) của trang: Flatsome sẽ hiện đoạn đó thành dải chữ dưới menu.
+Mỗi trang điền **cùng một câu** vào 2 chỗ:
 
+1. **Ô Tóm tắt (Excerpt)** ở cột phải trang chỉnh sửa: llms.txt lấy câu ở đây. Theme TOPBDS từ v1.0.26 ẩn dải Tóm tắt mà Flatsome hiện dưới menu, nên điền vào không làm lệch giao diện.
+2. **Rank Math → Chỉnh sửa đoạn trích → Mô tả**: câu hiện trên Google. Thanh màu dưới ô phải xanh (không quá 920px).
 
-| Trang | Meta Description |
+| Trang | Mô tả |
 |---|---|
-| Trang chủ | `TOPBDS.VN – cổng thông tin bất động sản: dự án căn hộ, biệt thự, liền kề, shophouse, đất nền tại Hà Nội, TP.HCM và các tỉnh; giá, pháp lý, tiến độ cập nhật.` |
+| Trang chủ | `TOPBDS.VN – cổng thông tin dự án căn hộ, biệt thự, liền kề, shophouse, đất nền tại Hà Nội, TP.HCM: giá, pháp lý, tiến độ cập nhật.` |
 | Giới thiệu (`/gioi-thieu-topbds/`) | `Về TOPBDS.VN: cổng thông tin bất động sản tổng hợp dự án rõ ràng, có nguồn, kèm đội ngũ tư vấn hỗ trợ từ tìm hiểu dự án, xem nhà mẫu đến giao dịch.` |
 | Liên hệ | `Liên hệ TOPBDS.VN để nhận bảng giá, tài liệu dự án và đặt lịch xem dự án. Hotline/Zalo 0977 113 009, email topbds.info@gmail.com.` |
 | Tin tức | `Tin tức bất động sản: thị trường, pháp lý, quy hoạch, phân tích đầu tư cập nhật hằng ngày từ TOPBDS.VN.` |
