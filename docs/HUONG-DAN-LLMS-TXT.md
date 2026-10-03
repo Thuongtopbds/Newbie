@@ -72,7 +72,8 @@ Bấm **Lưu thay đổi**, sau đó xoá cache LiteSpeed (LiteSpeed Cache → P
 
 ## 7. Meta Description cho các trang tĩnh
 
-Rank Math lấy mô tả link từ Meta Description; trang nào để trống thì lấy dòng chữ đầu trang (ví dụ "LIÊN HỆ", "VỀ CHÚNG TÔI"). Điền Meta Description trong ô Rank Math của từng trang:
+Rank Math lấy mô tả link từ Meta Description; trang nào để trống thì lấy dòng chữ đầu trang (ví dụ "LIÊN HỆ", "VỀ CHÚNG TÔI"). Điền Meta Description trong ô Rank Math của từng trang (Rank Math → Chỉnh sửa đoạn trích → Mô tả). **Không** dán vào ô "Tóm tắt" (Excerpt) của trang: Flatsome sẽ hiện đoạn đó thành dải chữ dưới menu.
+
 
 | Trang | Meta Description |
 |---|---|
