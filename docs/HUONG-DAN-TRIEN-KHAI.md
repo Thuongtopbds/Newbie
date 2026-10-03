@@ -152,7 +152,7 @@ Trang không cần UX Builder: bố cục áp dụng tự động cho mọi dự
 3. Vào **Cài đặt → Đường dẫn tĩnh**, chọn "Tên bài viết" rồi bấm **Lưu**, để các đường dẫn `/du-an/`, `/loai-hinh/`… hoạt động.
 
 Khi kích hoạt, theme tự tạo sẵn các mục sau:
-- Loại hình: Chung cư, Biệt thự, Liền kề, Shophouse, Đất nền, Khu đô thị, Nhà vườn
+- Loại hình: Chung cư, Biệt thự, Liền kề, Shophouse, Đất nền, Khu đô thị
 - Khu vực: Hà Nội, TP. Hồ Chí Minh, Hải Phòng, Hưng Yên, Bắc Ninh
 - Trạng thái: Đang mở bán, Sắp mở bán, Đã bàn giao
 

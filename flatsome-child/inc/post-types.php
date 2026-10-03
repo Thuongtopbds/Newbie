@@ -61,7 +61,7 @@ add_action( 'after_switch_theme', function () {
 	tp_register_post_types();
 
 	$defaults = array(
-		'loai_hinh'  => array( 'Chung cư', 'Biệt thự', 'Liền kề', 'Shophouse', 'Đất nền', 'Khu đô thị', 'Nhà vườn' ),
+		'loai_hinh'  => array( 'Chung cư', 'Biệt thự', 'Liền kề', 'Shophouse', 'Đất nền', 'Khu đô thị' ),
 		'khu_vuc'    => array( 'Hà Nội', 'TP. Hồ Chí Minh', 'Hải Phòng', 'Hưng Yên', 'Bắc Ninh' ),
 		'trang_thai' => array( 'Đang mở bán', 'Sắp mở bán', 'Đã bàn giao' ),
 	);

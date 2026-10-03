@@ -14,7 +14,7 @@ Tổng hợp các dự án chung cư đang mở bán, sắp mở bán và đã b
 
 **Meta:** Dự án chung cư đang mở bán: giá, mặt bằng căn hộ, pháp lý, tiến độ bàn giao cập nhật mới nhất. Nhận bảng giá và tư vấn miễn phí tại TOPBDS.VN.
 
-> Đã gộp: loại hình "Căn hộ" (`/loai-hinh/can-ho/`) và "Nhà phố" (`/loai-hinh/nha-pho/`) đã xoá. Dự án căn hộ dùng "Chung cư"; nhà phố dùng "Liền kề" hoặc "Shophouse". Hai đường dẫn cũ chuyển hướng 301 trong Rank Math → Chuyển hướng.
+> Đã gộp: loại hình "Căn hộ" (`/loai-hinh/can-ho/`), "Nhà phố" (`/loai-hinh/nha-pho/`) và "Nhà vườn" (`/loai-hinh/nha-vuon/`) đã xoá. Dự án căn hộ dùng "Chung cư"; nhà phố dùng "Liền kề" hoặc "Shophouse"; nhà vườn dùng "Biệt thự". Ba đường dẫn cũ chuyển hướng 301 trong Rank Math → Chuyển hướng.
 
 ### Biệt thự (`/loai-hinh/biet-thu/`)
 **Mô tả trang:**
