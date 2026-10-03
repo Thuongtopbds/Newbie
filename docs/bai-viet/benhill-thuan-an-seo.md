@@ -12,7 +12,7 @@ Nội dung bài viết nằm trong file `benhill-thuan-an.html` (cùng thư mụ
 | Đường dẫn (slug) | `benhill-thuan-an` |
 | Nội dung | Chuyển sang chế độ **Code/Văn bản**, dán toàn bộ file `.html` |
 | Tóm tắt (Excerpt) | Căn hộ 2 tòa 24 tầng với 5 tầng không gian xanh tại Thuận Giao, gần VSIP 1 và AEON Mall. Đã bàn giao, có thể xem nhà thực tế. |
-| Loại hình | Căn hộ |
+| Loại hình | Chung cư |
 | Khu vực | TP. Hồ Chí Minh |
 | Trạng thái | Đã bàn giao (nếu chủ đầu tư vẫn còn quỹ căn bán trực tiếp, có thể chọn thêm Đang mở bán) |
 | Ảnh đại diện | Ảnh phối cảnh hoặc ảnh thực tế 2 tòa tháp, tối thiểu 1600×900 |

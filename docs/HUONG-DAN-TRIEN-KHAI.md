@@ -152,7 +152,7 @@ Trang không cần UX Builder: bố cục áp dụng tự động cho mọi dự
 3. Vào **Cài đặt → Đường dẫn tĩnh**, chọn "Tên bài viết" rồi bấm **Lưu**, để các đường dẫn `/du-an/`, `/loai-hinh/`… hoạt động.
 
 Khi kích hoạt, theme tự tạo sẵn các mục sau:
-- Loại hình: Căn hộ, Biệt thự, Liền kề, Nhà phố, Đất nền, Khu đô thị, Nhà vườn, Shophouse
+- Loại hình: Chung cư, Biệt thự, Liền kề, Shophouse, Đất nền, Khu đô thị, Nhà vườn
 - Khu vực: Hà Nội, TP. Hồ Chí Minh, Hải Phòng, Hưng Yên, Bắc Ninh
 - Trạng thái: Đang mở bán, Sắp mở bán, Đã bàn giao
 
@@ -323,7 +323,7 @@ Mega menu "Dự án" không hiện trong menu trượt trên điện thoại, n�
    Dự án                 (liên kết tự tạo: /du-an/)
       Tất cả dự án       (/du-an/)
       Đang mở bán        (Trạng thái)
-      Căn hộ, Biệt thự, Liền kề, Nhà phố, Đất nền   (Loại hình)
+      Chung cư, Biệt thự, Liền kề, Shophouse, Đất nền   (Loại hình)
    Khu vực               (liên kết tự tạo: /du-an/)
       Hà Nội, TP. Hồ Chí Minh, …                    (Khu vực)
    Tin tức               (trang Tin tức)

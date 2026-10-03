@@ -43,7 +43,7 @@ add_action( 'ux_builder_setup', function () {
 		'options'  => array(
 			'placeholder' => $text( 'Chữ gợi ý', 'Nhập tên dự án, khu vực, loại hình hoặc từ khóa...' ),
 			'button'      => $text( 'Chữ trên nút', 'Tìm kiếm' ),
-			'chips'       => $text( 'Nút loại hình bên dưới', 'can-ho,biet-thu,lien-ke,nha-pho,dat-nen,khu-do-thi', 'Slug Loại hình, cách nhau bằng dấu phẩy. Để trống để ẩn.' ),
+			'chips'       => $text( 'Nút loại hình bên dưới', 'chung-cu,biet-thu,lien-ke,shophouse,dat-nen,khu-do-thi', 'Slug Loại hình, cách nhau bằng dấu phẩy. Để trống để ẩn.' ),
 		),
 	) );
 
@@ -61,7 +61,7 @@ add_action( 'ux_builder_setup', function () {
 			'columns'    => $number( 'Số cột (máy tính)', 4, 1, 6 ),
 			'badge'      => $yes_no( 'Hiện nhãn (Hot / Đang mở bán)' ),
 			'button'     => $yes_no( 'Hiện nút "Xem chi tiết"' ),
-			'loai_hinh'  => $text( 'Chỉ lấy loại hình', '', 'Slug, VD: can-ho,biet-thu' ),
+			'loai_hinh'  => $text( 'Chỉ lấy loại hình', '', 'Slug, VD: chung-cu,biet-thu' ),
 			'khu_vuc'    => $text( 'Chỉ lấy khu vực', '', 'Slug, VD: ha-noi' ),
 			'trang_thai' => $text( 'Chỉ lấy trạng thái', '', 'Slug, VD: sap-mo-ban' ),
 		),
@@ -72,7 +72,7 @@ add_action( 'ux_builder_setup', function () {
 		'category' => 'TOPBDS',
 		'options'  => array(
 			'taxonomy' => array( 'type' => 'select', 'heading' => 'Hiển thị', 'default' => 'loai_hinh', 'options' => array( 'loai_hinh' => 'Loại hình', 'khu_vuc' => 'Khu vực' ) ),
-			'include'  => $text( 'Chọn mục (theo thứ tự)', '', 'Slug, VD: biet-thu,can-ho. Để trống: lấy các mục nhiều dự án nhất.' ),
+			'include'  => $text( 'Chọn mục (theo thứ tự)', '', 'Slug, VD: biet-thu,chung-cu. Để trống: lấy các mục nhiều dự án nhất.' ),
 			'count'    => $number( 'Số ô', 5, 1, 12 ),
 			'columns'  => $number( 'Số cột (0 = bằng số ô)', 0, 0, 8 ),
 			'style'    => array( 'type' => 'select', 'heading' => 'Chiều cao ô', 'default' => 'tall', 'options' => array( 'tall' => 'Cao (loại hình)', 'short' => 'Thấp (khu vực)' ) ),

@@ -14,13 +14,7 @@ Tổng hợp các dự án chung cư đang mở bán, sắp mở bán và đã b
 
 **Meta:** Dự án chung cư đang mở bán: giá, mặt bằng căn hộ, pháp lý, tiến độ bàn giao cập nhật mới nhất. Nhận bảng giá và tư vấn miễn phí tại TOPBDS.VN.
 
-### Căn hộ (`/loai-hinh/can-ho/`)
-**Mô tả trang:**
-Danh sách dự án căn hộ từ studio, 1–3 phòng ngủ đến duplex, penthouse tại các khu vực đang phát triển mạnh. TOPBDS.VN cập nhật diện tích, thiết kế, giá bán, chính sách hỗ trợ vay và tiến độ bàn giao của từng dự án để bạn chọn được căn phù hợp với nhu cầu và tài chính.
-
-**Meta:** Căn hộ studio, 1–3 phòng ngủ, penthouse tại các dự án mới. Cập nhật giá bán, chính sách vay, tiến độ bàn giao. Tư vấn miễn phí tại TOPBDS.VN.
-
-> Gợi ý: "Chung cư" và "Căn hộ" gần như trùng nghĩa, dễ khiến Google coi là 2 trang giống nhau. Nếu được, nên gộp về một loại hình ("Chung cư") rồi chuyển hướng 301 trang còn lại.
+> Đã gộp: loại hình "Căn hộ" (`/loai-hinh/can-ho/`) và "Nhà phố" (`/loai-hinh/nha-pho/`) đã xoá. Dự án căn hộ dùng "Chung cư"; nhà phố dùng "Liền kề" hoặc "Shophouse". Hai đường dẫn cũ chuyển hướng 301 trong Rank Math → Chuyển hướng.
 
 ### Biệt thự (`/loai-hinh/biet-thu/`)
 **Mô tả trang:**

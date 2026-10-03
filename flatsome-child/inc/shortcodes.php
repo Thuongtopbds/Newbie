@@ -43,7 +43,7 @@ add_shortcode( 'tp_heading', function ( $atts ) {
 } );
 
 /**
- * [tp_hero_search placeholder="..." button="Tìm kiếm" chips="can-ho,biet-thu,lien-ke,nha-pho,dat-nen,khu-do-thi"]
+ * [tp_hero_search placeholder="..." button="Tìm kiếm" chips="chung-cu,biet-thu,lien-ke,shophouse,dat-nen,khu-do-thi"]
  *
  * Tìm trong post type Dự án; các nút bên dưới dẫn tới trang Loại hình tương ứng.
  */
@@ -51,7 +51,7 @@ add_shortcode( 'tp_hero_search', function ( $atts ) {
 	$a = shortcode_atts( array(
 		'placeholder' => 'Nhập tên dự án, khu vực, loại hình hoặc từ khóa...',
 		'button'      => 'Tìm kiếm',
-		'chips'       => 'can-ho,biet-thu,lien-ke,nha-pho,dat-nen,khu-do-thi',
+		'chips'       => 'chung-cu,biet-thu,lien-ke,shophouse,dat-nen,khu-do-thi',
 	), $atts );
 
 	$id   = wp_unique_id( 'tp-search-' );
@@ -80,7 +80,7 @@ add_shortcode( 'tp_hero_search', function ( $atts ) {
 /**
  * [tp_projects filter="featured|latest|selling|all" count="4" columns="4" badge="yes" button="yes"]
  *
- * Lọc thêm theo slug: loai_hinh="can-ho" khu_vuc="ha-noi" trang_thai="dang-mo-ban".
+ * Lọc thêm theo slug: loai_hinh="chung-cu" khu_vuc="ha-noi" trang_thai="dang-mo-ban".
  */
 add_shortcode( 'tp_projects', function ( $atts ) {
 	$a = shortcode_atts( array(
@@ -135,7 +135,7 @@ add_shortcode( 'tp_projects', function ( $atts ) {
 } );
 
 /**
- * [tp_terms taxonomy="loai_hinh" include="biet-thu,can-ho" count="5" arrow="yes" more=""]
+ * [tp_terms taxonomy="loai_hinh" include="biet-thu,chung-cu" count="5" arrow="yes" more=""]
  *
  * Với Khu vực: mặc định chỉ lấy cấp tỉnh/thành; more="Các tỉnh khác" thêm một ô cuối
  * đếm các dự án không thuộc những khu vực đã hiện.

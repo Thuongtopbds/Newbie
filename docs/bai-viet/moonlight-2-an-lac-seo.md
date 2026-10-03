@@ -51,7 +51,7 @@ Nội dung bài viết nằm trong file `moonlight-2-an-lac.html` (cùng thư m�
 | Đường dẫn (slug) | `moonlight-2-an-lac` |
 | Nội dung | Chuyển sang chế độ **Code/Văn bản**, dán toàn bộ file `.html` |
 | Tóm tắt (Excerpt) | Tòa căn hộ 21 tầng, 494 căn 2 – 3 phòng ngủ trên đại lộ Ánh Trăng 58m, khu đô thị An Lạc Green Symphony, đối diện Moonlight 1 đã bàn giao. |
-| Loại hình | Căn hộ |
+| Loại hình | Chung cư |
 | Khu vực | Hà Nội |
 | Trạng thái | Đang mở bán (hoặc Sắp mở bán nếu chủ đầu tư chưa công bố giá chính thức) |
 | Ảnh đại diện | Ảnh phối cảnh 2 tòa tháp, tối thiểu 1600×900 |

@@ -12,7 +12,7 @@ Nội dung bài viết: `tecco-elite-city-thai-nguyen.html` (cùng thư mục). 
 | Đường dẫn (slug) | `tecco-elite-city-thai-nguyen` |
 | Nội dung | Chuyển sang chế độ **Code/Văn bản**, dán toàn bộ file `.html` |
 | Tóm tắt (Excerpt) | Tổ hợp 6 toà chung cư 32 tầng trên đường Quang Trung, trung tâm Thái Nguyên. 4 toà đã có sổ hồng, đang mở bán toà A1 bàn giao đầu 2027. |
-| Loại hình | Căn hộ chung cư |
+| Loại hình | Chung cư |
 | Khu vực | Thái Nguyên (tạo mới nếu chưa có, slug `thai-nguyen`) |
 | Trạng thái | Đang mở bán |
 | Ảnh đại diện | Ảnh phối cảnh tổng thể 6 toà, tối thiểu 1600×900 |

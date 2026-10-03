@@ -12,7 +12,7 @@ Nội dung bài viết: `van-bay-van-don.html` (cùng thư mục). Khoảng 1.70
 | Đường dẫn (slug) | `chung-cu-van-bay-van-don` |
 | Nội dung | Chuyển sang chế độ **Code/Văn bản**, dán toàn bộ file `.html` |
 | Tóm tắt (Excerpt) | Toà căn hộ 30 tầng, 500 căn sở hữu lâu dài trên đại lộ 58m, trung tâm KĐT Phương Đông, view vịnh Bái Tử Long, đặc khu Vân Đồn. |
-| Loại hình | Căn hộ chung cư |
+| Loại hình | Chung cư |
 | Khu vực | Quảng Ninh (tạo mới nếu chưa có, slug `quang-ninh`) |
 | Trạng thái | Đang mở bán |
 | Ảnh đại diện | Ảnh phối cảnh toà Vân Bay hướng vịnh, tối thiểu 1600×900 |
