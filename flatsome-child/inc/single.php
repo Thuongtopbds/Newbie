@@ -205,3 +205,22 @@ add_filter( 'rank_math/researches/toc_plugins', function ( $plugins ) {
 	}
 	return $plugins;
 } );
+
+/**
+ * Bài viết tin tức dùng header thường như các trang khác. Header "transparent" của Flatsome nằm đè lên
+ * nội dung (position: absolute) nên che mất tiêu đề bài, vì bài viết không có ảnh nền phía trên.
+ */
+add_filter( 'flatsome_header_class', function ( $classes ) {
+	if ( ! is_singular( 'post' ) ) {
+		return $classes;
+	}
+	$drop = array( 'transparent', 'has-transparent', 'nav-dark', 'toggle-nav-dark' );
+	$keep = array();
+	foreach ( (array) $classes as $class ) {
+		$tokens = array_diff( preg_split( '/\s+/', (string) $class, -1, PREG_SPLIT_NO_EMPTY ), $drop );
+		if ( $tokens ) {
+			$keep[] = implode( ' ', $tokens );
+		}
+	}
+	return $keep;
+}, 999 );

@@ -566,6 +566,9 @@ a.tp-infocard:hover { border-color: var(--tp-primary); box-shadow: var(--tp-shad
 .blog-wrapper .entry-title,
 .blog-wrapper .entry-title a { color: var(--tp-navy); }
 .blog-wrapper .entry-title a:hover { color: var(--tp-primary); }
+/* Dự phòng nếu header bài viết vẫn ở chế độ transparent: không cho header đè lên tiêu đề. */
+.single-post .header.transparent:not(.stuck),
+.single-post .header.has-transparent:not(.stuck) { position: relative; }
 .tp-archive__count { margin: 0 0 14px; color: var(--tp-muted); font-size: 14px; }
 .tp-filter {
 	display: grid;
