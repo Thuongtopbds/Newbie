@@ -55,6 +55,14 @@ add_action( 'customize_register', function ( WP_Customize_Manager $wp_customize 
 		'mime_type' => 'image',
 	) ) );
 
+	$wp_customize->add_setting( 'tp_archive_intro', array( 'default' => tp_archive_intro_default(), 'sanitize_callback' => 'wp_kses_post' ) );
+	$wp_customize->add_control( 'tp_archive_intro', array(
+		'label'       => 'Giới thiệu trang "Tất cả dự án" (/du-an/)',
+		'description' => 'Hiện dưới tiêu đề trang danh sách dự án, 100–150 chữ. Để trống để ẩn.',
+		'section'     => 'tp_contact',
+		'type'        => 'textarea',
+	) );
+
 	$wp_customize->add_setting( 'tp_404_image', array( 'default' => 0, 'sanitize_callback' => 'absint' ) );
 	$wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'tp_404_image', array(
 		'label'       => 'Ảnh trang 404',
@@ -63,6 +71,14 @@ add_action( 'customize_register', function ( WP_Customize_Manager $wp_customize 
 		'mime_type'   => 'image',
 	) ) );
 } );
+
+function tp_archive_intro_default() {
+	return 'Tổng hợp các dự án bất động sản đang mở bán, sắp mở bán và đã bàn giao tại Hà Nội, Hưng Yên, Quảng Ninh, TP. Hồ Chí Minh và nhiều tỉnh thành khác. Mỗi dự án trên TOPBDS.VN đều có thông tin vị trí, chủ đầu tư, quy mô, pháp lý, tiến độ và giá bán được cập nhật thường xuyên, giúp bạn dễ dàng so sánh căn hộ chung cư, biệt thự, liền kề, shophouse hay đất nền phù hợp với nhu cầu ở và đầu tư.' . "\n\n" . 'Dùng bộ lọc bên dưới để tìm theo loại hình, khu vực, hoặc để lại số điện thoại tại từng dự án để nhận bảng giá và chính sách mới nhất qua Zalo.';
+}
+
+function tp_archive_intro() {
+	return trim( (string) get_theme_mod( 'tp_archive_intro', tp_archive_intro_default() ) );
+}
 
 function tp_hotline() {
 	return get_theme_mod( 'tp_hotline', '0977 113 009' );
@@ -94,3 +110,13 @@ add_action( 'wp_footer', function () {
 	</nav>
 	<?php
 } );
+
+/**
+ * Tiêu đề trang chuyên mục / thẻ của Flatsome: bỏ tiền tố "Lưu trữ danh mục:", "Lưu trữ thẻ:" để H1 chỉ còn tên chuyên mục.
+ */
+add_filter( 'gettext_flatsome', function ( $translation, $text ) {
+	if ( in_array( $text, array( 'Category Archives: %s', 'Tag Archives: %s' ), true ) ) {
+		return '%s';
+	}
+	return $translation;
+}, 10, 2 );
