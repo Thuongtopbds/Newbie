@@ -9,6 +9,7 @@ Website bất động sản TOPBDS trên WordPress + Flatsome.
 | `docs/HUONG-DAN-UPLOAD.md` | Các bước đưa website lên hosting |
 | `docs/HUONG-DAN-TRIEN-KHAI.md` | Hướng dẫn triển khai: phần nào làm bằng UX Blocks, phần nào code riêng, các bước cài đặt, danh sách thông tin cần bổ sung |
 | `docs/HUONG-DAN-ANH.md` | Bảng kích thước ảnh cần tải lên (hero, dự án, loại hình, khu vực, tin tức…) |
+| `docs/HUONG-DAN-LLMS-TXT.md` | Thiết lập llms.txt trong Rank Math (cho các công cụ AI) |
 | `docs/bai-viet/` | Bài dự án và bài thị trường kèm hướng dẫn SEO; danh sách đầy đủ ở `docs/bai-viet/README.md` |
 | `docs/trang/` | Nội dung các trang (chính sách bảo mật, mô tả loại hình và khu vực) |
 | `docs/ux-builder/` | Nội dung dán vào UX Builder: trang chủ, footer, mega menu |
