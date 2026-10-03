@@ -110,3 +110,13 @@ add_action( 'wp_footer', function () {
 	</nav>
 	<?php
 } );
+
+/**
+ * Tiêu đề trang chuyên mục / thẻ của Flatsome: bỏ tiền tố "Lưu trữ danh mục:", "Lưu trữ thẻ:" để H1 chỉ còn tên chuyên mục.
+ */
+add_filter( 'gettext_flatsome', function ( $translation, $text ) {
+	if ( in_array( $text, array( 'Category Archives: %s', 'Tag Archives: %s' ), true ) ) {
+		return '%s';
+	}
+	return $translation;
+}, 10, 2 );
