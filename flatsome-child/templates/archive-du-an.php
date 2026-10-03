@@ -21,6 +21,8 @@ get_header();
 			<h1 class="tp-archive__title"><?php echo esc_html( $tp_title ); ?></h1>
 			<?php if ( is_tax() && term_description() ) : ?>
 				<div class="tp-archive__desc"><?php echo wp_kses_post( term_description() ); ?></div>
+			<?php elseif ( is_post_type_archive( 'du_an' ) && ! is_search() && ! is_paged() && tp_archive_intro() ) : ?>
+				<div class="tp-archive__desc"><?php echo wp_kses_post( wpautop( tp_archive_intro() ) ); ?></div>
 			<?php endif; ?>
 		</header>
 

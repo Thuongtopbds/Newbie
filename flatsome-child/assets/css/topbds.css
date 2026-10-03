@@ -558,7 +558,9 @@ a.tp-infocard:hover { border-color: var(--tp-primary); box-shadow: var(--tp-shad
 .tp-archive { padding: 32px 0 48px; }
 .tp-archive__head { margin-bottom: 20px; }
 .tp-archive__title { margin: 0 0 8px; font-size: 28px; font-weight: 800; }
-.tp-archive__desc { color: var(--tp-muted); }
+.tp-archive__desc { max-width: 820px; color: var(--tp-muted); font-size: 15px; line-height: 1.7; }
+.tp-archive__desc p { margin: 0 0 10px; }
+.tp-archive__desc p:last-child { margin-bottom: 0; }
 .tp-archive__count { margin: 0 0 14px; color: var(--tp-muted); font-size: 14px; }
 .tp-filter {
 	display: grid;
