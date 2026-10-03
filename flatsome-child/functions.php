@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'TP_VERSION', '1.0.20' );
+define( 'TP_VERSION', '1.0.21' );
 define( 'TP_DIR', get_stylesheet_directory() );
 define( 'TP_URI', get_stylesheet_directory_uri() );
 

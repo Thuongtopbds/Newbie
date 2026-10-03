@@ -2,9 +2,10 @@
 /**
  * Hai banner dọc ghim hai bên nội dung (trang chủ, trang dự án).
  *
- * Chỉ hiện khi màn hình đủ rộng (≥ 1600px) để không đè lên khung nội dung 1200px. Ảnh khai báo qua
- * <picture><source media>, nên điện thoại và laptop nhỏ không tải ảnh banner. Khách có thể bấm ✕ để ẩn
- * trong phiên truy cập.
+ * Banner nằm trong khoảng trống hai bên khung nội dung. Độ rộng banner và mốc màn hình tối thiểu được tính
+ * theo độ rộng khung (Flatsome → Layout → Container Width): mặc định chọn cỡ lớn nhất vẫn vừa màn hình
+ * 1536px (laptop Full HD scale 125%, màn 4K scale 250%). Ảnh khai báo qua <picture><source media>, nên màn
+ * hình nhỏ hơn mốc không tải ảnh banner. Khách có thể bấm ✕ để ẩn trong phiên truy cập.
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -13,7 +14,22 @@ add_action( 'customize_register', function ( WP_Customize_Manager $wp_customize 
 	$wp_customize->add_section( 'tp_side_banners', array(
 		'title'       => 'TOPBDS – Banner hai bên',
 		'priority'    => 31,
-		'description' => 'Banner dọc ghim hai bên, chỉ hiện trên màn hình rộng từ 1600px. Ảnh nên rộng 320px (hiển thị 160px), cao 900–1200px, định dạng WebP, dưới 80 KB.',
+		'description' => tp_side_banner_help(),
+	) );
+
+	$wp_customize->add_setting( 'tp_side_width', array( 'default' => 0, 'sanitize_callback' => 'absint' ) );
+	$wp_customize->add_control( 'tp_side_width', array(
+		'label'   => 'Độ rộng banner',
+		'section' => 'tp_side_banners',
+		'type'    => 'select',
+		'choices' => array( 0 => 'Tự động (vừa màn hình 1536px)', 160 => '160px', 140 => '140px', 120 => '120px' ),
+	) );
+	$wp_customize->add_setting( 'tp_side_site_width', array( 'default' => 0, 'sanitize_callback' => 'absint' ) );
+	$wp_customize->add_control( 'tp_side_site_width', array(
+		'label'       => 'Độ rộng khung nội dung (px)',
+		'description' => 'Để 0: lấy theo Flatsome → Theme Options → Layout → Container Width.',
+		'section'     => 'tp_side_banners',
+		'type'        => 'number',
 	) );
 
 	foreach ( array( 'left' => 'trái', 'right' => 'phải' ) as $side => $label ) {
@@ -44,6 +60,33 @@ add_action( 'customize_register', function ( WP_Customize_Manager $wp_customize 
 } );
 
 /**
+ * Kích thước tính toán: [độ rộng khung nội dung, độ rộng banner, mốc màn hình tối thiểu].
+ * Banner cách khung 16px và cách mép màn hình ít nhất 16px.
+ */
+function tp_side_banner_layout() {
+	$site = (int) get_theme_mod( 'tp_side_site_width', 0 ) ?: (int) get_theme_mod( 'site_width', 1080 ) ?: 1080;
+	$w    = (int) get_theme_mod( 'tp_side_width', 0 );
+	if ( ! in_array( $w, array( 120, 140, 160 ), true ) ) {
+		$w = 120;
+		foreach ( array( 160, 140 ) as $try ) {
+			if ( $site + 2 * ( $try + 32 ) <= 1536 ) {
+				$w = $try;
+				break;
+			}
+		}
+	}
+	return array( $site, $w, $site + 2 * ( $w + 32 ) );
+}
+
+function tp_side_banner_help() {
+	list( $site, $w, $bp ) = tp_side_banner_layout();
+	return sprintf(
+		'Banner dọc ghim hai bên khung nội dung (%1$dpx). Hiện ở độ rộng %2$dpx trên màn hình từ %3$dpx trở lên; màn hình nhỏ hơn và điện thoại không hiện, không tải ảnh. Ảnh nên rộng %4$dpx (gấp đôi để nét), cao khoảng %5$d–%6$dpx, WebP, dưới 80 KB.',
+		$site, $w, $bp, $w * 2, $w * 6, $w * 7
+	);
+}
+
+/**
  * Trang hiện tại có được bật banner không.
  */
 function tp_side_banners_enabled() {
@@ -67,6 +110,7 @@ add_action( 'wp_footer', function () {
 		return;
 	}
 
+	list( $site, $bw, $bp ) = tp_side_banner_layout();
 	$html = '';
 	foreach ( array( 'left' => 'trái', 'right' => 'phải' ) as $side => $label ) {
 		$id  = (int) get_theme_mod( "tp_side_{$side}_img", 0 );
@@ -76,14 +120,16 @@ add_action( 'wp_footer', function () {
 		}
 		$link = get_theme_mod( "tp_side_{$side}_link", '' );
 		$alt  = get_post_meta( $id, '_wp_attachment_image_alt', true ) ?: 'Quảng cáo dự án';
-		$h    = $src[1] ? (int) round( 160 * $src[2] / $src[1] ) : 600;
+		$h    = $src[1] ? (int) round( $bw * $src[2] / $src[1] ) : $bw * 4;
 
 		// Ảnh thật chỉ nằm trong <source media>; <img> giữ ảnh 1×1 trong suốt nên màn hình nhỏ không tải gì.
 		$picture = sprintf(
-			'<picture><source media="(min-width: 1600px)" srcset="%1$s"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="160" height="%2$d" alt="%3$s" class="tp-no-lazy" data-no-lazy="1" decoding="async"></picture>',
+			'<picture><source media="(min-width: %4$dpx)" srcset="%1$s"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="%5$d" height="%2$d" alt="%3$s" class="tp-no-lazy" data-no-lazy="1" decoding="async"></picture>',
 			esc_url( $src[0] ),
 			$h,
-			esc_attr( $alt )
+			esc_attr( $alt ),
+			$bp,
+			$bw
 		);
 		if ( $link ) {
 			$is_external = wp_parse_url( $link, PHP_URL_HOST ) && wp_parse_url( $link, PHP_URL_HOST ) !== wp_parse_url( home_url(), PHP_URL_HOST );
@@ -101,6 +147,13 @@ add_action( 'wp_footer', function () {
 	if ( ! $html ) {
 		return;
 	}
+	// Vị trí phụ thuộc độ rộng khung, nên in CSS bố cục ngay tại đây (số nguyên đã tính ở PHP).
+	printf(
+		'<style>@media (min-width:%1$dpx){.tp-side{display:block;width:%2$dpx}.tp-side img{width:%2$dpx}.tp-side--left{left:calc(50%% - %3$dpx)}.tp-side--right{right:calc(50%% - %3$dpx)}}</style>',
+		$bp,
+		$bw,
+		(int) ( $site / 2 + 16 + $bw )
+	);
 	echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- các phần đã escape ở trên.
 	?>
 	<script>
