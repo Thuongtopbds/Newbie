@@ -104,3 +104,27 @@ Dự án bất động sản tại Bắc Ninh, một trong những trung tâm c�
 - Có thêm khu vực mới (Ninh Bình…) thì viết theo cùng công thức: **tên khu vực + điểm mạnh hạ tầng/kinh tế + các loại hình có dự án + TOPBDS cập nhật gì**.
 - Không đưa số liệu cụ thể (giá trung bình, số dự án) vào mô tả, vì sẽ nhanh lỗi thời.
 - Kiểm tra lại địa giới hành chính sau sáp nhập nếu chủ đầu tư đổi cách ghi địa chỉ.
+
+---
+
+## CHUYÊN MỤC TIN TỨC (Bài viết → Danh mục)
+
+Rank Math → Tiêu đề & Meta → **Danh mục**: Tiêu đề `%term% – Tin tức bất động sản %sep% %sitename%`, Mô tả `%term_description%`.
+
+### Thị trường (`/danh-muc/thi-truong/`)
+Tin tức thị trường bất động sản cập nhật hằng ngày: diễn biến giá, nguồn cung, sức mua và xu hướng tại Hà Nội, TP. Hồ Chí Minh và các tỉnh thành đang phát triển. TOPBDS.VN tổng hợp số liệu, nhận định từ chuyên gia và thông tin từ chủ đầu tư, giúp bạn nắm bắt thời điểm mua bán phù hợp.
+
+### Phân tích (`/danh-muc/phan-tich/`)
+Bài phân tích chuyên sâu về dự án, khu vực và phân khúc bất động sản: so sánh giá, đánh giá vị trí, hạ tầng kết nối, tiềm năng tăng giá và rủi ro cần lưu ý. Nội dung giúp người mua ở và nhà đầu tư có thêm góc nhìn trước khi ra quyết định.
+
+### Pháp lý (`/danh-muc/phap-ly/`)
+Cập nhật luật đất đai, nhà ở, kinh doanh bất động sản, thuế phí và thủ tục sang tên, cấp sổ đỏ, sổ hồng. TOPBDS.VN giải thích quy định mới bằng ngôn ngữ dễ hiểu, kèm hướng dẫn kiểm tra pháp lý dự án để bạn giao dịch an toàn.
+
+### Quy hoạch (`/danh-muc/quy-hoach/`)
+Thông tin quy hoạch đô thị, giao thông và sáp nhập địa giới hành chính: vành đai, cao tốc, đường sắt đô thị, khu công nghiệp và các khu đô thị mới. Theo dõi quy hoạch giúp bạn nhận diện sớm khu vực có tiềm năng phát triển.
+
+### Đầu tư (`/danh-muc/dau-tu/`)
+Kinh nghiệm và chiến lược đầu tư bất động sản: chọn phân khúc, tính dòng tiền cho thuê, sử dụng đòn bẩy ngân hàng, thời điểm mua và chốt lời. Nội dung thực tế dành cho cả người mới bắt đầu và nhà đầu tư có kinh nghiệm.
+
+### Tin tổng hợp (`/danh-muc/tin-tong-hop/`)
+Tổng hợp tin tức bất động sản nổi bật: thông tin dự án mới, sự kiện mở bán, chính sách ngân hàng, lãi suất và các hoạt động của TOPBDS.VN. Cập nhật nhanh để bạn không bỏ lỡ cơ hội.
