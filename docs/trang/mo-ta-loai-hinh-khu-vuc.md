@@ -86,9 +86,21 @@ Dự án bất động sản tại Thái Nguyên, trung tâm công nghiệp và 
 
 **Meta:** Dự án bất động sản Thái Nguyên: căn hộ, nhà phố, khu đô thị mới. Giá bán, pháp lý, tiến độ cập nhật tại TOPBDS.VN.
 
+### Hải Phòng (`/khu-vuc/hai-phong/`)
+**Mô tả trang:**
+Dự án bất động sản tại Hải Phòng, thành phố cảng và trung tâm công nghiệp – logistics của miền Bắc, nay gồm cả khu vực Hải Dương cũ sau sáp nhập từ 1/7/2025. Kết nối cao tốc Hà Nội – Hải Phòng, sân bay Cát Bi và cảng nước sâu Lạch Huyện giúp nhu cầu nhà ở của chuyên gia, công nhân tăng mạnh. TOPBDS.VN cập nhật căn hộ, liền kề, shophouse và đất nền cùng pháp lý, tiến độ và giá bán từng dự án.
+
+**Meta:** Dự án bất động sản Hải Phòng (gồm Hải Dương cũ): căn hộ, liền kề, shophouse, đất nền. Giá bán, pháp lý, tiến độ mới nhất tại TOPBDS.VN.
+
+### Bắc Ninh (`/khu-vuc/bac-ninh/`)
+**Mô tả trang:**
+Dự án bất động sản tại Bắc Ninh, một trong những trung tâm công nghiệp điện tử lớn nhất cả nước, nay gồm cả khu vực Bắc Giang cũ sau sáp nhập từ 1/7/2025. Hàng loạt khu công nghiệp và kết nối nhanh với Hà Nội qua cao tốc, Vành đai 4 tạo nhu cầu lớn về nhà ở và cho thuê. TOPBDS.VN cập nhật khu đô thị, căn hộ, liền kề và đất nền cùng pháp lý, tiến độ và giá bán.
+
+**Meta:** Dự án bất động sản Bắc Ninh (gồm Bắc Giang cũ): khu đô thị, căn hộ, liền kề, đất nền gần khu công nghiệp. Giá, pháp lý mới nhất tại TOPBDS.VN.
+
 ---
 
 ## Lưu ý
-- Có thêm khu vực mới (Bắc Ninh, Hải Phòng, Ninh Bình…) thì viết theo cùng công thức: **tên khu vực + điểm mạnh hạ tầng/kinh tế + các loại hình có dự án + TOPBDS cập nhật gì**.
+- Có thêm khu vực mới (Ninh Bình…) thì viết theo cùng công thức: **tên khu vực + điểm mạnh hạ tầng/kinh tế + các loại hình có dự án + TOPBDS cập nhật gì**.
 - Không đưa số liệu cụ thể (giá trung bình, số dự án) vào mô tả, vì sẽ nhanh lỗi thời.
 - Kiểm tra lại địa giới hành chính sau sáp nhập nếu chủ đầu tư đổi cách ghi địa chỉ.
