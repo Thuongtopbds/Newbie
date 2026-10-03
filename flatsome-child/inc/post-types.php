@@ -2,7 +2,7 @@
 /**
  * Post type "Dự án" và 3 phân loại: Loại hình, Khu vực, Trạng thái.
  *
- * URL: /du-an/ten-du-an/, /loai-hinh/can-ho/, /khu-vuc/ha-noi/, /trang-thai/dang-mo-ban/
+ * URL: /du-an/ten-du-an/, /loai-hinh/chung-cu/, /khu-vuc/ha-noi/, /trang-thai/dang-mo-ban/
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -61,7 +61,7 @@ add_action( 'after_switch_theme', function () {
 	tp_register_post_types();
 
 	$defaults = array(
-		'loai_hinh'  => array( 'Căn hộ', 'Biệt thự', 'Liền kề', 'Nhà phố', 'Đất nền', 'Khu đô thị', 'Nhà vườn', 'Shophouse' ),
+		'loai_hinh'  => array( 'Chung cư', 'Biệt thự', 'Liền kề', 'Shophouse', 'Đất nền', 'Khu đô thị' ),
 		'khu_vuc'    => array( 'Hà Nội', 'TP. Hồ Chí Minh', 'Hải Phòng', 'Hưng Yên', 'Bắc Ninh' ),
 		'trang_thai' => array( 'Đang mở bán', 'Sắp mở bán', 'Đã bàn giao' ),
 	);

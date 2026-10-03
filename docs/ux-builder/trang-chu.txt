@@ -8,7 +8,7 @@
 <h1>Tìm kiếm dự án phù hợp với bạn</h1>
 <p class="tp-hero__lead">Hàng nghìn dự án, cập nhật liên tục, thông tin minh bạch</p>
 
-[tp_hero_search chips="can-ho,biet-thu,lien-ke,nha-pho,dat-nen,khu-do-thi"]
+[tp_hero_search chips="chung-cu,biet-thu,lien-ke,shophouse,dat-nen,khu-do-thi"]
 
 [/col]
 [col span="4" span__sm="12" class="tp-glass"]
@@ -47,7 +47,7 @@
 
 [tp_heading title="Khám phá theo loại hình" sub="Chọn loại hình phù hợp với nhu cầu của bạn" link="/du-an/" link_text="Xem tất cả loại hình"]
 
-[tp_terms taxonomy="loai_hinh" include="biet-thu,can-ho,nha-vuon,lien-ke,dat-nen" count="5" arrow="yes"]
+[tp_terms taxonomy="loai_hinh" include="chung-cu,biet-thu,lien-ke,shophouse,dat-nen" count="5" arrow="yes"]
 
 [/col]
 

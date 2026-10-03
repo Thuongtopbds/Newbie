@@ -16,7 +16,7 @@
 <h4>Khám phá</h4>
 <ul>
 <li><a href="/du-an/">Dự án</a></li>
-<li><a href="/loai-hinh/can-ho/">Căn hộ</a></li>
+<li><a href="/loai-hinh/chung-cu/">Chung cư</a></li>
 <li><a href="/loai-hinh/biet-thu/">Biệt thự</a></li>
 <li><a href="/loai-hinh/lien-ke/">Liền kề</a></li>
 <li><a href="/loai-hinh/dat-nen/">Đất nền</a></li>
