@@ -41,7 +41,7 @@ get_header();
 						'selected'        => get_query_var( $tp_tax ),
 						'show_option_all' => 'Tất cả',
 						'hierarchical'    => true,
-						'hide_empty'      => false,
+						'hide_empty'      => true, // chỉ hiện loại hình, khu vực đã có dự án
 						'orderby'         => 'name',
 					) );
 					?>
