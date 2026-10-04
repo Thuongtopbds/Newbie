@@ -450,3 +450,11 @@ Child theme được chạy trên WordPress mới nhất (PHP 8.4) với dữ li
 8. ~~Nút trái tim~~ — đã bỏ cùng trang "Dự án đã lưu".
 9. ~~Cam kết trong hero~~ — giữ "Hỗ trợ 24/7".
 10. ~~Kỹ thuật~~ — hosting LiteSpeed (xem Bước 7), tên miền tạm `nhadep.click` (chuyển sang tên miền chính theo Bước 8), Flatsome 3.20.11.
+
+### Trang Tin tức (/tin-tuc/)
+
+Theme tự thêm phần đầu trang Tin tức (từ v1.0.29): tiêu đề **H1**, đoạn giới thiệu và các nút chuyên mục có bài viết.
+
+- **Tiêu đề H1:** Giao diện → Tùy biến → TOPBDS – Liên hệ → "Tiêu đề H1 trang Tin tức" (mặc định "Tin tức bất động sản").
+- **Đoạn giới thiệu:** lấy từ ô **Tóm tắt** của trang Tin tức (cũng là mô tả trong llms.txt). Chỉ hiện ở trang 1.
+- **Nút chuyên mục:** tự lấy các chuyên mục đang có bài, sắp theo số bài.

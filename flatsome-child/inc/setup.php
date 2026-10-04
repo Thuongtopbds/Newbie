@@ -63,6 +63,14 @@ add_action( 'customize_register', function ( WP_Customize_Manager $wp_customize 
 		'type'        => 'textarea',
 	) );
 
+	$wp_customize->add_setting( 'tp_blog_title', array( 'default' => 'Tin tức bất động sản', 'sanitize_callback' => 'sanitize_text_field' ) );
+	$wp_customize->add_control( 'tp_blog_title', array(
+		'label'       => 'Tiêu đề H1 trang Tin tức',
+		'description' => 'Đoạn giới thiệu dưới tiêu đề lấy từ ô Tóm tắt của trang Tin tức.',
+		'section'     => 'tp_contact',
+		'type'        => 'text',
+	) );
+
 	$wp_customize->add_setting( 'tp_404_image', array( 'default' => 0, 'sanitize_callback' => 'absint' ) );
 	$wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'tp_404_image', array(
 		'label'       => 'Ảnh trang 404',

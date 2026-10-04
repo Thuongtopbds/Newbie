@@ -224,3 +224,28 @@ add_filter( 'flatsome_header_class', function ( $classes ) {
 	}
 	return $keep;
 }, 999 );
+
+/**
+ * Phần đầu trang Tin tức: H1, giới thiệu (ô Tóm tắt của trang Tin tức) và các nút chuyên mục.
+ * Dùng cùng khung "archive-page-header" của Flatsome để giống trang chuyên mục.
+ */
+function tp_blog_header() {
+	$page_id = (int) get_option( 'page_for_posts' );
+	$title   = trim( (string) get_theme_mod( 'tp_blog_title', 'Tin tức bất động sản' ) );
+	$intro   = $page_id && ! is_paged() ? get_post_field( 'post_excerpt', $page_id ) : '';
+	$cats    = get_terms( array( 'taxonomy' => 'category', 'hide_empty' => true, 'orderby' => 'count', 'order' => 'DESC', 'exclude' => array( (int) get_option( 'default_category' ) ) ) );
+
+	$html  = '<header class="archive-page-header tp-blog-head"><div class="row"><div class="large-12 text-center col">';
+	$html .= '<h1 class="page-title is-large uppercase"><span>' . esc_html( $title ?: 'Tin tức' ) . '</span></h1>';
+	if ( $intro ) {
+		$html .= '<div class="taxonomy-description"><p>' . esc_html( $intro ) . '</p></div>';
+	}
+	if ( $cats && ! is_wp_error( $cats ) ) {
+		$html .= '<ul class="tp-blog-cats" aria-label="Chuyên mục tin tức">';
+		foreach ( $cats as $cat ) {
+			$html .= '<li><a href="' . esc_url( get_term_link( $cat ) ) . '">' . esc_html( $cat->name ) . '</a></li>';
+		}
+		$html .= '</ul>';
+	}
+	return $html . '</div></div></header>';
+}
