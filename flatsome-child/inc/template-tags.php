@@ -128,7 +128,11 @@ function tp_project_card( $post_id, $args = array() ) {
  */
 function tp_term_tile( WP_Term $term, $arrow = true ) {
 	$image_id = (int) get_term_meta( $term->term_id, 'tp_image_id', true );
-	$image    = $image_id ? wp_get_attachment_image( $image_id, 'tp-tile', false, array( 'alt' => '' ) ) : '<span class="tp-noimg" aria-hidden="true"></span>';
+	$alt      = $image_id ? get_post_meta( $image_id, '_wp_attachment_image_alt', true ) : '';
+	if ( ! $alt ) {
+		$alt = 'khu_vuc' === $term->taxonomy ? 'Dự án bất động sản tại ' . $term->name : 'Dự án ' . mb_strtolower( $term->name );
+	}
+	$image    = $image_id ? wp_get_attachment_image( $image_id, 'tp-tile', false, array( 'alt' => $alt ) ) : '<span class="tp-noimg" aria-hidden="true"></span>';
 
 	return sprintf(
 		'<a class="tp-tile" href="%1$s">%2$s<span class="tp-tile__body"><span class="tp-tile__name">%3$s</span><span class="tp-tile__count">%4$s dự án</span></span>%5$s</a>',
