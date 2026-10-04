@@ -78,8 +78,9 @@ add_shortcode( 'tp_hero_search', function ( $atts ) {
 } );
 
 /**
- * [tp_projects filter="featured|latest|selling|all" count="4" columns="4" badge="yes" button="yes"]
+ * [tp_projects filter="featured|latest|selling|all" count="4" columns="4" badge="yes" button="yes" heading="h3|p"]
  *
+ * Trong header (mega menu) tên dự án tự dùng thẻ <p> thay vì <h3>, để tiêu đề H1 của trang luôn là tiêu đề đầu tiên.
  * Lọc thêm theo slug: loai_hinh="chung-cu" khu_vuc="ha-noi" trang_thai="dang-mo-ban".
  */
 add_shortcode( 'tp_projects', function ( $atts ) {
@@ -93,7 +94,12 @@ add_shortcode( 'tp_projects', function ( $atts ) {
 		'khu_vuc'    => '',
 		'trang_thai' => '',
 		'empty'      => 'Chưa có dự án phù hợp.',
+		'heading'    => '',
 	), $atts );
+
+	if ( ! $a['heading'] ) {
+		$a['heading'] = did_action( 'flatsome_before_header' ) && ! did_action( 'flatsome_after_header' ) ? 'p' : 'h3';
+	}
 
 	$query = array(
 		'post_type'           => 'du_an',
@@ -129,7 +135,7 @@ add_shortcode( 'tp_projects', function ( $atts ) {
 
 	$html = '<div class="tp-grid tp-grid--scroll" style="--tp-cols:' . max( 1, min( 6, (int) $a['columns'] ) ) . '">';
 	foreach ( $posts as $post ) {
-		$html .= tp_project_card( $post->ID, array( 'badge' => tp_bool( $a['badge'] ), 'button' => tp_bool( $a['button'] ) ) );
+		$html .= tp_project_card( $post->ID, array( 'badge' => tp_bool( $a['badge'] ), 'button' => tp_bool( $a['button'] ), 'heading' => $a['heading'] ) );
 	}
 	return $html . '</div>';
 } );

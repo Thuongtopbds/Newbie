@@ -64,6 +64,12 @@ add_action( 'ux_builder_setup', function () {
 			'loai_hinh'  => $text( 'Chỉ lấy loại hình', '', 'Slug, VD: chung-cu,biet-thu' ),
 			'khu_vuc'    => $text( 'Chỉ lấy khu vực', '', 'Slug, VD: ha-noi' ),
 			'trang_thai' => $text( 'Chỉ lấy trạng thái', '', 'Slug, VD: sap-mo-ban' ),
+			'heading'    => array(
+				'type'    => 'select',
+				'heading' => 'Thẻ tên dự án',
+				'default' => '',
+				'options' => array( '' => 'Tự động (H3; trong menu dùng P)', 'h3' => 'H3', 'p' => 'Đoạn văn (P) – dùng trong menu' ),
+			),
 		),
 	) );
 

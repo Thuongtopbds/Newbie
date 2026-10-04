@@ -25,7 +25,7 @@
 
 <p class="tp-mega__title">Dự án nổi bật</p>
 
-[tp_projects filter="featured" count="1" columns="1" button="no"]
+[tp_projects filter="featured" count="1" columns="1" button="no" heading="p"]
 
 [/col]
 

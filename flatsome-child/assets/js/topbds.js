@@ -4,8 +4,11 @@
 
 	if (dialog && typeof dialog.showModal === 'function') {
 		var photos = JSON.parse(dialog.getAttribute('data-photos') || '[]');
-		var img = dialog.querySelector('img');
 		var count = dialog.querySelector('.tp-lightbox__count');
+		// Tạo <img> khi mở lần đầu: thẻ img src="" có sẵn trong HTML sẽ bị trình duyệt và công cụ SEO coi là ảnh lỗi.
+		var img = document.createElement('img');
+		img.alt = '';
+		dialog.insertBefore(img, count);
 		var title = (document.querySelector('h1') || {}).textContent || '';
 		var current = 0;
 

@@ -195,7 +195,6 @@ while ( have_posts() ) :
 				data-photos="<?php echo esc_attr( wp_json_encode( array_map( function ( $id ) { return wp_get_attachment_image_url( $id, 'full' ); }, $tp_photos ) ) ); ?>">
 				<button type="button" class="tp-lightbox__close" data-tp-lightbox-close aria-label="Đóng">×</button>
 				<button type="button" class="tp-lightbox__nav tp-lightbox__nav--prev" data-tp-lightbox-step="-1" aria-label="Ảnh trước">‹</button>
-				<img src="" alt="">
 				<p class="tp-lightbox__count" aria-live="polite"></p>
 				<button type="button" class="tp-lightbox__nav tp-lightbox__nav--next" data-tp-lightbox-step="1" aria-label="Ảnh sau">›</button>
 			</dialog>

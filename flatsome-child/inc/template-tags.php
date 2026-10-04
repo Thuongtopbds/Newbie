@@ -86,7 +86,7 @@ function tp_project_badge( $post_id ) {
  */
 function tp_project_card( $post_id, $args = array() ) {
 	$args = wp_parse_args( $args, array( 'badge' => true, 'button' => true, 'heading' => 'h3' ) );
-	$tag  = in_array( $args['heading'], array( 'h2', 'h3', 'h4' ), true ) ? $args['heading'] : 'h3';
+	$tag  = in_array( $args['heading'], array( 'h2', 'h3', 'h4', 'p' ), true ) ? $args['heading'] : 'h3';
 
 	$link     = get_permalink( $post_id );
 	$title    = get_the_title( $post_id );

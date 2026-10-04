@@ -83,7 +83,7 @@ Không cần cài ACF: các trường thông tin dùng meta box có sẵn của 
 |---|---|
 | `[tp_heading]` | `title`, `sub`, `link`, `link_text`, `tag` (h2/h3/h1), `light` |
 | `[tp_hero_search]` | `placeholder`, `button`, `chips` (slug Loại hình, cách nhau dấu phẩy) |
-| `[tp_projects]` | `filter` (featured / latest / selling / all), `count`, `columns`, `badge`, `button`, `loai_hinh`, `khu_vuc`, `trang_thai` |
+| `[tp_projects]` | `filter` (featured / latest / selling / all), `count`, `columns`, `badge`, `button`, `loai_hinh`, `khu_vuc`, `trang_thai`, `heading` (h3 / p; trong mega menu dùng `p`) |
 | `[tp_terms]` | `taxonomy` (loai_hinh / khu_vuc), `include`, `count`, `columns`, `style` (tall / short), `arrow`, `more` |
 | `[tp_news]` | `count`, `category`, `excerpt` |
 | `[tp_mega_links]` | `taxonomy` (loai_hinh / khu_vuc / trang_thai), `count` (0 = tất cả), `hide_empty`, `more`, `more_link` |
