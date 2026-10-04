@@ -233,14 +233,17 @@ function tp_blog_header() {
 	$page_id = (int) get_option( 'page_for_posts' );
 	$title   = trim( (string) get_theme_mod( 'tp_blog_title', 'Tin tức bất động sản' ) );
 	$intro   = $page_id && ! is_paged() ? get_post_field( 'post_excerpt', $page_id ) : '';
-	$cats    = get_terms( array( 'taxonomy' => 'category', 'hide_empty' => true, 'orderby' => 'count', 'order' => 'DESC', 'exclude' => array( (int) get_option( 'default_category' ) ) ) );
+	$cats    = get_terms( array( 'taxonomy' => 'category', 'hide_empty' => true, 'orderby' => 'count', 'order' => 'DESC' ) );
+	$cats    = is_wp_error( $cats ) ? array() : array_filter( $cats, function ( $cat ) {
+		return ! in_array( $cat->slug, array( 'uncategorized', 'chua-phan-loai', 'khong-phan-loai' ), true );
+	} );
 
 	$html  = '<header class="archive-page-header tp-blog-head"><div class="row"><div class="large-12 text-center col">';
 	$html .= '<h1 class="page-title is-large uppercase"><span>' . esc_html( $title ?: 'Tin tức' ) . '</span></h1>';
 	if ( $intro ) {
 		$html .= '<div class="taxonomy-description"><p>' . esc_html( $intro ) . '</p></div>';
 	}
-	if ( $cats && ! is_wp_error( $cats ) ) {
+	if ( $cats ) {
 		$html .= '<ul class="tp-blog-cats" aria-label="Chuyên mục tin tức">';
 		foreach ( $cats as $cat ) {
 			$html .= '<li><a href="' . esc_url( get_term_link( $cat ) ) . '">' . esc_html( $cat->name ) . '</a></li>';
