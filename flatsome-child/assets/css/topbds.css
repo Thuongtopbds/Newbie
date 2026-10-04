@@ -572,6 +572,14 @@ a.tp-infocard:hover { border-color: var(--tp-primary); box-shadow: var(--tp-shad
 /* Flatsome in "Tóm tắt" (Excerpt) của trang thành dải chữ dưới header; các trang TOPBDS không dùng dải này. */
 .page-header-excerpt { display: none; }
 
+/* Đoạn văn trong bài dự án, bài tin tức và trang văn bản: canh đều hai bên */
+.tp-content p,
+.tp-content li,
+.blog-single .entry-content p,
+.blog-single .entry-content li,
+.tp-doc__content p,
+.tp-doc__content li { text-align: justify; text-justify: inter-word; }
+
 /* Trang Tin tức: nút chuyển chuyên mục dưới tiêu đề */
 .tp-blog-cats { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 14px 0 0; padding: 0; list-style: none; }
 .tp-blog-cats li { margin: 0; }
