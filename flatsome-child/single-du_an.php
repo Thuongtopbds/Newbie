@@ -118,7 +118,7 @@ while ( have_posts() ) :
 					<div class="tp-mosaic tp-mosaic--<?php echo count( $tp_shown ); ?>">
 						<?php foreach ( $tp_shown as $tp_index => $tp_image ) : ?>
 							<a class="tp-mosaic__item" href="<?php echo esc_url( wp_get_attachment_image_url( $tp_image, 'full' ) ); ?>" data-tp-photo-open="<?php echo (int) ( $tp_index + $tp_offset ); ?>">
-								<?php echo wp_get_attachment_image( $tp_image, 0 === $tp_index ? 'large' : 'tp-card', false, array( 'alt' => get_the_title() . ' – ảnh ' . ( $tp_index + 1 + $tp_offset ) ) ); ?>
+								<?php echo wp_get_attachment_image( $tp_image, 0 === $tp_index ? 'large' : 'tp-card', false, array( 'alt' => get_post_meta( $tp_image, '_wp_attachment_image_alt', true ) ?: get_the_title() . ' – ảnh ' . ( $tp_index + 1 + $tp_offset ) ) ); ?>
 								<?php if ( $tp_more > 0 && count( $tp_shown ) - 1 === $tp_index ) : ?>
 									<span class="tp-mosaic__more">+<?php echo (int) $tp_more; ?> ảnh</span>
 								<?php endif; ?>
