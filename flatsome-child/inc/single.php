@@ -252,3 +252,79 @@ function tp_blog_header() {
 	}
 	return $html . '</div></div></header>';
 }
+
+/**
+ * Câu hỏi thường gặp của trang dự án, lấy từ nội dung bài: mục H2 "Câu hỏi thường gặp" (hoặc "Hỏi đáp", "FAQ"),
+ * mỗi câu hỏi là một H3, câu trả lời là phần nội dung ngay sau H3 đó.
+ *
+ * @return array[] Mỗi dòng: [câu hỏi, câu trả lời].
+ */
+function tp_project_faq( $post_id ) {
+	$content = (string) get_post_field( 'post_content', $post_id );
+	if ( ! preg_match( '#<h2[^>]*>\s*(?:<[^>]+>\s*)*(?:câu hỏi thường gặp|hỏi đáp|faq)\b.*?</h2>(.*?)(?=<h2[\s>]|$)#isu', $content, $section ) ) {
+		return array();
+	}
+
+	// wpautop: nội dung lưu bằng trình soạn thảo cổ điển chưa có thẻ <p>.
+	$parts = preg_split( '#<h3[^>]*>(.*?)</h3>#is', wpautop( $section[1] ), -1, PREG_SPLIT_DELIM_CAPTURE );
+	$faq   = array();
+	for ( $i = 1; $i + 1 < count( $parts ); $i += 2 ) {
+		$question = trim( wp_strip_all_tags( $parts[ $i ] ) );
+		// Chỉ lấy đoạn <p> đầu tiên để dòng ghi chú cuối mục (VD "Xem video…") không lọt vào câu trả lời cuối.
+		$answer = preg_match( '#<p[^>]*>(.*?)</p>#is', $parts[ $i + 1 ], $first ) ? $first[1] : $parts[ $i + 1 ];
+		$answer = trim( preg_replace( '/\s+/u', ' ', wp_strip_all_tags( strip_shortcodes( $answer ) ) ) );
+		if ( '' !== $question && '' !== $answer ) {
+			$faq[] = array( html_entity_decode( $question, ENT_QUOTES, 'UTF-8' ), html_entity_decode( $answer, ENT_QUOTES, 'UTF-8' ) );
+		}
+	}
+	return $faq;
+}
+
+/**
+ * Schema FAQPage cho trang dự án, dựng từ mục "Câu hỏi thường gặp" (xem tp_project_faq).
+ * Thêm vào @graph của Rank Math; bỏ qua nếu trang đã có FAQPage (VD dùng khối FAQ by Rank Math).
+ */
+function tp_project_faq_schema( $post_id ) {
+	$faq = tp_project_faq( $post_id );
+	if ( ! $faq ) {
+		return array();
+	}
+	return array(
+		'@type'      => 'FAQPage',
+		'@id'        => get_permalink( $post_id ) . '#faq',
+		'mainEntity' => array_map( function ( $row ) {
+			return array(
+				'@type'          => 'Question',
+				'name'           => $row[0],
+				'acceptedAnswer' => array( '@type' => 'Answer', 'text' => $row[1] ),
+			);
+		}, $faq ),
+	);
+}
+
+add_filter( 'rank_math/json_ld', function ( $data ) {
+	if ( ! is_singular( 'du_an' ) ) {
+		return $data;
+	}
+	foreach ( (array) $data as $entity ) {
+		if ( is_array( $entity ) && 'FAQPage' === ( $entity['@type'] ?? '' ) ) {
+			return $data;
+		}
+	}
+	$schema = tp_project_faq_schema( get_queried_object_id() );
+	if ( $schema ) {
+		$data['tpFaq'] = $schema;
+	}
+	return $data;
+}, 99 );
+
+// Không có Rank Math thì tự in schema FAQPage.
+add_action( 'wp_head', function () {
+	if ( defined( 'RANK_MATH_VERSION' ) || ! is_singular( 'du_an' ) ) {
+		return;
+	}
+	$schema = tp_project_faq_schema( get_queried_object_id() );
+	if ( $schema ) {
+		echo '<script type="application/ld+json">' . wp_json_encode( array( '@context' => 'https://schema.org' ) + $schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ) . "</script>\n";
+	}
+} );

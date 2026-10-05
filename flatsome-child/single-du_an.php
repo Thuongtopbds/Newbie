@@ -46,7 +46,7 @@ while ( have_posts() ) :
 
 		<section class="tp-phero">
 			<?php if ( has_post_thumbnail() ) : ?>
-				<div class="tp-phero__bg"><?php the_post_thumbnail( 'full', array( 'alt' => '', 'class' => 'tp-no-lazy', 'data-no-lazy' => '1', 'fetchpriority' => 'high', 'loading' => 'eager', 'sizes' => '100vw' ) ); ?></div>
+				<div class="tp-phero__bg"><?php the_post_thumbnail( 'full', array( 'alt' => get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ) ?: get_the_title(), 'class' => 'tp-no-lazy', 'data-no-lazy' => '1', 'fetchpriority' => 'high', 'loading' => 'eager', 'sizes' => '100vw' ) ); ?></div>
 			<?php endif; ?>
 			<div class="container tp-phero__inner">
 				<div class="tp-phero__main">
@@ -129,7 +129,7 @@ while ( have_posts() ) :
 
 				<?php if ( $tp_specs ) : ?>
 					<section class="tp-section" id="tong-quan">
-						<h2 class="tp-section__title">Tổng quan dự án</h2>
+						<h2 class="tp-section__title">Tổng quan dự án <?php the_title(); ?></h2>
 						<dl class="tp-specgrid">
 							<?php foreach ( $tp_specs as list( $tp_icon, $tp_label, $tp_value ) ) : ?>
 								<div class="tp-specgrid__item">
