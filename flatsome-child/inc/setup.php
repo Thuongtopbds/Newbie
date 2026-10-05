@@ -6,6 +6,9 @@
 defined( 'ABSPATH' ) || exit;
 
 add_action( 'after_setup_theme', function () {
+	// Thêm class wp-embed-responsive vào <body> để CSS của khối nhúng (YouTube…) giữ đúng tỷ lệ 16:9.
+	// Thiếu dòng này khung video cao cố định 574px nên bị cắt hai bên, nhất là trên điện thoại.
+	add_theme_support( 'responsive-embeds' );
 	add_image_size( 'tp-card', 640, 420, true );
 	add_image_size( 'tp-tile', 520, 400, true );
 	add_image_size( 'tp-news', 880, 500, true );
