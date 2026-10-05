@@ -149,8 +149,8 @@ while ( have_posts() ) :
 					<section class="tp-section" id="ban-do">
 						<h2 class="tp-section__title">Vị trí trên bản đồ</h2>
 						<div class="tp-map">
-							<iframe title="Bản đồ vị trí <?php echo esc_attr( get_the_title() ); ?>" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-								src="<?php echo esc_url( 'https://maps.google.com/maps?q=' . rawurlencode( $tp_map ) . '&z=15&output=embed' ); ?>"></iframe>
+							<?php // Một dòng, data-no-lazy: "Lazy Load Iframes" của LiteSpeed không đổi được src nằm ở dòng riêng, bản đồ thành trang trắng. Đã có loading="lazy" của trình duyệt. ?>
+							<iframe src="<?php echo esc_url( 'https://maps.google.com/maps?q=' . rawurlencode( $tp_map ) . '&z=15&output=embed' ); ?>" title="Bản đồ vị trí <?php echo esc_attr( get_the_title() ); ?>" loading="lazy" data-no-lazy="1" referrerpolicy="no-referrer-when-downgrade"></iframe>
 						</div>
 					</section>
 				<?php endif; ?>
