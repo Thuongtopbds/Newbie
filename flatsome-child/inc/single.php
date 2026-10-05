@@ -254,13 +254,38 @@ function tp_blog_header() {
 }
 
 /**
- * Câu hỏi thường gặp của trang dự án, lấy từ nội dung bài: mục H2 "Câu hỏi thường gặp" (hoặc "Hỏi đáp", "FAQ"),
- * mỗi câu hỏi là một H3, câu trả lời là phần nội dung ngay sau H3 đó.
+ * Câu hỏi thường gặp của trang dự án, lấy từ nội dung bài:
+ * - khối "FAQ by Rank Math" (chỉ lưu câu hỏi trong thuộc tính khối, không có H3 trong nội dung), hoặc
+ * - mục H2 "Câu hỏi thường gặp" (hoặc "Hỏi đáp", "FAQ"), mỗi câu hỏi là một H3, câu trả lời là đoạn ngay sau H3 đó.
  *
  * @return array[] Mỗi dòng: [câu hỏi, câu trả lời].
  */
 function tp_project_faq( $post_id ) {
 	$content = (string) get_post_field( 'post_content', $post_id );
+	$clean   = function ( $html ) {
+		$text = trim( preg_replace( '/\s+/u', ' ', wp_strip_all_tags( strip_shortcodes( (string) $html ) ) ) );
+		return html_entity_decode( $text, ENT_QUOTES, 'UTF-8' );
+	};
+
+	if ( function_exists( 'has_block' ) && has_block( 'rank-math/faq-block', $content ) ) {
+		$faq = array();
+		foreach ( tp_find_blocks( parse_blocks( $content ), 'rank-math/faq-block' ) as $block ) {
+			foreach ( (array) ( $block['attrs']['questions'] ?? array() ) as $row ) {
+				if ( isset( $row['visible'] ) && ! $row['visible'] ) {
+					continue;
+				}
+				$question = $clean( $row['title'] ?? '' );
+				$answer   = $clean( $row['content'] ?? '' );
+				if ( '' !== $question && '' !== $answer ) {
+					$faq[] = array( $question, $answer );
+				}
+			}
+		}
+		if ( $faq ) {
+			return $faq;
+		}
+	}
+
 	if ( ! preg_match( '#<h2[^>]*>\s*(?:<[^>]+>\s*)*(?:câu hỏi thường gặp|hỏi đáp|faq)\b.*?</h2>(.*?)(?=<h2[\s>]|$)#isu', $content, $section ) ) {
 		return array();
 	}
@@ -269,20 +294,35 @@ function tp_project_faq( $post_id ) {
 	$parts = preg_split( '#<h3[^>]*>(.*?)</h3>#is', wpautop( $section[1] ), -1, PREG_SPLIT_DELIM_CAPTURE );
 	$faq   = array();
 	for ( $i = 1; $i + 1 < count( $parts ); $i += 2 ) {
-		$question = trim( wp_strip_all_tags( $parts[ $i ] ) );
+		$question = $clean( $parts[ $i ] );
 		// Chỉ lấy đoạn <p> đầu tiên để dòng ghi chú cuối mục (VD "Xem video…") không lọt vào câu trả lời cuối.
-		$answer = preg_match( '#<p[^>]*>(.*?)</p>#is', $parts[ $i + 1 ], $first ) ? $first[1] : $parts[ $i + 1 ];
-		$answer = trim( preg_replace( '/\s+/u', ' ', wp_strip_all_tags( strip_shortcodes( $answer ) ) ) );
+		$answer = $clean( preg_match( '#<p[^>]*>(.*?)</p>#is', $parts[ $i + 1 ], $first ) ? $first[1] : $parts[ $i + 1 ] );
 		if ( '' !== $question && '' !== $answer ) {
-			$faq[] = array( html_entity_decode( $question, ENT_QUOTES, 'UTF-8' ), html_entity_decode( $answer, ENT_QUOTES, 'UTF-8' ) );
+			$faq[] = array( $question, $answer );
 		}
 	}
 	return $faq;
 }
 
 /**
+ * Các khối tên $name trong danh sách khối, kể cả khối lồng bên trong (VD trong Group, Columns).
+ */
+function tp_find_blocks( $blocks, $name ) {
+	$found = array();
+	foreach ( $blocks as $block ) {
+		if ( $name === $block['blockName'] ) {
+			$found[] = $block;
+		}
+		if ( ! empty( $block['innerBlocks'] ) ) {
+			$found = array_merge( $found, tp_find_blocks( $block['innerBlocks'], $name ) );
+		}
+	}
+	return $found;
+}
+
+/**
  * Schema FAQPage cho trang dự án, dựng từ mục "Câu hỏi thường gặp" (xem tp_project_faq).
- * Thêm vào @graph của Rank Math; bỏ qua nếu trang đã có FAQPage (VD dùng khối FAQ by Rank Math).
+ * Thêm vào @graph của Rank Math; bỏ qua nếu Rank Math đã tự thêm FAQPage cho trang.
  */
 function tp_project_faq_schema( $post_id ) {
 	$faq = tp_project_faq( $post_id );
@@ -307,7 +347,7 @@ add_filter( 'rank_math/json_ld', function ( $data ) {
 		return $data;
 	}
 	foreach ( (array) $data as $entity ) {
-		if ( is_array( $entity ) && 'FAQPage' === ( $entity['@type'] ?? '' ) ) {
+		if ( is_array( $entity ) && in_array( 'FAQPage', (array) ( $entity['@type'] ?? array() ), true ) ) {
 			return $data;
 		}
 	}
@@ -316,7 +356,7 @@ add_filter( 'rank_math/json_ld', function ( $data ) {
 		$data['tpFaq'] = $schema;
 	}
 	return $data;
-}, 99 );
+}, 999 );
 
 // Không có Rank Math thì tự in schema FAQPage.
 add_action( 'wp_head', function () {
