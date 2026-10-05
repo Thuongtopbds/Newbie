@@ -498,7 +498,7 @@ a.tp-infocard:hover { border-color: var(--tp-primary); box-shadow: var(--tp-shad
 .tp-doc__hero .tp-crumbs { margin-bottom: 14px; color: rgba(255, 255, 255, .7); }
 .tp-doc__hero .tp-crumbs a { color: rgba(255, 255, 255, .85); }
 .tp-doc__hero .tp-crumbs a:hover { color: #fff; }
-.tp-doc__hero .tp-crumbs__sep { color: rgba(255, 255, 255, .45); }
+.tp-doc__hero .tp-crumbs__sep, .tp-doc__hero .tp-crumbs .separator { color: rgba(255, 255, 255, .45); }
 .tp-doc__meta { display: inline-flex; align-items: center; gap: 8px; margin: 4px 0 0; color: rgba(255, 255, 255, .75); font-size: 14px; }
 .tp-doc__body { display: grid; grid-template-columns: 260px minmax(0, 760px); gap: 56px; justify-content: center; padding-top: 44px; padding-bottom: 72px; }
 .tp-doc__body--single { grid-template-columns: minmax(0, 800px); }
@@ -613,6 +613,8 @@ a.tp-infocard:hover { border-color: var(--tp-primary); box-shadow: var(--tp-shad
 .tp-crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; color: var(--tp-muted); font-size: 13px; }
 .tp-crumbs a { color: var(--tp-muted); }
 .tp-crumbs a:hover { color: var(--tp-primary); }
+/* Breadcrumb của Rank Math bọc trong <p>: bỏ lề của <p> để giữ khoảng cách như breadcrumb của theme. */
+.tp-crumbs p { margin: 0; }
 
 /* Bỏ kiểu dt/dd mặc định của Flatsome (in hoa, nằm cùng dòng) trong các khối nhãn – giá trị của trang dự án */
 .tp-project dl dt,
@@ -629,7 +631,7 @@ a.tp-infocard:hover { border-color: var(--tp-primary); box-shadow: var(--tp-shad
 .tp-phero .tp-crumbs { margin-bottom: 18px; color: rgba(255, 255, 255, .7); }
 .tp-phero .tp-crumbs a { color: rgba(255, 255, 255, .8); }
 .tp-phero .tp-crumbs a:hover { color: #fff; }
-.tp-phero .tp-crumbs__sep { color: rgba(255, 255, 255, .45); }
+.tp-phero .tp-crumbs__sep, .tp-phero .tp-crumbs .separator { color: rgba(255, 255, 255, .45); }
 .tp-phero__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
 .tp-phero__tags .tp-badge { position: static; padding: 6px 12px; border-radius: 999px; font-size: 13px; }
 .tp-phero__tag { padding: 5px 12px; border: 1px solid rgba(255, 255, 255, .45); border-radius: 999px; background: rgba(255, 255, 255, .1); color: #fff; font-size: 13px; font-weight: 600; backdrop-filter: blur(4px); }
