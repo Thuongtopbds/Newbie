@@ -1,6 +1,6 @@
 # An Garden Châu Sơn – cách đăng bài và cài SEO
 
-Nội dung bài viết nằm trong file `an-garden-chau-son.html` (cùng thư mục). Bài dài khoảng 1.750 chữ, gồm 9 mục H2, 3 bảng và 5 câu hỏi thường gặp.
+Nội dung bài viết nằm trong file `an-garden-chau-son.html` (cùng thư mục). Bài dài khoảng 1.750 chữ, gồm 9 mục H2, 3 bảng và 6 câu hỏi thường gặp.
 
 **Nguồn số liệu:**
 - Website angarden-hud.com: thông tin tổng quan, 3 phân khu, tiện ích, thời gian di chuyển.
@@ -57,7 +57,7 @@ Số lần xuất hiện trong bài: "An Garden" 18 lần, "An Garden Châu Sơn
 | Quy mô | `2,1ha, 94 căn (74 liền kề, 20 biệt thự)` |
 | Diện tích | `Liền kề 128,9 – 315 m²; biệt thự 186,8 – 255,2 m²` |
 | Phòng ngủ | Để trống |
-| Pháp lý | `Đủ điều kiện bán NOHTTTL (Sở XD Ninh Bình, 7/2026)` |
+| Pháp lý | `Sở hữu lâu dài, đủ điều kiện bán (Sở XD Ninh Bình, 7/2026)` |
 | Bàn giao | `Xây thô, hoàn thiện mặt ngoài` |
 | Vị trí trên bản đồ | Nên dùng **tọa độ** lấy từ Google Maps, như các trang dự án trước |
 | Thư viện ảnh | 6 – 12 ảnh |
@@ -91,7 +91,7 @@ Mỗi ảnh nên nén dưới 200KB.
 ## 5. Cần kiểm tra trước khi đăng
 
 - **Giá và chính sách:** chưa có trong nguồn công khai. Bài đang để "liên hệ". Có bảng giá thì bổ sung vào mục "Giá bán và chính sách" và câu hỏi thường gặp.
-- **Thời hạn sở hữu:** website ghi "sở hữu trọn đời", bài viết ghi "chủ đầu tư công bố hình thức sở hữu lâu dài". Thông báo của Sở Xây dựng lại ghi dự án có "thời hạn hoạt động 50 năm". Đây là thời hạn của **dự án đầu tư**, không nhất thiết là thời hạn sổ của người mua. Nên hỏi chủ đầu tư thời hạn ghi trên sổ, rồi sửa câu trong mục "Pháp lý và tiến độ" cho chính xác.
+- ~~Thời hạn sở hữu~~: **đã xác nhận.** Khi sang tên cho khách hàng, người mua được cấp sổ sở hữu lâu dài. Thời hạn 50 năm trong thông báo của Sở Xây dựng là thời hạn hoạt động của dự án đầu tư. Bài đã ghi rõ ở bảng thông tin, mục Pháp lý và thêm 1 câu hỏi thường gặp.
 - **Diện tích liền kề 128,9 – 315m²:** lấy theo website chủ đầu tư. Mức 315m² khá lớn với nhà liền kề, có thể là căn góc. Nên đối chiếu với bảng hàng.
 - **Thời gian tới Sun Urban City:** website ghi 15 phút, CafeF ghi 7 – 10 phút. Bài ghi khoảng 7 – 15 phút.
 - **Tiến độ thực tế:** kế hoạch hoàn thành hết quý III/2026, nghĩa là đã đến hạn. Nên kiểm tra thực tế công trường và bổ sung ảnh tiến độ.
