@@ -16,6 +16,7 @@ Mỗi bài gồm 2 file:
 | Tiền Hải Center City | Đất nền | Tiền Hải, Hưng Yên (Thái Bình cũ) | [html](tien-hai-center-city.html) | [seo](tien-hai-center-city-seo.md) |
 | Chung cư Vân Bay Vân Đồn | Căn hộ | Đặc khu Vân Đồn, Quảng Ninh | [html](van-bay-van-don.html) | [seo](van-bay-van-don-seo.md) |
 | An Garden Châu Sơn | Liền kề, biệt thự | Châu Sơn (Phủ Lý), Ninh Bình | [html](an-garden-chau-son.html) | [seo](an-garden-chau-son-seo.md) |
+| Tecco IVY Central (Bình An Tower) | Căn hộ | Đông Hòa (Dĩ An), TP.HCM | [html](tecco-ivy-central.html) | [seo](tecco-ivy-central-seo.md) |
 
 ## Bài thị trường
 
