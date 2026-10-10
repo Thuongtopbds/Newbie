@@ -11,8 +11,8 @@ Nội dung bài viết nằm trong file `tecco-ivy-central.html` (cùng thư m�
 
 | Nhóm | Từ khóa |
 |---|---|
-| **Chính** | `Tecco IVY Central` |
-| Phụ | `Bình An Tower`, `IVY Central Dĩ An`, `Tecco IVY Central Đông Hòa`, `chung cư 446 Quốc lộ 1K` |
+| **Chính** | `IVY Central` (đổi từ `Tecco IVY Central` ngày 10/10/2026) |
+| Phụ | `Tecco IVY Central`, `Bình An Tower`, `IVY Central Dĩ An`, `IVY Central Đông Hòa`, `chung cư 446 Quốc lộ 1K` |
 
 **Lý do chọn:**
 - **Giữ tên cũ "Bình An Tower" làm từ khóa phụ.** Dự án đã được quảng bá với tên này từ 2020, nhiều người vẫn tìm theo tên cũ. Bài có hẳn một mục H2 và một câu hỏi thường gặp giải thích việc đổi tên, nên người tìm "Bình An Tower" vẫn vào đúng trang.
@@ -64,8 +64,8 @@ Số lần xuất hiện trong bài: "Tecco IVY Central" 25 lần, "Bình An Tow
 
 | Mục | Nội dung |
 |---|---|
-| Từ khóa chính | `Tecco IVY Central`, rồi thêm `Bình An Tower`, `IVY Central Dĩ An`, `Tecco IVY Central Đông Hòa`, `chung cư 446 Quốc lộ 1K` |
-| SEO Title (≤ 60 ký tự) | `Tecco IVY Central (Bình An Tower) Quốc lộ 1K – Giá 2026` (55 ký tự) |
+| Từ khóa chính | `IVY Central`, rồi thêm `Tecco IVY Central`, `Bình An Tower`, `IVY Central Dĩ An`, `IVY Central Đông Hòa`, `chung cư 446 Quốc lộ 1K` |
+| SEO Title (≤ 60 ký tự) | Chưa có giá: `IVY Central Dĩ An (Bình An Tower) – Mặt Bằng, Tiến Độ 2026` (58 ký tự). Khi có giá: `IVY Central (Bình An Tower) Quốc lộ 1K – Mặt Bằng, Giá 2026` (59 ký tự) |
 | Permalink | `tecco-ivy-central` |
 | Meta Description (≤ 160 ký tự) | `Tecco IVY Central (tên cũ Bình An Tower) – 441 căn hộ 2 – 3PN mặt tiền Quốc lộ 1K, sát Làng Đại học Quốc gia. Mặt bằng, giá bán, tiến độ mới nhất 2026.` (151 ký tự) |
 | Schema | **Article**. FAQ Schema do giao diện tự tạo từ mục "Câu hỏi thường gặp" |
