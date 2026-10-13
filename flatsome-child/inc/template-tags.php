@@ -50,9 +50,9 @@ function tp_icon( $name, $size = 18 ) {
 /**
  * Ảnh của bài viết/dự án, có khung giữ chỗ khi chưa có ảnh đại diện.
  */
-function tp_post_image( $post_id, $size ) {
+function tp_post_image( $post_id, $size, $attr = array() ) {
 	if ( has_post_thumbnail( $post_id ) ) {
-		return get_the_post_thumbnail( $post_id, $size, array( 'alt' => get_the_title( $post_id ) ) );
+		return get_the_post_thumbnail( $post_id, $size, array_merge( array( 'alt' => get_the_title( $post_id ) ), $attr ) );
 	}
 	return '<span class="tp-noimg" aria-hidden="true"></span>';
 }
@@ -98,7 +98,10 @@ function tp_project_card( $post_id, $args = array() ) {
 	?>
 	<article class="tp-card">
 		<a class="tp-card__media" href="<?php echo esc_url( $link ); ?>" tabindex="-1" aria-hidden="true">
-			<?php echo tp_post_image( $post_id, 'tp-card' ); ?>
+			<?php
+			// Thẻ dự án trong menu xổ xuống (tên dự án dùng thẻ p) luôn ẩn khi tải trang: tải sau, không tranh ưu tiên với ảnh đầu trang.
+			echo tp_post_image( $post_id, 'tp-card', 'p' === $tag ? array( 'loading' => 'lazy', 'fetchpriority' => 'low' ) : array() );
+			?>
 		</a>
 		<?php if ( $args['badge'] ) { echo tp_project_badge( $post_id ); } ?>
 		<div class="tp-card__body">
