@@ -92,10 +92,16 @@ Dự án bất động sản tại Bắc Ninh, một trong những trung tâm c�
 
 **Meta:** Dự án bất động sản Bắc Ninh (gồm Bắc Giang cũ): khu đô thị, căn hộ, liền kề, đất nền gần khu công nghiệp. Giá, pháp lý mới nhất tại TOPBDS.VN.
 
+### Ninh Bình (`/khu-vuc/ninh-binh/`)
+**Mô tả trang:**
+Dự án bất động sản tại Ninh Bình, nay gồm cả khu vực Hà Nam và Nam Định cũ sau sáp nhập tỉnh từ 1/7/2025. Nằm trên trục cao tốc Bắc – Nam, cách Hà Nội khoảng một giờ di chuyển, Ninh Bình mới vừa có các khu công nghiệp lớn quanh Phủ Lý, Đồng Văn, vừa có thế mạnh du lịch di sản Tràng An – Tam Cốc. TOPBDS.VN cập nhật liền kề, biệt thự, đất nền và khu đô thị mới cùng pháp lý, tiến độ và giá bán từng dự án.
+
+**Meta:** Dự án bất động sản Ninh Bình (gồm Hà Nam, Nam Định cũ): liền kề, biệt thự, đất nền, khu đô thị. Giá bán, pháp lý, tiến độ mới nhất tại TOPBDS.VN.
+
 ---
 
 ## Lưu ý
-- Có thêm khu vực mới (Ninh Bình…) thì viết theo cùng công thức: **tên khu vực + điểm mạnh hạ tầng/kinh tế + các loại hình có dự án + TOPBDS cập nhật gì**.
+- Có thêm khu vực mới thì viết theo cùng công thức: **tên khu vực + điểm mạnh hạ tầng/kinh tế + các loại hình có dự án + TOPBDS cập nhật gì**.
 - Không đưa số liệu cụ thể (giá trung bình, số dự án) vào mô tả, vì sẽ nhanh lỗi thời.
 - Kiểm tra lại địa giới hành chính sau sáp nhập nếu chủ đầu tư đổi cách ghi địa chỉ.
 

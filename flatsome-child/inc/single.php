@@ -291,12 +291,20 @@ function tp_project_faq( $post_id ) {
 	}
 
 	// wpautop: nội dung lưu bằng trình soạn thảo cổ điển chưa có thẻ <p>.
-	$parts = preg_split( '#<h3[^>]*>(.*?)</h3>#is', wpautop( $section[1] ), -1, PREG_SPLIT_DELIM_CAPTURE );
+	// Bỏ chú thích khối <!-- wp:… --> trước: nếu không, wpautop bọc chúng thành <p> và câu trả lời bị lấy rỗng.
+	$parts = preg_split( '#<h3[^>]*>(.*?)</h3>#is', wpautop( preg_replace( '#<!--.*?-->#s', '', $section[1] ) ), -1, PREG_SPLIT_DELIM_CAPTURE );
 	$faq   = array();
 	for ( $i = 1; $i + 1 < count( $parts ); $i += 2 ) {
 		$question = $clean( $parts[ $i ] );
-		// Chỉ lấy đoạn <p> đầu tiên để dòng ghi chú cuối mục (VD "Xem video…") không lọt vào câu trả lời cuối.
-		$answer = $clean( preg_match( '#<p[^>]*>(.*?)</p>#is', $parts[ $i + 1 ], $first ) ? $first[1] : $parts[ $i + 1 ] );
+		// Chỉ lấy đoạn <p> có chữ đầu tiên để dòng ghi chú cuối mục (VD "Xem video…") không lọt vào câu trả lời cuối.
+		$answer = '';
+		preg_match_all( '#<p[^>]*>(.*?)</p>#is', $parts[ $i + 1 ], $paras );
+		foreach ( $paras[1] ?: array( $parts[ $i + 1 ] ) as $para ) {
+			$answer = $clean( $para );
+			if ( '' !== $answer ) {
+				break;
+			}
+		}
 		if ( '' !== $question && '' !== $answer ) {
 			$faq[] = array( $question, $answer );
 		}
