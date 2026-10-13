@@ -60,3 +60,25 @@ add_filter( 'wp_get_attachment_image_attributes', function ( $attr, $attachment 
 	$attr['class']        .= ' tp-no-lazy';
 	return $attr;
 }, 20, 2 );
+
+/**
+ * Flatsome xoá srcset/sizes khỏi ảnh nền section sau bộ lọc trên, nên thêm lại vào HTML của shortcode [section].
+ * Thiếu srcset thì thẻ ảnh vẫn tải bản 1920px, lệch với bản cỡ nhỏ đã preload và điện thoại phải tải hai lần.
+ */
+add_filter( 'do_shortcode_tag', function ( $output, $tag ) {
+	static $done = false;
+	if ( $done || 'section' !== $tag || is_admin() || ! is_front_page() || ! ( $id = tp_front_hero_image_id() ) ) {
+		return $output;
+	}
+	if ( ! preg_match( '/<img\b[^>]*\bclass="[^"]*\bbg\b[^"]*"[^>]*>/', $output, $m ) || false !== strpos( $m[0], 'srcset=' ) ) {
+		return $output;
+	}
+	$srcset = wp_get_attachment_image_srcset( $id, 'full' );
+	if ( ! $srcset || false === strpos( $m[0], (string) wp_get_attachment_image_url( $id, 'full' ) ) ) {
+		return $output;
+	}
+	$done = true;
+	$img  = preg_replace( '/^<img\b/', '<img srcset="' . esc_attr( $srcset ) . '" sizes="100vw"', $m[0] );
+	return str_replace( $m[0], $img, $output );
+}, 20, 2 );
+
