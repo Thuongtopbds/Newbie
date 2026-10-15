@@ -24,5 +24,6 @@ Mỗi bài gồm 2 file:
 |---|---|---|---|
 | Dòng tiền vào bất động sản 9 tháng 2026 chưa hề giảm | 9 tháng 2026 | [html](thi-truong-dong-tien-bat-dong-san-9-thang-2026.html) | [seo](thi-truong-dong-tien-bat-dong-san-9-thang-2026-seo.md) |
 | Thanh khoản bất động sản 2026: 4 nút thắt và cách khơi thông | Quý II/2026 | [html](thi-truong-khoi-thong-thanh-khoan-bat-dong-san.html) | [seo](thi-truong-khoi-thong-thanh-khoan-bat-dong-san-seo.md) |
+| Có nên chờ giá nhà giảm sâu? Lời khuyên cho người mua ở thực | Quý II – III/2026 | [html](thi-truong-co-nen-cho-gia-nha-giam.html) | [seo](thi-truong-co-nen-cho-gia-nha-giam-seo.md) |
 
 Bài thị trường đặt tên file bắt đầu bằng `thi-truong-`.
