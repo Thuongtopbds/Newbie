@@ -1,6 +1,6 @@
 # Greenera Southmark – cách đăng bài và cài SEO
 
-Nội dung bài viết nằm trong file `greenera-southmark.html` (cùng thư mục). Bài dài khoảng 2.050 chữ, gồm 10 mục H2, 5 bảng và 6 câu hỏi thường gặp. Mục "Giá bán và chính sách" có dòng chú thích `<!-- Bổ sung bảng giá… -->` để bạn nhập bảng giá, tiến độ thanh toán và chính sách khi có bản chính thức.
+Nội dung bài viết nằm trong file `greenera-southmark.html` (cùng thư mục). Bài dài khoảng 2.050 chữ, gồm 10 mục H2, 5 bảng và 7 câu hỏi thường gặp. Mục "Giá bán và chính sách" có dòng chú thích `<!-- Bổ sung bảng giá… -->` để bạn nhập bảng giá, tiến độ thanh toán và chính sách khi có bản chính thức.
 
 **Nguồn số liệu:**
 - Google Drive: "Slide thuyết trình 20.03.2026.pdf" (tổng quan dự án, tòa LAVISH, SEREN, diện tích từng căn, cập nhật pháp lý 12/9/2025) và "Tiêu chuẩn bàn giao - Greenera Southmark.pdf".
@@ -10,18 +10,27 @@ Nội dung bài viết nằm trong file `greenera-southmark.html` (cùng thư m�
 
 ## 1. Từ khóa
 
-Gợi ý tìm kiếm của Google (tháng 10/2026) cho thấy người dùng gần như chỉ tìm theo tên "Greenera Southmark", kèm "486 Ngọc Hồi" hoặc "Ngọc Hồi".
+Số liệu Keyword Planner (Việt Nam, tiếng Việt, tháng 4 – 9/2026), kết hợp gợi ý tìm kiếm của Google:
+
+| Từ khóa | Lượt tìm TB/tháng | So cùng kỳ | Ghi chú |
+|---|---|---|---|
+| `greenera southmark` | 1.300 | -70% | Gấp hơn 10 lần các cụm còn lại |
+| `dự án 486 ngọc hồi` | 90 | -57% | |
+| `chung cư 486 ngọc hồi` | 70 | -67% | |
+| `noxh 486 ngọc hồi` | 70 | +100% | Người tìm nhà ở xã hội, xem ghi chú bên dưới |
+| `chung cư greenerasouthmark` | Không có dữ liệu | | Viết liền, quá ít người tìm |
 
 | Nhóm | Từ khóa |
 |---|---|
 | **Chính** | `Greenera Southmark` |
-| Phụ | `Greenera Ngọc Hồi`, `chung cư 486 Ngọc Hồi`, `Greenera Southmark giá`, `Greenera Southmark Tân Hoàng Minh`, `Greenera Southmark mặt bằng` |
+| Phụ | `dự án 486 Ngọc Hồi`, `chung cư 486 Ngọc Hồi`, `Greenera Ngọc Hồi`, `Greenera Southmark giá`, `Greenera Southmark Tân Hoàng Minh` |
 | Dài, theo ý định | `Greenera Southmark 486 Ngọc Hồi`, `giá chung cư 486 Ngọc Hồi`, `chung cư Ngọc Hồi Tân Hoàng Minh`, `Greenera Thanh Trì`, `Greenera Southmark tiến độ` |
 
-**Lý do chọn:**
-- **"Greenera Southmark" là cụm Google gợi ý đầu tiên** cho cả "greenera" lẫn "greenera southmark", ngắn và không trùng dự án khác.
-- **"Chung cư 486 Ngọc Hồi"** có nhiều biến thể gợi ý (giá, mua, bán, mở bán), tức có người tìm theo địa chỉ mà không nhớ tên dự án.
-- **"Tân Hoàng Minh"** được tìm kèm vì đây là dự án đánh dấu sự trở lại của Tân Hoàng Minh. Bài ghi rõ vai trò từng đơn vị (Tổng Bách Hóa là chủ đầu tư, Tân Hoàng Minh phát triển, Ramond Holdings bán hàng) để trả lời đúng câu hỏi "chủ đầu tư là ai".
+**Đọc số liệu:**
+- **"Greenera Southmark" là từ khóa chính rõ ràng**, khoảng 1.300 lượt/tháng. Mức giảm 70% so với cùng kỳ là bình thường: dự án ra mắt tháng 7/2025 nên giai đoạn đó lượt tìm tăng đột biến.
+- **"Dự án 486 Ngọc Hồi" (90) nhỉnh hơn "chung cư 486 Ngọc Hồi" (70)**, nên câu mở đầu bài dùng cụm "dự án chung cư 486 Ngọc Hồi" để khớp cả hai.
+- **"NOXH 486 Ngọc Hồi" tăng 100%**: có người nhầm đây là nhà ở xã hội. Không nên nhắm từ khóa này để thu hút, vì dự án là chung cư thương mại. Bài có thêm câu hỏi thường gặp "Chung cư 486 Ngọc Hồi có phải nhà ở xã hội không?" để trả lời đúng, tránh khách hiểu nhầm.
+- Mức cạnh tranh quảng cáo đều "Thấp", giá thầu khoảng 5.000 – 30.000đ/lượt bấm. Nếu chạy Google Ads cho dự án này, chi phí khá rẻ.
 
 Số lần xuất hiện trong bài: "Greenera Southmark" 22 lần, "Ngọc Hồi" 22 lần.
 
@@ -65,7 +74,7 @@ Số lần xuất hiện trong bài: "Greenera Southmark" 22 lần, "Ngọc Hồ
 
 | Mục | Nội dung |
 |---|---|
-| Từ khóa chính | `Greenera Southmark`, rồi thêm `Greenera Ngọc Hồi`, `chung cư 486 Ngọc Hồi`, `Greenera Southmark giá`, `Greenera Southmark Tân Hoàng Minh` |
+| Từ khóa chính | `Greenera Southmark`, rồi thêm `dự án 486 Ngọc Hồi`, `chung cư 486 Ngọc Hồi`, `Greenera Ngọc Hồi`, `Greenera Southmark giá` |
 | SEO Title (≤ 60 ký tự) | `Greenera Southmark 486 Ngọc Hồi: Giá, Mặt Bằng, Tiến Độ 2026` (60 ký tự) |
 | Permalink | `greenera-southmark` |
 | Meta Description (≤ 160 ký tự) | `Greenera Southmark Ngọc Hồi – 830 căn hộ 1 – 4PN, duplex tại 486 Ngọc Hồi, Thanh Trì. Mặt bằng 3 tòa, tiêu chuẩn bàn giao, giá và tiến độ mới nhất 2026.` (152 ký tự) |
