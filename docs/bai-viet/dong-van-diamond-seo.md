@@ -64,7 +64,7 @@ Số lần xuất hiện trong bài: "Đồng Văn Diamond" 19 lần.
 | Từ khóa chính | `Đồng Văn Diamond`, rồi thêm `shophouse Đồng Văn Diamond`, `shophouse Đồng Văn`, `shophouse Duy Tiên` |
 | SEO Title (≤ 60 ký tự) | `Đồng Văn Diamond: Shophouse 5 Tầng Cổng KCN Đồng Văn 3` (54 ký tự) |
 | Permalink | `dong-van-diamond` |
-| Meta Description (≤ 160 ký tự) | `Đồng Văn Diamond – 45 căn shophouse 5 tầng và khách sạn 12 tầng ngay cổng KCN Đồng Văn 3, Duy Tiên. Đủ điều kiện mở bán, sổ lâu dài. Giá mới nhất.` (147 ký tự) |
+| Meta Description (≤ 160 ký tự) | `Đồng Văn Diamond – 45 căn shophouse 5 tầng và khách sạn 12 tầng ngay cổng KCN Đồng Văn 3, Duy Tiên. Đủ điều kiện mở bán, sổ lâu dài. Giá mới nhất.` (146 ký tự) |
 | Schema | **Article**. FAQ Schema do giao diện tự tạo từ mục "Câu hỏi thường gặp" |
 
 ## 4. Ảnh
