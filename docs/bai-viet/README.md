@@ -18,6 +18,7 @@ Mỗi bài gồm 2 file:
 | An Garden Châu Sơn | Liền kề, biệt thự | Châu Sơn (Phủ Lý), Ninh Bình | [html](an-garden-chau-son.html) | [seo](an-garden-chau-son-seo.md) |
 | Tecco IVY Central (Bình An Tower) | Căn hộ | Đông Hòa (Dĩ An), TP.HCM | [html](tecco-ivy-central.html) | [seo](tecco-ivy-central-seo.md) |
 | Greenera Southmark | Căn hộ | 486 Ngọc Hồi, Thanh Trì, Hà Nội | [html](greenera-southmark.html) | [seo](greenera-southmark-seo.md) |
+| LakeView Tower Giải Phóng | Căn hộ | 1283 Giải Phóng, Hoàng Mai, Hà Nội | [html](lakeview-tower-giai-phong.html) | [seo](lakeview-tower-giai-phong-seo.md) |
 
 ## Bài thị trường
 
