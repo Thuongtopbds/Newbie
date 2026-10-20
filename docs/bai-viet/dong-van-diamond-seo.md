@@ -1,8 +1,9 @@
 # Đồng Văn Diamond – cách đăng bài và cài SEO
 
-Nội dung bài viết nằm trong file `dong-van-diamond.html` (cùng thư mục). Bài dài khoảng 1.400 chữ, gồm 9 mục H2, 2 bảng và 6 câu hỏi thường gặp. Mục "Giá bán và chính sách" có dòng chú thích `<!-- Bổ sung bảng giá… -->` để bạn nhập bảng giá.
+Nội dung bài viết nằm trong file `dong-van-diamond.html` (cùng thư mục). Bài dài khoảng 1.550 chữ, gồm 9 mục H2, 3 bảng và 6 câu hỏi thường gặp. Mục "Giá bán và chính sách" có dòng chú thích `<!-- Bổ sung bảng giá… -->` để bạn nhập bảng giá.
 
 **Nguồn số liệu:**
+- Ảnh chụp tài liệu dự án bạn gửi: cơ cấu 45 căn theo diện tích và vị trí.
 - datxanhmienbac.com.vn (đơn vị phân phối): vị trí, chủ đầu tư, quy mô 2,13ha, 45 sản phẩm, khách sạn 12 tầng, 2 mẫu thiết kế shophouse, kết nối giao thông, tiện ích.
 - **Chưa dùng được** file "ĐÀO TẠO DỰ ÁN ĐỒNG VĂN - HÀ NAM (NB).pdf" trong Drive: file nặng 86MB và chủ yếu là ảnh, công cụ không trích được chữ. Nếu bạn gửi bản nhẹ hơn (dưới 20MB) hoặc ảnh chụp các trang về pháp lý, mặt bằng, giá, mình sẽ bổ sung vào bài.
 - Tìm kiếm Google: chỉ có tin rao trên guland.vn, batdongsan.com.vn; chưa có bài báo nào về dự án.
@@ -50,7 +51,7 @@ Số lần xuất hiện trong bài: "Đồng Văn Diamond" 19 lần.
 | Địa chỉ đầy đủ | `Tổ dân phố Sa Lao, phường Đồng Văn, tỉnh Ninh Bình (thị xã Duy Tiên, Hà Nam cũ)` |
 | Chủ đầu tư | `Tổng công ty Đầu tư phát triển nhà và đô thị Nam Hà Nội` |
 | Quy mô | `2,13ha, 45 shophouse, khách sạn 12 tầng` |
-| Diện tích | `Sàn 100 – 135 m²/tầng` (đổi sang diện tích đất khi có) |
+| Diện tích | `110 – 147,8 m²` |
 | Pháp lý | `Sổ hồng lâu dài` |
 | Bàn giao | Để trống tới khi có thông tin |
 | Vị trí trên bản đồ | Dùng **tọa độ** từ Google Maps, tìm "KCN Đồng Văn 3" |
@@ -81,7 +82,7 @@ Mỗi ảnh nén dưới 200KB.
 
 ## 5. Cần kiểm tra trước khi đăng
 
-- **Diện tích đất từng căn:** đơn vị phân phối mới công bố diện tích sàn (100 – 110m² và 135m²/sàn). Tin rao trên batdongsan.com.vn ghi diện tích 110 – 148,7m², nhiều khả năng là diện tích đất. Bổ sung khi có bảng hàng.
+- **Diện tích đất từng căn:** đã cập nhật theo ảnh tài liệu bạn gửi (110m² × 25 căn, 120m² × 10, 135,5m² × 8, 143,3 – 147,8m² × 2). Tài liệu gọi là "liền kề xây 5 tầng", website gọi là shophouse; bài dùng cả hai cách gọi.
 - **Pháp lý:** chưa có số quyết định giao đất, giấy phép xây dựng, văn bản đủ điều kiện bán. Khi tìm kiếm, mình thấy UBND tỉnh Hà Nam có quyết định giao khoảng 18.653,5m² đất tại phường Đồng Văn cho cùng chủ đầu tư, dự án "Khu nhà ở và thương mại dịch vụ phía Đông Đồng Văn (DT-ĐT33.23)". Mình **chưa xác nhận** được đây có phải Đồng Văn Diamond hay không (diện tích khác với 2,13ha), nên **không đưa vào bài**. Bạn hỏi lại phòng kinh doanh tên pháp lý của dự án.
 - **Chủ đầu tư:** một số tin rao gọi là "HUD Đồng Văn". Tổng công ty Đầu tư phát triển nhà và đô thị Nam Hà Nội có trụ sở tại Duy Tiên, khác Tổng công ty HUD của Bộ Xây dựng. Bài chỉ ghi đúng tên đầy đủ, không gọi là HUD.
 - **Đã bỏ khỏi bài:** câu "tăng giá trị tài sản khoảng 20%/năm" của đơn vị phân phối, vì đây là cam kết lợi nhuận không có căn cứ.
