@@ -1,6 +1,6 @@
-# LakeView Tower Giải Phóng – cách đăng bài và cài SEO
+# Lakeside Garden Giải Phóng (1283 Giải Phóng) – cách đăng bài và cài SEO
 
-Nội dung bài viết nằm trong file `lakeview-tower-giai-phong.html` (cùng thư mục). Bài dài khoảng 1.900 chữ, gồm 10 mục H2, 2 bảng và 6 câu hỏi thường gặp. Mục "Giá bán và chính sách" có dòng chú thích `<!-- Bổ sung bảng giá… -->` để bạn nhập bảng giá khi có bản chính thức.
+Nội dung bài viết nằm trong file `lakeside-garden-giai-phong.html` (cùng thư mục). Bài dài khoảng 1.900 chữ, gồm 10 mục H2, 2 bảng và 6 câu hỏi thường gặp. Mục "Giá bán và chính sách" có dòng chú thích `<!-- Bổ sung bảng giá… -->` để bạn nhập bảng giá khi có bản chính thức.
 
 **Nguồn số liệu:**
 - lakeviewtower.vn: tên pháp lý, chủ đầu tư, đơn vị quản lý, thiết kế, giám sát, tổng mức đầu tư, quyết định chủ trương 4616/QĐ-UBND, mặt bằng tầng điển hình 10 căn, hoàn thành quý IV/2028.
@@ -8,6 +8,8 @@ Nội dung bài viết nằm trong file `lakeview-tower-giai-phong.html` (cùng 
 - tasecogiaiphong.com, tasecolongbien.com.vn, duantasecoland.vn, nhadepthudo.com.vn: diện tích căn theo tài liệu bán hàng, tiện ích, khoảng cách hồ Linh Đàm 300m.
 
 ## 1. Từ khóa
+
+**Cập nhật 20/10/2026:** thư mời lễ trao chứng nhận đại lý phân phối (21/10/2026) của Taseco Land – ICON4 gọi dự án là **"Lakeside Garden (1283 Giải Phóng)"**. Đây là tên chủ đầu tư đang truyền thông, nên bài và từ khóa chuyển sang tên này. Tên "LakeView Tower" (ghi trong quyết định chuyển mục đích sử dụng đất 5/2026) giữ làm từ khóa phụ.
 
 Số liệu Keyword Planner bạn gửi (Việt Nam, 10/2025 – 9/2026):
 
@@ -19,17 +21,13 @@ Số liệu Keyword Planner bạn gửi (Việt Nam, 10/2025 – 9/2026):
 | `lakeside garden 1283 giải phóng`, `lakeside garden giải phóng`, `lakeside giải phóng` | Không có dữ liệu | | |
 
 **Đọc số liệu:**
-- **720 lượt của "lakeside garden" phần lớn không phải dự án này.** Nếu người tìm đúng dự án 1283 Giải Phóng thì các cụm có chữ "giải phóng" phải có số liệu, nhưng cả 3 cụm đều trống. "Lakeside garden" là cụm tiếng Anh chung chung, trùng tên nhiều dự án, khu nghỉ dưỡng, nhà hàng khác. Biểu đồ của cụm này cũng không tăng theo thời điểm dự án được công bố.
-- **"LakeView Tower" là tên đang lên:** tăng 800% so với cùng kỳ, và "lakeview tower giải phóng" bắt đầu có lượt tìm từ khi báo đưa tin tên thương mại (5/2026). Lượng còn nhỏ vì dự án chưa mở bán; khi mở bán, lượt tìm theo tên chính thức sẽ tăng nhanh.
+- **720 lượt của "lakeside garden" hiện chủ yếu là các nơi khác cùng tên** (dữ liệu đến tháng 9/2026, trước khi chủ đầu tư dùng tên này). Từ khi dự án truyền thông rầm rộ với tên Lakeside Garden, lượt tìm cụm này và "lakeside garden giải phóng" sẽ tăng. Vì cụm "lakeside garden" đứng riêng bị trùng nhiều, từ khóa chính nên kèm "Giải Phóng" để Google hiểu đúng dự án.
+- **Kiểm tra lại Keyword Planner sau 1 – 2 tháng** với các cụm `lakeside garden giải phóng`, `lakeside garden 1283 giải phóng`, `taseco giải phóng`, `chung cư 1283 giải phóng` để chỉnh từ khóa phụ.
 
 | Nhóm | Từ khóa |
 |---|---|
-| **Chính** | `LakeView Tower Giải Phóng` |
-| Phụ | `LakeView Tower`, `Taseco Giải Phóng`, `chung cư 1283 Giải Phóng`, `Lakeside Gardens Giải Phóng`, `Taseco Land Giải Phóng` |
-
-**Nên kiểm tra thêm trên Keyword Planner:** `taseco giải phóng`, `chung cư 1283 giải phóng`, `dự án 1283 giải phóng`, `taseco land giải phóng`. Nếu `taseco giải phóng` có lượt tìm cao hơn hẳn `lakeview tower giải phóng`, vẫn giữ từ khóa chính theo tên chính thức (sẽ tăng dần), còn title có thể đặt cả hai tên như gợi ý bên dưới.
-
-Số lần xuất hiện trong bài: "LakeView Tower" 22 lần (trong đó "LakeView Tower Giải Phóng" 10 lần), "1283 Giải Phóng" 9 lần, "Taseco Giải Phóng" 5 lần, "Lakeside Gardens" 5 lần.
+| **Chính** | `Lakeside Garden Giải Phóng` |
+| Phụ | `Lakeside Garden`, `Lakeside Garden 1283 Giải Phóng`, `LakeView Tower Giải Phóng`, `Taseco Giải Phóng`, `chung cư 1283 Giải Phóng` |
 
 ## 2. Đăng dự án
 
@@ -37,10 +35,10 @@ Số lần xuất hiện trong bài: "LakeView Tower" 22 lần (trong đó "Lake
 
 | Ô | Nhập |
 |---|---|
-| Tiêu đề | `LakeView Tower Giải Phóng` |
-| Đường dẫn (slug) | `lakeview-tower-giai-phong` |
+| Tiêu đề | `Lakeside Garden Giải Phóng` |
+| Đường dẫn (slug) | `lakeside-garden-giai-phong` |
 | Nội dung | Chuyển sang chế độ **Code/Văn bản**, dán toàn bộ file `.html` |
-| Tóm tắt (Excerpt) | LakeView Tower Giải Phóng (Taseco Giải Phóng) – chung cư 27 tầng tại 1283 Giải Phóng, cạnh hồ Linh Đàm, khoảng 340 căn 1PN+1 – 3PN, hoàn thành dự kiến quý IV/2028. |
+| Tóm tắt (Excerpt) | Lakeside Garden Giải Phóng (LakeView Tower, Taseco Giải Phóng) – chung cư 27 tầng tại 1283 Giải Phóng, cạnh hồ Linh Đàm, khoảng 340 căn 1PN+1 – 3PN, hoàn thành dự kiến quý IV/2028. |
 | Loại hình | **Chung cư** |
 | Khu vực | **Hà Nội** |
 | Trạng thái | Sắp mở bán |
@@ -71,24 +69,24 @@ Số lần xuất hiện trong bài: "LakeView Tower" 22 lần (trong đó "Lake
 
 | Mục | Nội dung |
 |---|---|
-| Từ khóa chính | `LakeView Tower Giải Phóng`, rồi thêm `LakeView Tower`, `Taseco Giải Phóng`, `chung cư 1283 Giải Phóng`, `Lakeside Gardens Giải Phóng` |
-| SEO Title (≤ 60 ký tự) | `LakeView Tower Giải Phóng (Taseco 1283): Mặt Bằng, Giá 2026` (59 ký tự) |
-| Permalink | `lakeview-tower-giai-phong` |
-| Meta Description (≤ 160 ký tự) | `LakeView Tower Giải Phóng – chung cư 27 tầng của Taseco Land tại 1283 Giải Phóng, cạnh hồ Linh Đàm. Mặt bằng 1PN+1 – 3PN, pháp lý, tiến độ, giá mới nhất.` (153 ký tự) |
+| Từ khóa chính | `Lakeside Garden Giải Phóng`, rồi thêm `Lakeside Garden`, `LakeView Tower Giải Phóng`, `Taseco Giải Phóng`, `chung cư 1283 Giải Phóng` |
+| SEO Title (≤ 60 ký tự) | `Lakeside Garden Giải Phóng (Taseco 1283): Mặt Bằng, Giá 2026` (60 ký tự) |
+| Permalink | `lakeside-garden-giai-phong` |
+| Meta Description (≤ 160 ký tự) | `Lakeside Garden 1283 Giải Phóng (LakeView Tower) – chung cư 27 tầng của Taseco Land cạnh hồ Linh Đàm. Mặt bằng 1PN+1 – 3PN, pháp lý, tiến độ, giá mới nhất.` (155 ký tự) |
 | Schema | **Article**. FAQ Schema do giao diện tự tạo từ mục "Câu hỏi thường gặp" |
 
 ## 4. Ảnh
 
 | Tên file | Alt |
 |---|---|
-| `phoi-canh-lakeview-tower-giai-phong.webp` | Phối cảnh LakeView Tower Giải Phóng nhìn từ hồ Linh Đàm |
-| `vi-tri-lakeview-tower-1283-giai-phong.webp` | Vị trí LakeView Tower tại 1283 Giải Phóng, cạnh hồ Linh Đàm |
-| `mat-bang-tang-dien-hinh-lakeview-tower.webp` | Mặt bằng tầng điển hình LakeView Tower Giải Phóng, 10 căn mỗi tầng |
-| `can-1pn-1-lakeview-tower.webp` | Mặt bằng căn hộ 1 phòng ngủ + 1 LakeView Tower |
-| `can-2pn-lakeview-tower.webp` | Mặt bằng căn hộ 2 phòng ngủ LakeView Tower Giải Phóng |
-| `can-3pn-lakeview-tower.webp` | Mặt bằng căn hộ 3 phòng ngủ Taseco Giải Phóng |
-| `tien-ich-tang-mai-lakeview-tower.webp` | Vườn tiện ích tầng mái LakeView Tower |
-| `tien-do-lakeview-tower-thang-10-2026.webp` | Tiến độ thi công LakeView Tower Giải Phóng tháng 10/2026 |
+| `phoi-canh-lakeside-garden-giai-phong.webp` | Phối cảnh Lakeside Garden Giải Phóng nhìn từ hồ Linh Đàm |
+| `vi-tri-lakeside-garden-1283-giai-phong.webp` | Vị trí Lakeside Garden tại 1283 Giải Phóng, cạnh hồ Linh Đàm |
+| `mat-bang-tang-dien-hinh-lakeside-garden.webp` | Mặt bằng tầng điển hình Lakeside Garden Giải Phóng, 10 căn mỗi tầng |
+| `can-1pn-1-lakeside-garden.webp` | Mặt bằng căn hộ 1 phòng ngủ + 1 Lakeside Garden |
+| `can-2pn-lakeside-garden.webp` | Mặt bằng căn hộ 2 phòng ngủ Lakeside Garden Giải Phóng |
+| `can-3pn-lakeside-garden.webp` | Mặt bằng căn hộ 3 phòng ngủ Taseco Giải Phóng |
+| `tien-ich-tang-mai-lakeside-garden.webp` | Vườn tiện ích tầng mái Lakeside Garden |
+| `tien-do-lakeside-garden-thang-10-2026.webp` | Tiến độ thi công Lakeside Garden Giải Phóng tháng 10/2026 |
 
 Mỗi ảnh nén dưới 200KB.
 
@@ -100,4 +98,4 @@ Mỗi ảnh nén dưới 200KB.
 - **ICON4:** một số website ghi ICON4 là đơn vị thi công. lakeviewtower.vn ghi là đơn vị quản lý dự án. Bài ghi "quản lý dự án". Kiểm tra lại với biển công trường.
 - **Tiêu chuẩn bàn giao:** một website liệt kê danh mục nội thất (sàn Quick-Step, Hansgrohe, Bosch, Franke…), nhưng trang đó có nhiều đoạn chép từ dự án Long Biên Central. Bài **không** đưa danh mục thương hiệu, chỉ ghi kính Low-E và trần 2,7 – 2,85m. Bổ sung khi có tài liệu chính thức.
 - **Khởi công:** một nguồn ghi tháng 4/2026, nguồn khác ghi quý IV/2025. Bài ghi "năm 2026, theo đơn vị phân phối". Nếu có ảnh công trường, thêm mục "Tiến độ thực tế" như bài An Garden.
-- **Giá:** các nguồn đưa từ khoảng 90 – 95 triệu/m² đến "1xx triệu/m²". Bài không ghi số, chỉ dẫn lời lãnh đạo Taseco Land (giá ngang hoặc cao hơn Long Biên Central). Nhập bảng giá khi chủ đầu tư công bố, rồi thêm câu hỏi thường gặp "Giá LakeView Tower bao nhiêu?".
+- **Giá:** các nguồn đưa từ khoảng 90 – 95 triệu/m² đến "1xx triệu/m²". Bài không ghi số, chỉ dẫn lời lãnh đạo Taseco Land (giá ngang hoặc cao hơn Long Biên Central). Nhập bảng giá khi chủ đầu tư công bố, rồi thêm câu hỏi thường gặp "Giá Lakeside Garden Giải Phóng bao nhiêu?".
