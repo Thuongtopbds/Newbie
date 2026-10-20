@@ -19,6 +19,7 @@ Mỗi bài gồm 2 file:
 | Tecco IVY Central (Bình An Tower) | Căn hộ | Đông Hòa (Dĩ An), TP.HCM | [html](tecco-ivy-central.html) | [seo](tecco-ivy-central-seo.md) |
 | Greenera Southmark | Căn hộ | 486 Ngọc Hồi, Thanh Trì, Hà Nội | [html](greenera-southmark.html) | [seo](greenera-southmark-seo.md) |
 | Lakeside Garden Giải Phóng (LakeView Tower) | Căn hộ | 1283 Giải Phóng, Hoàng Mai, Hà Nội | [html](lakeside-garden-giai-phong.html) | [seo](lakeside-garden-giai-phong-seo.md) |
+| Tara Maison Mỹ Đình | Căn hộ | Mỹ Đình (Từ Liêm), Hà Nội | [html](tara-maison-my-dinh.html) | [seo](tara-maison-my-dinh-seo.md) |
 
 ## Bài thị trường
 
