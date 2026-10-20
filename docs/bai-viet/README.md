@@ -20,6 +20,7 @@ Mỗi bài gồm 2 file:
 | Greenera Southmark | Căn hộ | 486 Ngọc Hồi, Thanh Trì, Hà Nội | [html](greenera-southmark.html) | [seo](greenera-southmark-seo.md) |
 | Lakeside Garden Giải Phóng (LakeView Tower) | Căn hộ | 1283 Giải Phóng, Hoàng Mai, Hà Nội | [html](lakeside-garden-giai-phong.html) | [seo](lakeside-garden-giai-phong-seo.md) |
 | Tara Maison Mỹ Đình | Căn hộ | Mỹ Đình (Từ Liêm), Hà Nội | [html](tara-maison-my-dinh.html) | [seo](tara-maison-my-dinh-seo.md) |
+| Đồng Văn Diamond | Shophouse | Đồng Văn (Duy Tiên), Ninh Bình | [html](dong-van-diamond.html) | [seo](dong-van-diamond-seo.md) |
 
 ## Bài thị trường
 
