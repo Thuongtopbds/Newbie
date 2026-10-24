@@ -107,4 +107,54 @@
 		}, { rootMargin: '-150px 0px -60% 0px' });
 		targets.forEach(function (t) { observer.observe(t); });
 	}
+	// Slide ảnh có hàng ảnh nhỏ: vuốt trên điện thoại, nút mũi tên, bấm ảnh nhỏ, phím mũi tên.
+	document.querySelectorAll('[data-tp-slider]').forEach(function (slider) {
+		var track = slider.querySelector('[data-tp-slider-track]');
+		var slides = track.children;
+		var thumbs = slider.querySelectorAll('[data-tp-slider-go]');
+		var thumbsWrap = slider.querySelector('[data-tp-slider-thumbs]');
+		var caption = slider.querySelector('[data-tp-slider-caption]');
+		var count = slider.querySelector('[data-tp-slider-count]');
+		var current = 0;
+		var target = null; // ảnh đang trượt tới: bấm liên tục khi chưa trượt xong vẫn tính đúng
+
+		var go = function (i) {
+			i = (i + slides.length) % slides.length;
+			target = i;
+			track.scrollTo({ left: slides[i].offsetLeft, behavior: 'smooth' });
+		};
+		var mark = function (i) {
+			if (i === current) return;
+			current = i;
+			caption.innerHTML = slides[i].getAttribute('data-caption') || '';
+			count.textContent = (i + 1) + ' / ' + slides.length;
+			thumbs.forEach(function (t, n) {
+				t.classList.toggle('is-active', n === i);
+				if (n === i) {
+					t.setAttribute('aria-current', 'true');
+					thumbsWrap.scrollTo({ left: t.offsetLeft - (thumbsWrap.clientWidth - t.offsetWidth) / 2, behavior: 'smooth' });
+				} else {
+					t.removeAttribute('aria-current');
+				}
+			});
+		};
+
+		track.addEventListener('scroll', function () {
+			var i = Math.round(track.scrollLeft / track.clientWidth);
+			mark(i);
+			if (i === target) target = null;
+		}, { passive: true });
+		slider.addEventListener('click', function (e) {
+			var step = e.target.closest('[data-tp-slider-step]');
+			var to = e.target.closest('[data-tp-slider-go]');
+			if (step) go((target === null ? current : target) + parseInt(step.getAttribute('data-tp-slider-step'), 10));
+			if (to) go(parseInt(to.getAttribute('data-tp-slider-go'), 10));
+		});
+		track.addEventListener('keydown', function (e) {
+			if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+				e.preventDefault();
+				go((target === null ? current : target) + (e.key === 'ArrowRight' ? 1 : -1));
+			}
+		});
+	});
 })();
