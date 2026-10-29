@@ -3,7 +3,7 @@
  * Trang chi tiết dự án.
  *
  * Hero ảnh nền (giống trang chủ) với khung kính thông số → thanh mục lục dính → lưới ảnh
- * → Tổng quan dự án → nội dung bài → bản đồ, cùng thẻ "Nhận báo giá" dính ở cột phải
+ * → Tổng quan dự án (đoạn mở đầu bài + ô thông số) → nội dung bài → bản đồ, cùng thẻ "Nhận báo giá" dính ở cột phải
  * → dự án liên quan.
  */
 
@@ -15,10 +15,12 @@ while ( have_posts() ) :
 	the_post();
 
 	$tp_id      = get_the_ID();
-	$tp_specs   = array_values( array_filter( tp_project_specs( $tp_id ), function ( $row ) {
-		return 'Giá bán' !== $row[1];
-	} ) );
 	$tp_facts   = tp_project_facts( $tp_id );
+	// Bỏ các ô đã có ở khung thông số đầu trang (giá, diện tích, phòng ngủ, pháp lý, bàn giao).
+	$tp_in_hero = array_merge( array( 'Giá bán' ), array_column( $tp_facts, 1 ) );
+	$tp_specs   = array_values( array_filter( tp_project_specs( $tp_id ), function ( $row ) use ( $tp_in_hero ) {
+		return ! in_array( $row[1], $tp_in_hero, true );
+	} ) );
 	$tp_photos  = tp_project_gallery_ids( $tp_id );
 	$tp_mosaic  = has_post_thumbnail() ? array_slice( $tp_photos, 1 ) : $tp_photos;
 	$tp_map     = get_post_meta( $tp_id, 'tp_ban_do', true );
@@ -27,6 +29,13 @@ while ( have_posts() ) :
 	$tp_types   = get_the_terms( $tp_id, 'loai_hinh' );
 
 	list( $tp_content, $tp_toc ) = tp_content_toc( apply_filters( 'the_content', get_the_content() ) );
+
+	// Các đoạn mở đầu bài (trước H2 đầu tiên) đưa lên ngay dưới tiêu đề "Tổng quan", trên các ô thông số.
+	$tp_lead = '';
+	if ( $tp_specs && preg_match( '#^\s*((?:<p\b[^>]*>.*?</p>\s*)+)#is', $tp_content, $tp_match ) ) {
+		$tp_lead    = trim( $tp_match[1] );
+		$tp_content = substr( $tp_content, strlen( $tp_match[0] ) );
+	}
 
 	$tp_nav = $tp_specs ? array( array( 'tong-quan', 'Tổng quan' ) ) : array();
 	// Nhãn trên thanh mục lục bỏ tên dự án cho gọn: "Có nên mua Noble Palace?" → "Có nên mua?".
@@ -130,6 +139,9 @@ while ( have_posts() ) :
 				<?php if ( $tp_specs ) : ?>
 					<section class="tp-section" id="tong-quan">
 						<h2 class="tp-section__title">Tổng quan dự án <?php the_title(); ?></h2>
+						<?php if ( $tp_lead ) : ?>
+							<div class="tp-content tp-lead entry-content"><?php echo $tp_lead; ?></div>
+						<?php endif; ?>
 						<dl class="tp-specgrid">
 							<?php foreach ( $tp_specs as list( $tp_icon, $tp_label, $tp_value ) ) : ?>
 								<div class="tp-specgrid__item">
