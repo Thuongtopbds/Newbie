@@ -109,6 +109,13 @@ Trang được thiết kế theo cùng phong cách với trang chủ: hero ảnh
 | **Dự án liên quan** | 4 thẻ dự án cùng loại hình hoặc khu vực |
 | **Mobile** | Lưới ảnh thành dãy vuốt ngang, thẻ báo giá chuyển xuống cuối bài. Thanh dưới đáy có 3 nút: Chat Zalo, Gọi, Báo giá |
 
+**Slide ảnh trong bài** (ảnh lớn, nút mũi tên cam, thanh chú thích xanh, hàng ảnh nhỏ bên dưới; có từ theme v1.0.41):
+1. Trong bài, bấm **+** → chọn khối **Thư viện ảnh** (Gallery) → **Thư viện phương tiện** → chọn các ảnh → **Tạo thư viện mới** → **Chèn thư viện**.
+2. Bấm vào khung thư viện (không bấm vào một ảnh lẻ). Ở cột phải, tab **Khối** → mở **Nâng cao** → ô **Lớp CSS bổ sung** gõ `tp-slider`.
+3. Bấm **Cập nhật**, rồi LiteSpeed Cache → **Purge All**.
+
+Trong trình soạn thảo khối vẫn hiện dạng lưới, ngoài trang web mới thành slide. Chú thích của từng ảnh (nếu có) hiện trên thanh xanh; Alt lấy từ Thư viện, ảnh chưa có Alt dùng chú thích. Muốn thêm hoặc bớt ảnh thì sửa ngay trong khối Thư viện ảnh. Trong UX Builder dùng phần tử **TOPBDS → Slide ảnh có ảnh nhỏ** hoặc shortcode `[tp_slider ids="12,34,56"]`.
+
 Trang không cần UX Builder: bố cục áp dụng tự động cho mọi dự án, người quản trị chỉ nhập thông tin và viết bài.
 
 **Cài đặt cho trang chi tiết** (Giao diện → Tuỳ biến → TOPBDS – Liên hệ):

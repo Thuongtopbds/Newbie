@@ -24,6 +24,14 @@ add_action( 'ux_builder_setup', function () {
 	};
 	$icons  = array( 'shield' => 'Khiên (uy tín)', 'headset' => 'Tai nghe (tư vấn)', 'users' => 'Người (đồng hành)', 'bulb' => 'Bóng đèn', 'chat' => 'Tin nhắn', 'phone' => 'Điện thoại', 'building' => 'Toà nhà', 'search' => 'Tìm kiếm', 'mail' => 'Email' );
 
+	add_ux_builder_shortcode( 'tp_slider', array(
+		'name'     => 'Slide ảnh có ảnh nhỏ',
+		'category' => 'TOPBDS',
+		'options'  => array(
+			'ids' => array( 'type' => 'gallery', 'heading' => 'Chọn ảnh' ),
+		),
+	) );
+
 	add_ux_builder_shortcode( 'tp_heading', array(
 		'name'     => 'Tiêu đề mục',
 		'category' => 'TOPBDS',
