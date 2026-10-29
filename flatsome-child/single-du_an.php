@@ -28,6 +28,11 @@ while ( have_posts() ) :
 	$tp_loc     = get_post_meta( $tp_id, 'tp_dia_chi_day_du', true ) ?: get_post_meta( $tp_id, 'tp_dia_chi', true ) ?: tp_term_names( $tp_id, 'khu_vuc' );
 	$tp_types   = get_the_terms( $tp_id, 'loai_hinh' );
 
+	// Ảnh nền hero là ảnh ưu tiên cao của trang (fetchpriority="high"); báo cho WordPress trước khi xử lý
+	// nội dung bài, để ảnh đầu tiên trong bài không bị gắn thêm fetchpriority="high".
+	if ( has_post_thumbnail() && function_exists( 'wp_high_priority_element_flag' ) ) {
+		wp_high_priority_element_flag( false );
+	}
 	list( $tp_content, $tp_toc ) = tp_content_toc( apply_filters( 'the_content', get_the_content() ) );
 
 	// Các đoạn mở đầu bài (trước H2 đầu tiên) đưa lên ngay dưới tiêu đề "Tổng quan", trên các ô thông số.
@@ -140,7 +145,7 @@ while ( have_posts() ) :
 					<section class="tp-section" id="tong-quan">
 						<h2 class="tp-section__title">Tổng quan dự án <?php the_title(); ?></h2>
 						<?php if ( $tp_lead ) : ?>
-							<div class="tp-content tp-lead entry-content"><?php echo $tp_lead; ?></div>
+							<div class="tp-content tp-lead"><?php echo $tp_lead; ?></div>
 						<?php endif; ?>
 						<dl class="tp-specgrid">
 							<?php foreach ( $tp_specs as list( $tp_icon, $tp_label, $tp_value ) ) : ?>
