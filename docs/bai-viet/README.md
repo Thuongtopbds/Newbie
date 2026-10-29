@@ -17,6 +17,10 @@ Mỗi bài gồm 2 file:
 | Chung cư Vân Bay Vân Đồn | Căn hộ | Đặc khu Vân Đồn, Quảng Ninh | [html](van-bay-van-don.html) | [seo](van-bay-van-don-seo.md) |
 | An Garden Châu Sơn | Liền kề, biệt thự | Châu Sơn (Phủ Lý), Ninh Bình | [html](an-garden-chau-son.html) | [seo](an-garden-chau-son-seo.md) |
 | Tecco IVY Central (Bình An Tower) | Căn hộ | Đông Hòa (Dĩ An), TP.HCM | [html](tecco-ivy-central.html) | [seo](tecco-ivy-central-seo.md) |
+| Greenera Southmark | Căn hộ | 486 Ngọc Hồi, Thanh Trì, Hà Nội | [html](greenera-southmark.html) | [seo](greenera-southmark-seo.md) |
+| Lakeside Garden Giải Phóng (LakeView Tower) | Căn hộ | 1283 Giải Phóng, Hoàng Mai, Hà Nội | [html](lakeside-garden-giai-phong.html) | [seo](lakeside-garden-giai-phong-seo.md) |
+| Tara Maison Mỹ Đình | Căn hộ | Mỹ Đình (Từ Liêm), Hà Nội | [html](tara-maison-my-dinh.html) | [seo](tara-maison-my-dinh-seo.md) |
+| Đồng Văn Diamond | Shophouse | Đồng Văn (Duy Tiên), Ninh Bình | [html](dong-van-diamond.html) | [seo](dong-van-diamond-seo.md) |
 
 ## Bài thị trường
 

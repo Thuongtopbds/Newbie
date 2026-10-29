@@ -267,48 +267,48 @@ function tp_project_faq( $post_id ) {
 		return html_entity_decode( $text, ENT_QUOTES, 'UTF-8' );
 	};
 
+	// Gộp câu hỏi trong khối "FAQ by Rank Math" với câu hỏi viết bằng H3 dưới H2 "Câu hỏi thường gặp":
+	// bài có thể dùng cả hai, trùng câu hỏi thì chỉ lấy một lần.
+	$faq  = array();
+	$seen = array();
+	$add  = function ( $question, $answer ) use ( &$faq, &$seen ) {
+		$key = function_exists( 'mb_strtolower' ) ? mb_strtolower( $question ) : strtolower( $question );
+		if ( '' !== $question && '' !== $answer && ! isset( $seen[ $key ] ) ) {
+			$seen[ $key ] = true;
+			$faq[]        = array( $question, $answer );
+		}
+	};
+
+	if ( preg_match( '#<h2[^>]*>\s*(?:<[^>]+>\s*)*(?:câu hỏi thường gặp|hỏi đáp|faq)\b.*?</h2>(.*?)(?=<h2[\s>]|$)#isu', $content, $section ) ) {
+		// wpautop: nội dung lưu bằng trình soạn thảo cổ điển chưa có thẻ <p>.
+		// Bỏ chú thích khối <!-- wp:… --> trước: nếu không, wpautop bọc chúng thành <p> và câu trả lời bị lấy rỗng.
+		$parts = preg_split( '#<h3[^>]*>(.*?)</h3>#is', wpautop( preg_replace( '#<!--.*?-->#s', '', $section[1] ) ), -1, PREG_SPLIT_DELIM_CAPTURE );
+		for ( $i = 1; $i + 1 < count( $parts ); $i += 2 ) {
+			$question = $clean( $parts[ $i ] );
+			// Chỉ lấy đoạn <p> có chữ đầu tiên để dòng ghi chú cuối mục (VD "Xem video…") không lọt vào câu trả lời cuối.
+			$answer = '';
+			preg_match_all( '#<p[^>]*>(.*?)</p>#is', $parts[ $i + 1 ], $paras );
+			foreach ( $paras[1] ?: array( $parts[ $i + 1 ] ) as $para ) {
+				$answer = $clean( $para );
+				if ( '' !== $answer ) {
+					break;
+				}
+			}
+			$add( $question, $answer );
+		}
+	}
+
 	if ( function_exists( 'has_block' ) && has_block( 'rank-math/faq-block', $content ) ) {
-		$faq = array();
 		foreach ( tp_find_blocks( parse_blocks( $content ), 'rank-math/faq-block' ) as $block ) {
 			foreach ( (array) ( $block['attrs']['questions'] ?? array() ) as $row ) {
 				if ( isset( $row['visible'] ) && ! $row['visible'] ) {
 					continue;
 				}
-				$question = $clean( $row['title'] ?? '' );
-				$answer   = $clean( $row['content'] ?? '' );
-				if ( '' !== $question && '' !== $answer ) {
-					$faq[] = array( $question, $answer );
-				}
+				$add( $clean( $row['title'] ?? '' ), $clean( $row['content'] ?? '' ) );
 			}
-		}
-		if ( $faq ) {
-			return $faq;
 		}
 	}
 
-	if ( ! preg_match( '#<h2[^>]*>\s*(?:<[^>]+>\s*)*(?:câu hỏi thường gặp|hỏi đáp|faq)\b.*?</h2>(.*?)(?=<h2[\s>]|$)#isu', $content, $section ) ) {
-		return array();
-	}
-
-	// wpautop: nội dung lưu bằng trình soạn thảo cổ điển chưa có thẻ <p>.
-	// Bỏ chú thích khối <!-- wp:… --> trước: nếu không, wpautop bọc chúng thành <p> và câu trả lời bị lấy rỗng.
-	$parts = preg_split( '#<h3[^>]*>(.*?)</h3>#is', wpautop( preg_replace( '#<!--.*?-->#s', '', $section[1] ) ), -1, PREG_SPLIT_DELIM_CAPTURE );
-	$faq   = array();
-	for ( $i = 1; $i + 1 < count( $parts ); $i += 2 ) {
-		$question = $clean( $parts[ $i ] );
-		// Chỉ lấy đoạn <p> có chữ đầu tiên để dòng ghi chú cuối mục (VD "Xem video…") không lọt vào câu trả lời cuối.
-		$answer = '';
-		preg_match_all( '#<p[^>]*>(.*?)</p>#is', $parts[ $i + 1 ], $paras );
-		foreach ( $paras[1] ?: array( $parts[ $i + 1 ] ) as $para ) {
-			$answer = $clean( $para );
-			if ( '' !== $answer ) {
-				break;
-			}
-		}
-		if ( '' !== $question && '' !== $answer ) {
-			$faq[] = array( $question, $answer );
-		}
-	}
 	return $faq;
 }
 
@@ -354,15 +354,20 @@ add_filter( 'rank_math/json_ld', function ( $data ) {
 	if ( ! is_singular( 'du_an' ) ) {
 		return $data;
 	}
-	foreach ( (array) $data as $entity ) {
+	$schema = tp_project_faq_schema( get_queried_object_id() );
+	if ( ! $schema ) {
+		return $data;
+	}
+	// Rank Math đã có FAQPage (từ khối FAQ) thì chỉ thay khi bản gộp có nhiều câu hỏi hơn, để không ra 2 FAQPage.
+	foreach ( (array) $data as $key => $entity ) {
 		if ( is_array( $entity ) && in_array( 'FAQPage', (array) ( $entity['@type'] ?? array() ), true ) ) {
+			if ( count( $schema['mainEntity'] ) > count( (array) ( $entity['mainEntity'] ?? array() ) ) ) {
+				$data[ $key ] = array_merge( $entity, array( 'mainEntity' => $schema['mainEntity'] ) );
+			}
 			return $data;
 		}
 	}
-	$schema = tp_project_faq_schema( get_queried_object_id() );
-	if ( $schema ) {
-		$data['tpFaq'] = $schema;
-	}
+	$data['tpFaq'] = $schema;
 	return $data;
 }, 999 );
 
