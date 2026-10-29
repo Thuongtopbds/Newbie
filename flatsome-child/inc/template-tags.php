@@ -101,7 +101,7 @@ function tp_project_card( $post_id, $args = array() ) {
 	<article class="tp-card">
 		<a class="tp-card__media" href="<?php echo esc_url( $link ); ?>" tabindex="-1" aria-hidden="true">
 			<?php
-			// Thẻ dự án trong menu xổ xuống (tên dự án dùng thẻ p) luôn ẩn khi tải trang: tải sau, không tranh ưu tiên với ảnh đầu trang.
+			// Thẻ dự án dùng thẻ p (menu xổ xuống, dự án liên quan cuối trang) không hiện ngay khi tải trang: tải sau, không tranh ưu tiên với ảnh đầu trang.
 			echo tp_post_image( $post_id, 'tp-card', 'p' === $tag ? array( 'loading' => 'lazy', 'fetchpriority' => 'low' ) : array() );
 			?>
 		</a>

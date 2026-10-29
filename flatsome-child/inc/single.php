@@ -171,7 +171,7 @@ function tp_quote_card( $post_id ) {
 		<?php if ( $price ) : ?>
 			<p class="tp-quote-card__price"><span>Giá bán</span><strong><?php echo esc_html( $price ); ?></strong></p>
 		<?php endif; ?>
-		<h2 class="tp-quote-card__title" id="tp-quote-title">Nhận bảng giá &amp; chính sách mới nhất</h2>
+		<p class="tp-quote-card__title" id="tp-quote-title">Nhận bảng giá &amp; chính sách mới nhất</p>
 		<p class="tp-quote-card__sub">Gửi bảng giá, mặt bằng và tài liệu dự án qua Zalo trong ít phút.</p>
 		<div class="tp-quote-card__form">
 			<?php
