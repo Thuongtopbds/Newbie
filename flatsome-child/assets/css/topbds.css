@@ -718,7 +718,7 @@ a.tp-infocard:hover { border-color: var(--tp-primary); box-shadow: var(--tp-shad
 .tp-content { color: #344054; font-size: 16px; line-height: 1.75; }
 .tp-content > :first-child { margin-top: 0; }
 /* Đoạn mở đầu bài, hiển thị dưới tiêu đề Tổng quan, trên các ô thông số */
-.tp-lead { margin-bottom: 20px; padding: 0; }
+.tp-lead { margin-bottom: 20px; }
 .tp-lead > :last-child { margin-bottom: 0; }
 .tp-content h3 { margin: 26px 0 10px; color: var(--tp-ink); font-size: 18px; font-weight: 700; }
 .tp-content p,
