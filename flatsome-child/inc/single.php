@@ -358,16 +358,37 @@ add_filter( 'rank_math/json_ld', function ( $data ) {
 	if ( ! $schema ) {
 		return $data;
 	}
-	// Rank Math đã có FAQPage (từ khối FAQ) thì chỉ thay khi bản gộp có nhiều câu hỏi hơn, để không ra 2 FAQPage.
+	$is_faq = function ( $entity ) {
+		return is_array( $entity ) && in_array( 'FAQPage', (array) ( $entity['@type'] ?? array() ), true );
+	};
+	$found  = false;
 	foreach ( (array) $data as $key => $entity ) {
-		if ( is_array( $entity ) && in_array( 'FAQPage', (array) ( $entity['@type'] ?? array() ), true ) ) {
-			if ( count( $schema['mainEntity'] ) > count( (array) ( $entity['mainEntity'] ?? array() ) ) ) {
-				$data[ $key ] = array_merge( $entity, array( 'mainEntity' => $schema['mainEntity'] ) );
+		if ( ! is_array( $entity ) ) {
+			continue;
+		}
+		// Rank Math có khi đặt FAQPage của khối FAQ trong subjectOf của Article: bỏ đi, vì bản gộp đã gồm các câu hỏi đó.
+		if ( ! empty( $entity['subjectOf'] ) && is_array( $entity['subjectOf'] ) ) {
+			$subjects = isset( $entity['subjectOf']['@type'] ) ? array( $entity['subjectOf'] ) : $entity['subjectOf'];
+			$subjects = array_values( array_filter( $subjects, function ( $subject ) use ( $is_faq ) {
+				return ! $is_faq( $subject );
+			} ) );
+			if ( $subjects ) {
+				$data[ $key ]['subjectOf'] = $subjects;
+			} else {
+				unset( $data[ $key ]['subjectOf'] );
 			}
-			return $data;
+		}
+		// Rank Math đã có FAQPage riêng thì chỉ thay khi bản gộp có nhiều câu hỏi hơn, để không ra 2 FAQPage.
+		if ( $is_faq( $entity ) ) {
+			$found = true;
+			if ( count( $schema['mainEntity'] ) > count( (array) ( $entity['mainEntity'] ?? array() ) ) ) {
+				$data[ $key ]['mainEntity'] = $schema['mainEntity'];
+			}
 		}
 	}
-	$data['tpFaq'] = $schema;
+	if ( ! $found ) {
+		$data['tpFaq'] = $schema;
+	}
 	return $data;
 }, 999 );
 
