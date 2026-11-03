@@ -24,6 +24,23 @@ Dự án mới mở bán nên các công cụ đo từ khóa có thể báo lư�
 
 Số lần xuất hiện trong bài: "An Garden" 18 lần, "An Garden Châu Sơn" 14 lần, "HUD Châu Sơn" 2 lần, "Phủ Lý" 13 lần.
 
+### Đổi từ khóa chính sang `HUD Châu Sơn` (3/11/2026)
+
+Gợi ý tìm kiếm của Google: "hud châu sơn" ra `kdt hud châu sơn`, `bán đất hud châu sơn`, `dự án hud châu sơn`, `khu đô thị hud châu sơn`; "khu đô thị châu sơn" cũng gợi ý `khu đô thị hud châu sơn`. Gõ "an garden châu sơn", "liền kề hud châu sơn", "biệt thự hud châu sơn" chưa có gợi ý nào. Vì vậy `HUD Châu Sơn` có người tìm nhiều hơn.
+
+Lưu ý: người tìm "HUD Châu Sơn" nhiều khi muốn tìm cả Khu đô thị mới Châu Sơn (gồm đất nền), không chỉ An Garden. Bài cần nói rõ An Garden là phần nào trong khu đô thị.
+
+| Mục | Trước | Sau |
+|---|---|---|
+| Từ khóa chính | `An Garden Châu Sơn` | `HUD Châu Sơn` |
+| Từ khóa phụ | | `HUD Châu Sơn An Garden`, `An Garden Châu Sơn`, `khu đô thị HUD Châu Sơn`, `liền kề HUD Châu Sơn`, `biệt thự HUD Châu Sơn` |
+| Tiêu đề bài (H1) | An Garden Châu Sơn | HUD Châu Sơn An Garden |
+| SEO Title | An Garden Châu Sơn: Giá Liền Kề, Biệt Thự HUD Phủ Lý 2026 | HUD Châu Sơn An Garden: Giá Liền Kề, Biệt Thự Phủ Lý 2026 (57 ký tự) |
+| Meta Description | | HUD Châu Sơn An Garden – 94 căn liền kề, biệt thự do HUD phát triển tại KĐT mới Châu Sơn, Phủ Lý. Giá từ 42,8 triệu/m², đã đủ điều kiện mở bán. (143 ký tự) |
+| Đường dẫn | `an-garden-chau-son` | Giữ nguyên |
+
+Giữ khoảng một nửa số lần nhắc "An Garden Châu Sơn" trong bài, vì đây vẫn là tên thương mại chủ đầu tư dùng.
+
 ## 2. Đăng dự án
 
 **Dự án → Thêm dự án**
