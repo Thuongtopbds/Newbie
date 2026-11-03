@@ -199,8 +199,9 @@ while ( have_posts() ) :
 				<div class="container">
 					<?php echo do_shortcode( '[tp_heading title="Dự án liên quan" sub="Các dự án cùng loại hình hoặc cùng khu vực" link="' . esc_url( get_post_type_archive_link( 'du_an' ) ) . '" link_text="Xem tất cả dự án"]' ); ?>
 					<div class="tp-grid tp-grid--scroll" style="--tp-cols:4">
+						<?php // Tên dự án liên quan dùng thẻ p: không chen tên dự án khác vào dàn ý tiêu đề của trang. ?>
 						<?php foreach ( $tp_related as $tp_related_id ) : ?>
-							<?php echo tp_project_card( $tp_related_id ); ?>
+							<?php echo tp_project_card( $tp_related_id, array( 'heading' => 'p' ) ); ?>
 						<?php endforeach; ?>
 					</div>
 				</div>
