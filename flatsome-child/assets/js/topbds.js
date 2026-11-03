@@ -157,4 +157,39 @@
 			}
 		});
 	});
+	// Gửi sự kiện liên hệ về Google (Analytics + Google Ads) qua thẻ gtag gắn ở wp-content/mu-plugins.
+	// Chưa có gtag (quản trị viên đang đăng nhập, hoặc chưa gắn thẻ) thì bỏ qua.
+	var track = function (name, params) {
+		if (typeof window.gtag !== 'function') return;
+		var h1 = document.body.classList.contains('single-du_an') && document.querySelector('h1');
+		if (h1) params.project_name = h1.textContent.trim();
+		window.gtag('event', name, params);
+	};
+	var placeOf = function (el) {
+		var places = [
+			['.tp-mobile-bar', 'thanh_duoi_mobile'], ['#header', 'header'], ['.tp-phero', 'dau_trang_du_an'],
+			['.tp-quote-card', 'the_bao_gia'], ['.tp-side', 'banner_hai_ben'],
+			['#footer, .tp-footer', 'footer']
+		];
+		for (var i = 0; i < places.length; i++) {
+			if (el.closest(places[i][0])) return places[i][1];
+		}
+		return 'noi_dung';
+	};
+
+	document.addEventListener('click', function (e) {
+		var a = e.target.closest('a[href]');
+		if (!a) return;
+		var href = a.getAttribute('href');
+		if (/^tel:/i.test(href)) track('click_call', { link_location: placeOf(a), phone: href.replace(/^tel:/i, '') });
+		else if (/zalo\.me|zalo\.vn/i.test(href)) track('click_zalo', { link_location: placeOf(a), link_url: href });
+	});
+
+	// Contact Form 7 gửi thành công (đã gửi mail).
+	document.addEventListener('wpcf7mailsent', function (e) {
+		var form = e.target;
+		var id = String(e.detail && e.detail.contactFormId);
+		var name = form.closest('.tp-quote-card') ? 'bao_gia' : (form.closest('#footer, .tp-footer') ? 'dang_ky_footer' : 'form_' + id);
+		track('generate_lead', { form_name: name, form_id: id, link_location: placeOf(form) });
+	});
 })();
