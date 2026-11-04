@@ -192,4 +192,11 @@
 		var name = form.closest('.tp-quote-card') ? 'bao_gia' : (form.closest('#footer, .tp-footer') ? 'dang_ky_footer' : 'form_' + id);
 		track('generate_lead', { form_name: name, form_id: id, link_location: placeOf(form) });
 	});
+	// Chống bot gửi form (inc/antispam.php): ghi số giây từ lúc mở trang tới lúc bấm gửi.
+	// Bắt ở pha capture để chạy trước khi Contact Form 7 đọc dữ liệu form.
+	var openedAt = Date.now();
+	document.addEventListener('submit', function (e) {
+		var timer = e.target.querySelector && e.target.querySelector('input[name="tp_t"]');
+		if (timer) timer.value = ((Date.now() - openedAt) / 1000).toFixed(1);
+	}, true);
 })();

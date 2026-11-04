@@ -30,3 +30,7 @@ Gợi ý giá trị trong Google Ads: `generate_lead` và `click_call` để **C
 ## 4. Xem báo cáo
 
 Analytics → Báo cáo → Tương tác → **Sự kiện**, bấm vào tên sự kiện. Muốn xem theo dự án hoặc vị trí bấm thì vào Quản trị → **Định nghĩa tuỳ chỉnh** → **Tạo phương diện tuỳ chỉnh** (phạm vi Sự kiện) cho `project_name`, `link_location`, `form_name`.
+
+## 5. Chống bot gửi form (theme từ v1.0.47)
+
+Mọi form Contact Form 7 có thêm 2 ô ẩn (`inc/antispam.php`): ô bẫy `tp_hp` (người không thấy nên để trống) và `tp_t` (số giây từ lúc mở trang tới lúc bấm gửi, do JS điền). Lượt gửi bị coi là spam khi ô bẫy có chữ, khi `tp_t` trống (bot gửi thẳng tới máy chủ, không chạy JS) hoặc gửi nhanh hơn 3 giây. Spam không gửi email và không bắn sự kiện `generate_lead`. Khách thật không phải làm gì thêm, không có captcha.
