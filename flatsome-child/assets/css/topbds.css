@@ -162,6 +162,9 @@
 	line-height: 1.2;
 }
 .tp-badge--hot { background: #e5383b; }
+/* Nhóm nhãn trên thẻ dự án: Trạng thái và "Hot" đứng cạnh nhau, tự xuống dòng khi thẻ hẹp. */
+.tp-badges { position: absolute; top: 12px; left: 12px; right: 12px; z-index: 1; display: flex; flex-wrap: wrap; gap: 6px; pointer-events: none; }
+.tp-badges .tp-badge { position: static; }
 
 
 .tp-card__body { display: flex; flex: 1; flex-direction: column; gap: 6px; padding: 14px 16px 16px; }
@@ -633,6 +636,7 @@ a.tp-infocard:hover { border-color: var(--tp-primary); box-shadow: var(--tp-shad
 .tp-phero .tp-crumbs a:hover { color: #fff; }
 .tp-phero .tp-crumbs__sep, .tp-phero .tp-crumbs .separator { color: rgba(255, 255, 255, .45); }
 .tp-phero__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.tp-phero__tags .tp-badges { display: contents; }
 .tp-phero__tags .tp-badge { position: static; padding: 6px 12px; border-radius: 999px; font-size: 13px; }
 .tp-phero__tag { padding: 5px 12px; border: 1px solid rgba(255, 255, 255, .45); border-radius: 999px; background: rgba(255, 255, 255, .1); color: #fff; font-size: 13px; font-weight: 600; backdrop-filter: blur(4px); }
 .tp-phero__tag:hover { border-color: var(--tp-primary); background: var(--tp-primary); color: #fff; }

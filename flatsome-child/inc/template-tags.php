@@ -68,17 +68,18 @@ function tp_term_names( $post_id, $taxonomy ) {
 }
 
 /**
- * Nhãn góc ảnh: "Hot" nếu được tick, nếu không thì theo Trạng thái (VD: "Đang mở bán").
+ * Nhãn góc ảnh: Trạng thái (VD: "Đang mở bán"), kèm "Hot" đứng bên cạnh nếu được tick.
  */
 function tp_project_badge( $post_id ) {
-	if ( get_post_meta( $post_id, 'tp_hot', true ) ) {
-		return '<span class="tp-badge tp-badge--hot">Hot</span>';
-	}
+	$badges = '';
 	$status = get_the_terms( $post_id, 'trang_thai' );
 	if ( $status && ! is_wp_error( $status ) ) {
-		return '<span class="tp-badge">' . esc_html( $status[0]->name ) . '</span>';
+		$badges .= '<span class="tp-badge">' . esc_html( $status[0]->name ) . '</span>';
 	}
-	return '';
+	if ( get_post_meta( $post_id, 'tp_hot', true ) ) {
+		$badges .= '<span class="tp-badge tp-badge--hot">Hot</span>';
+	}
+	return $badges ? '<span class="tp-badges">' . $badges . '</span>' : '';
 }
 
 /**
