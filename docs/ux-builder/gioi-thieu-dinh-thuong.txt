@@ -1,0 +1,190 @@
+[section label="Đầu trang" padding="64px" padding__sm="40px" dark="true" class="tp-pagehero tp-about-hero"]
+
+[row v_align="middle"]
+
+[col span="7" span__sm="12"]
+
+<p class="tp-eyebrow">VỀ TOPBDS</p>
+<h1>Đinh Thưởng</h1>
+<p class="tp-about-hero__role">Giám đốc dự án · Môi giới bất động sản có chứng chỉ hành nghề · Người sáng lập TOPBDS</p>
+<p class="tp-about-hero__slogan">“Trao niềm tin – Nhận giá trị”</p>
+
+[tp_contact_buttons style="cta"]
+
+[/col]
+[col span="5" span__sm="12"]
+
+<figure class="tp-about-hero__photo"><img src="https://topbds.vn/wp-content/uploads/2026/09/tu-van-vien.jpg" width="500" height="500" alt="Đinh Thưởng, Giám đốc dự án, người sáng lập TOPBDS" fetchpriority="high"><figcaption><strong>150</strong> giao dịch thành công từ năm 2019</figcaption></figure>
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Câu chuyện" padding="64px" padding__sm="40px"]
+
+[row]
+
+[col span="12"]
+
+<div class="tp-about-story">
+<h2>Mỗi giao dịch là một quyết định lớn của một gia đình</h2>
+<p>Năm 2019, tôi bắt đầu làm môi giới bất động sản vì [lý do thật của bạn, 1–2 câu].</p>
+<blockquote>Sau bảy năm và 150 giao dịch thành công, tôi vẫn làm việc theo một nguyên tắc: chỉ giới thiệu cho khách những sản phẩm tôi đã tự tìm hiểu kỹ về pháp lý, vị trí và tiềm năng, giống như khi tôi chọn cho chính gia đình mình.</blockquote>
+<p>Hiện tôi là Giám đốc dự án tại Công ty Đất Xanh Miền Bắc và trực tiếp vận hành TOPBDS.vn. Đây là nơi tôi chia sẻ thông tin dự án đã được kiểm chứng để khách hàng có thể so sánh và quyết định một cách chủ động.</p>
+</div>
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Những con số" bg_color="#f6f7f9" padding="56px" padding__sm="36px"]
+
+[row]
+
+[col span="12"]
+
+<h2 class="tp-about-title">Những con số</h2>
+<div class="tp-about-stats">
+<div class="tp-about-stat"><strong>7 năm</strong><span>làm nghề môi giới (từ 2019)</span></div>
+<div class="tp-about-stat"><strong>150</strong><span>giao dịch thành công</span></div>
+<div class="tp-about-stat"><strong>4</strong><span>thị trường chuyên sâu</span></div>
+<div class="tp-about-stat"><strong>1</strong><span>chứng chỉ hành nghề môi giới bất động sản</span></div>
+</div>
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Hành nghề minh bạch" padding="64px" padding__sm="40px"]
+
+[row v_align="middle"]
+
+[col span="7" span__sm="12"]
+
+<div class="tp-about-license">
+<h2>Hành nghề minh bạch, đúng pháp luật</h2>
+<ul>
+<li><span>Chứng chỉ hành nghề môi giới bất động sản số <strong>[số chứng chỉ]</strong>, do [Sở Xây dựng …] cấp ngày [ngày cấp].</span></li>
+<li><span>Hành nghề thông qua doanh nghiệp: <strong>[tên pháp lý đầy đủ của Đất Xanh Miền Bắc]</strong>, đúng theo quy định của Luật Kinh doanh bất động sản 2023.</span></li>
+</ul>
+</div>
+
+[/col]
+[col span="5" span__sm="12"]
+
+[ux_image id="ID_ANH_CHUNG_CHI" class="tp-rounded"]
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Dự án tiêu biểu" bg_color="#f6f7f9" padding="64px" padding__sm="40px"]
+
+[row]
+
+[col span="12"]
+
+<h2 class="tp-about-title">Dự án tiêu biểu tôi đã tư vấn và phân phối</h2>
+<div class="tp-about-projects">
+<article class="tp-about-project"><span class="tp-about-project__place">Gia Lâm, Hà Nội</span><h3>Biệt thự Lan Viên Đặng Xá</h3><p>[1–2 câu về vai trò của bạn ở dự án, ví dụ số căn đã giao dịch hoặc vị trí bạn phụ trách]</p></article>
+<article class="tp-about-project"><span class="tp-about-project__place">[Khu vực]</span><h3>Khu đô thị HUD Mê Linh</h3><p>[1–2 câu về vai trò và kết quả]</p></article>
+<article class="tp-about-project"><span class="tp-about-project__place">[Khu vực]</span><h3>Biệt thự Eurowindow Twin Parks</h3><p>[1–2 câu về vai trò và kết quả]</p></article>
+</div>
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Khu vực am hiểu" padding="64px" padding__sm="40px"]
+
+[row]
+
+[col span="12"]
+
+<h2 class="tp-about-title">Khu vực tôi am hiểu sâu</h2>
+<div class="tp-about-areas">
+<div class="tp-about-area">[tp_icon name="pin" size="22" badge="yes"]<h3>Hà Nội</h3><p>Biệt thự, liền kề và khu đô thị ở các hướng phát triển phía Đông và phía Bắc thành phố.</p></div>
+<div class="tp-about-area">[tp_icon name="pin" size="22" badge="yes"]<h3>Quảng Ninh</h3><p>[Loại hình cụ thể, ví dụ bất động sản nghỉ dưỡng hoặc đất nền]</p></div>
+<div class="tp-about-area">[tp_icon name="pin" size="22" badge="yes"]<h3>Phú Quốc</h3><p>[Loại hình cụ thể]</p></div>
+<div class="tp-about-area">[tp_icon name="pin" size="22" badge="yes"]<h3>Đà Nẵng</h3><p>[Loại hình cụ thể]</p></div>
+</div>
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Cách làm việc" bg_color="#f6f7f9" padding="64px" padding__sm="40px"]
+
+[row]
+
+[col span="12"]
+
+<h2 class="tp-about-title">Cách tôi làm việc với khách hàng</h2>
+<ol class="tp-about-steps">
+<li><h3>Lắng nghe nhu cầu</h3><p>Mục đích ở hay đầu tư, ngân sách, thời gian dự kiến.</p></li>
+<li><h3>Đề xuất có chọn lọc</h3><p>Chỉ đưa ra 2–3 lựa chọn phù hợp nhất, kèm phân tích ưu điểm và hạn chế của từng lựa chọn.</p></li>
+<li><h3>Đi xem thực tế</h3><p>Tôi cùng khách đến tận dự án và kiểm tra pháp lý.</p></li>
+<li><h3>Đồng hành đến khi bàn giao</h3><p>Hỗ trợ đặt cọc, ký hợp đồng, làm việc với ngân hàng, và tiếp tục hỗ trợ sau giao dịch.</p></li>
+</ol>
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Khách hàng nói gì (xoá nếu chưa có)" padding="64px" padding__sm="40px"]
+
+[row]
+
+[col span="12"]
+
+<h2 class="tp-about-title">Khách hàng nói gì</h2>
+<div class="tp-about-reviews">
+<figure class="tp-about-review"><blockquote>“[Lời nhận xét thật của khách]”</blockquote><figcaption>[Anh/Chị …], khách hàng [tên dự án]</figcaption></figure>
+<figure class="tp-about-review"><blockquote>“[Lời nhận xét thật của khách]”</blockquote><figcaption>[Anh/Chị …], khách hàng [tên dự án]</figcaption></figure>
+</div>
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Ngoài công việc (xoá nếu chưa có)" padding="0px" padding__sm="0px"]
+
+[row]
+
+[col span="12"]
+
+<div class="tp-about-personal"><h2>Ngoài công việc</h2><p>[1–2 câu đời thường, ví dụ về gia đình, sở thích hoặc một hoạt động bạn hay làm cuối tuần]</p></div>
+
+[/col]
+
+[/row]
+
+[/section]
+[section label="Liên hệ" padding="56px" padding__sm="36px"]
+
+[row v_align="middle" class="tp-cta tp-about-cta"]
+
+[col span="7" span__sm="12"]
+
+<p class="tp-cta__title">Bạn đang cân nhắc một bất động sản?</p>
+<p>Hãy nhắn cho tôi qua Zalo hoặc gọi trực tiếp. Tôi sẽ trả lời thật về sản phẩm bạn quan tâm, kể cả khi câu trả lời là “chưa nên mua”.</p>
+<p class="tp-about-cta__addr">[tp_icon name="pin" size="16"] 85 Vũ Trọng Phụng, P. Thanh Xuân, Hà Nội</p>
+
+[/col]
+[col span="5" span__sm="12"]
+
+[tp_contact_buttons style="cta"]
+
+[/col]
+
+[/row]
+
+[/section]
